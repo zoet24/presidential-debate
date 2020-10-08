@@ -1,41 +1,121 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
-
-Welcome zoet24,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
 `python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+# Presidential Debate
 
-Another blue button should appear to click: *Open Browser*.
+## Code Institute: Milestone Project 2
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Intro
 
-A blue button should appear to click: *Make Public*,
+This was the second of four Milestone Projects required to pass the Full Stack Web Development Program at _Code Institute_. The main requirements were to build an interactive front-end site which responds to the users' actions using HTML, CSS and JavaScript.
 
-Another blue button should appear to click: *Open Browser*.
+Click [here](https://github.com/zoet24/presidential-debate) to view the Github repository for the project, and click here to view the live website.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+## Table of Contents
 
-## Updates Since The Instructional Video
+- [UX Design](#ux-design)
+    - [Main aims](#main-aims)
+    - [User stories](#user-stories)
+        - [Project stakeholder](#project-stakeholder)
+        - [New users](#new-users)
+        - [Returning users](#returning-users)
+- [Design Process](#design-process)
+- [Features](#features)
+    - [Existing features](#existing-features)
+        - [Consistent features](#consistent-features)
+        - [Home](#home)
+        - [Tutorial](#tutorial)
+        - [Game](#game)
+    - [Features left to implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+    - [Languages and frameworks](#languages-and-frameworks)
+    - [Additional tools used](#additional-tools-used)
+- [Git Commit Messages](#git-commit-messages)
+- [Testing](#testing)
+    - [Testing user stories](#testing-user-stories)
+        - [Testing - Project stakeholder](#testing---project-stakeholder)
+        - [Testing - New users](#testing---new-users)
+        - [Testing - Returning users](#testing---returning-users)
+    - [Validating the code](#validating-the-code)
+        - [HTML](#html)
+        - [CSS](#css)
+        - [JS](#js)
+    - [Validating the responsiveness](#validating-the-responsiveness)
+    - [Validating the accessibility](#validating-the-accessibility)
+    - [Validating the functionality of all links](#validating-the-functionality-of-all-links)
+- [Deployment](#deployment)
+- [Cloning](#cloning)
+- [Credits](#credits)
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+## UX Design
+### Main aims
+### User stories
+#### Project stakeholder
+#### New users
+#### Returning users
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
+## Design Process
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. **Strategy plane:**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+2. **Scope plane:**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+3. **Structure plane:**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+4. **Skeleton plane:**
 
---------
+5. **Surface plane:**
 
-Happy coding!
+## Features
+### Existing features
+#### Consistent features
+#### Home
+#### Tutorial
+#### Game
+### Features left to implement
+
+## Technologies used
+### Languages and frameworks
+### Additional tools used
+
+## Git Commit Messages
+
+## Testing
+### Testing User Stories
+#### Testing - Project stakeholder
+#### Testing - New users
+#### Testing - Returning users
+### Validating the code
+#### HTML
+#### CSS
+#### JS
+#### Validating the responsiveness
+#### Validating the accessibility
+#### Validating the functionality of all links
+
+## Deployment
+
+I used GitHub Pages to deploy my website with the following steps:
+
+1. I opened _Settings_ on my project repository in GitHub.
+2. I then scrolled to _GitHub Pages_.
+3. I selected the _master branch_ as my source.
+4. This deployed my project on GitHub Pages and allowed me to share the live website.
+
+More information on Github Pages can be found [here](https://pages.github.com/).
+
+## Cloning
+
+To develop my project further you can clone it to your local machine with the following steps:
+
+1. Scroll to the top of my repository and click on the _Clone or download_ button.
+2. Decide whether you want to clone the project using HTTPS or an SSH key.
+  1. For HTTPS: click on the checklist icon to the right of the URL.
+  2. For SSH key: first click on 'Use SSH' then click on the checklist icon to the right of the URL.
+3. Open the _Terminal._
+4. Change the current working directory to the destination of the cloned directory.
+5. Type "git clone" and then paste the URL you copied earlier.
+6. Press _Enter_ to create your local clone.
+
+More information can be found [here](https://docs.github.com/en/enterprise/2.13/user/articles/cloning-a-repository).
+
+## Credits
