@@ -1,3 +1,22 @@
 body {
     text-transform: uppercase;
+    text-align: center;
+}
+
+.box {
+    border-width: 2px;
+    border-style: solid;
+    margin: 4px auto;
+}
+
+.box-trump {
+    border-color: red;
+}
+
+.box-biden {
+    border-color: blue;
+}
+
+.box-user-info {
+    border-color: black;
 }
