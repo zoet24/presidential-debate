@@ -26,7 +26,18 @@ function newGame(){
     game.userSequence = [];
 }
 
-//Clicking Trump/Biden buttons triggers reaction
+//randomSequence function generates a random whole number between 1 and 2 and pushes it into the compSequence array
+function randomSequence(){
+    for(i=0;i<game.turn;i++){
+        this.compSequence.push(Math.floor(Math.random() * 2) + 1);
+    }
+}
+
+// function boxReact(i){
+
+// }
+
+//Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
 $(".box-trump-1").click(function(){
     boxTrumpOne();
 });
@@ -35,20 +46,25 @@ $(".box-biden-1").click(function(){
     boxBidenOne();
 });
 
+//Reactions are audio clip and CSS shake effect
 function boxTrumpOne(){
     var audio = document.getElementById("audio-trump-1");
+    audio.currentTime = 0;
     audio.play();
     $(".box-trump-1").addClass("shake");
         setTimeout(function () {
-        		$(".box-trump-1").removeClass("shake");
-        }, 600);
+            audio.pause();   
+            $(".box-trump-1").removeClass("shake");
+        }, 1200);
 }
 
 function boxBidenOne(){
     var audio = document.getElementById("audio-biden-1");
+    audio.currentTime = 0;
     audio.play();
     $(".box-biden-1").addClass("shake");
         setTimeout(function () {
-        		$(".box-biden-1").removeClass("shake");
-        }, 600);
+            audio.pause();    
+            $(".box-biden-1").removeClass("shake");
+        }, 1200);
 }
