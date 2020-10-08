@@ -21,15 +21,34 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-3 box box-user-info">
-                    <span>Level 0</span>
+                <div class="col-3 box box-user-info level">
+                    <span>Level: 0</span>
                 </div>
-                <div class="col-3 box box-user-info">
-                    <span>Start</span>
+                <div class="col-3 box box-user-info start-button">
+                    <button class="start">Start</button>
                 </div>
-                <div class="col-3 box box-user-info">
-                    <span>Highscore</span>
+                <div class="col-3 box box-user-info score">
+                    <span>Score: 0</span>
                 </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <ul class="difficulty">
+                    <li>
+                        <input type="radio" class="difficulty-opt" name="difficulty" value="2">Easy
+                    </li>
+                    <li>
+                        <input type="radio" class="difficulty-opt" name="difficulty" value="1" checked>Normal
+                    </li>
+                    <li>
+                        <input type="radio" class="difficulty-opt" name="difficulty" value="0.5">Hard
+                    </li>
+                    <li>
+                        <input type="radio" class="difficulty-opt" name="difficulty" value="0.25">Insane
+                    </li>
+                </ul>
             </div>
         </div>
 
