@@ -25,3 +25,30 @@ function newGame(){
     game.compSequence = [];
     game.userSequence = [];
 }
+
+//Clicking Trump/Biden buttons triggers reaction
+$(".box-trump-1").click(function(){
+    boxTrumpOne();
+});
+
+$(".box-biden-1").click(function(){
+    boxBidenOne();
+});
+
+function boxTrumpOne(){
+    var audio = document.getElementById("audio-trump-1");
+    audio.play();
+    $(".box-trump-1").addClass("shake");
+        setTimeout(function () {
+        		$(".box-trump-1").removeClass("shake");
+        }, 600);
+}
+
+function boxBidenOne(){
+    var audio = document.getElementById("audio-biden-1");
+    audio.play();
+    $(".box-biden-1").addClass("shake");
+        setTimeout(function () {
+        		$(".box-biden-1").removeClass("shake");
+        }, 600);
+}
