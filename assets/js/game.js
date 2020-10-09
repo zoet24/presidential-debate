@@ -6,6 +6,7 @@ var game = {
     score: 0,
     turnActive: false,
     compSequence: [],
+    dispSequence: [],
     userSequence: [],
 }
 
@@ -18,24 +19,41 @@ $("#start").click(function(){
 function newGame(){
     $("#start").addClass("hide-button");
     game.level = 1;
-    game.turn = 0;
+    game.turn = 1;
     game.difficulty = 1;
     game.score = 0;
     game.turnActive = true;
     game.compSequence = [];
+    game.dispSequence = [];
     game.userSequence = [];
+    compTurn();
 }
 
-//randomSequence function generates a random whole number between 1 and 2 and pushes it into the compSequence array
-function randomSequence(){
+//compTurn function generates a random whole number between 1 and 2 and pushes it into the compSequence array
+function compTurn(){
+    setTimeout(function() {
     for(i=0;i<game.turn;i++){
-        this.compSequence.push(Math.floor(Math.random() * 2) + 1);
+        game.compSequence.push(Math.floor(Math.random() * 2) + 1);
     }
+    for(i=0;i<game.compSequence.length; i++) {
+        boxReact(i);
+    }
+    }, 250);
 }
 
-// function boxReact(i){
-
-// }
+//boxReact function accesses each value in compSequence array that has been filled by the compTurn function and triggers reaction
+function boxReact(i){
+    setTimeout(function () {
+        if (game.compSequence[i] == 1) {
+            game.dispSequence.push(i);
+            boxTrumpOne();
+        }
+        if (game.compSequence[i] == 2) {
+            game.dispSequence.push(i);
+            boxBidenOne();
+        }
+    })
+}
 
 //Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
 $(".box-trump-1").click(function(){
