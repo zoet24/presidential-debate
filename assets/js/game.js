@@ -2,9 +2,9 @@
 var game = {
     level: 0,
     turn: 0,
-    // difficulty: 1,
     score: 0,
-    turnActive: false,
+    count: 0,
+    // difficulty: 1,
     compSequence: [],
     dispSequence: [],
     userSequence: [],
@@ -20,9 +20,9 @@ function newGame(){
     $("#start").addClass("hide-button");
     game.level = 1;
     game.turn = 1;
-    // game.difficulty = 1;
     game.score = 0;
-    game.turnActive = true;
+    game.count = 0;
+    // game.difficulty = 1;
     game.compSequence = [];
     game.dispSequence = [];
     game.userSequence = [];
@@ -94,8 +94,29 @@ function boxBidenOne(){
 }
 
 //userTurn()
-    //Push user input into userSequnce[]
+    //Push user input into userSequence[]
 
-//compareSequences()
-    //if compSequence = userSequence then turn has been successful, add points to score, call new compTurn
+//compareSequences() compares compSequence[] and userSequence[], calls gameOver(), gameContinue() or userTurn()
+function compareSequences() {
     //if compSequence != userSequence then turn has not been successful, end game
+    if (game.userSequence[game.count] != game.compSequence[game.count]) {
+        //Add CSS reaction later
+        gameOver();    
+    }
+    else {
+        //if compSequence == userSequence then turn has been successful, add points to score, call new compTurn
+        if (game.userSequence[game.count] == game.compSequence[game.count]) {
+            //Add CSS reaction later
+            gameContinue();
+        }
+        //else turn is not done yet
+        else {
+            userTurn();
+            game.count++;
+        }
+    }
+}
+
+//gameOver()
+
+//gameContinue()
