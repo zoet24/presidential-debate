@@ -52,7 +52,13 @@ function boxReact(i){
             game.dispSequence.push(i);
             boxBidenOne();
         }
-    })
+        //When length of compSequence[] = length of dispSequence[] boxReact() calls userTurn()
+        if (game.compSequence.length == game.dispSequence.length) {
+            setTimeout(function() {
+                userTurn();
+            }, 250);
+        }
+    }, 250 * i);
 }
 
 //Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
