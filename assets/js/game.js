@@ -1,8 +1,8 @@
 //Game variables
 var game = {
-    level: 1,
+    level: 0,
     turn: 0,
-    difficulty: 1,
+    // difficulty: 1,
     score: 0,
     turnActive: false,
     compSequence: [],
@@ -10,17 +10,17 @@ var game = {
     userSequence: [],
 }
 
-//Clicking start button calls newGame function
+//Clicking start button calls newGame()
 $("#start").click(function(){
     newGame();
 });
 
-//newGame function hides start button, resets game variables
+//newGame() hides start button, resets game variables, calls compTurn()
 function newGame(){
     $("#start").addClass("hide-button");
     game.level = 1;
     game.turn = 1;
-    game.difficulty = 1;
+    // game.difficulty = 1;
     game.score = 0;
     game.turnActive = true;
     game.compSequence = [];
@@ -29,7 +29,7 @@ function newGame(){
     compTurn();
 }
 
-//compTurn function generates a random whole number between 1 and 2 and pushes it into the compSequence array
+//compTurn() generates a random whole number between 1 and 2 and pushes it into compSequence[], calls boxReact() x # of turns
 function compTurn(){
     setTimeout(function() {
     for(i=0;i<game.turn;i++){
@@ -41,7 +41,7 @@ function compTurn(){
     }, 250);
 }
 
-//boxReact function accesses each value in compSequence array that has been filled by the compTurn function and triggers reaction
+//boxReact() accesses each value in compSequence[], pushes relevant value into dispSequence[], calls relevant reaction
 function boxReact(i){
     setTimeout(function () {
         if (game.compSequence[i] == 1) {
@@ -86,3 +86,10 @@ function boxBidenOne(){
             $(".box-biden-1").removeClass("shake");
         }, 1200);
 }
+
+//userTurn()
+    //Push user input into userSequnce[]
+
+//compareSequences()
+    //if compSequence = userSequence then turn has been successful, add points to score, call new compTurn
+    //if compSequence != userSequence then turn has not been successful, end game
