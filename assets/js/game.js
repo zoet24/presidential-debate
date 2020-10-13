@@ -26,6 +26,11 @@ function newGame(){
     game.compSequence = [];
     game.dispSequence = [];
     game.userSequence = [];
+    
+    console.log("newGame");
+    console.log("Level:", game.level, "Turn:", game.turn, "Score:", game.score, "Count:", game.count);
+    console.log("comp:", game.compSequence, "disp:", game.dispSequence, "user:", game.userSequence);
+    
     compTurn();
 }
 
@@ -33,22 +38,27 @@ function newGame(){
 function compTurn(){
     setTimeout(function() {
     for(i=0;i<game.turn;i++){
-        game.compSequence.push(Math.floor(Math.random() * 2) + 1);
+        game.compSequence.push(Math.floor(Math.random() * 2));
     }
     for(i=0;i<game.compSequence.length; i++) {
         boxReact(i);
     }
-    }, 250);
+    }, 1000);
+
+    console.log("compTurn");
+    console.log("Level:", game.level, "Turn:", game.turn, "Score:", game.score, "Count:", game.count);
+    console.log("comp:", game.compSequence, "disp:", game.dispSequence, "user:", game.userSequence);
+
 }
 
 //boxReact() accesses each value in compSequence[], pushes relevant value into dispSequence[], calls relevant reaction
 function boxReact(i){
     setTimeout(function () {
-        if (game.compSequence[i] == 1) {
+        if (game.compSequence[i] == 0) {
             game.dispSequence.push(i);
             boxTrumpOne();
         }
-        if (game.compSequence[i] == 2) {
+        if (game.compSequence[i] == 1) {
             game.dispSequence.push(i);
             boxBidenOne();
         }
@@ -56,9 +66,9 @@ function boxReact(i){
         if (game.compSequence.length == game.dispSequence.length) {
             setTimeout(function() {
                 userTurn();
-            }, 250);
+            }, 1000);
         }
-    }, 250 * i);
+    }, 1000 * i);
 }
 
 //Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
@@ -98,7 +108,7 @@ function userTurn() {
     $(".box-game").on("click", function(){
         setTimeout(function() {
             compareSequences();
-        }, 250);
+        }, 1000);
     });
     
     $(".box-trump-1").click(function(){
@@ -110,28 +120,31 @@ function userTurn() {
         game.userSequence.push(2);
         boxBidenOne();
     });
+
+    console.log("userTurn");
+    console.log("Level:", game.level, "Turn:", game.turn, "Score:", game.score, "Count:", game.count);
+    console.log("comp:", game.compSequence, "disp:", game.dispSequence, "user:", game.userSequence);
 }
 
 //compareSequences() compares compSequence[] and userSequence[], calls gameOver(), gameContinue() or userTurn()
 function compareSequences() {
-    //if compSequence != userSequence then turn has not been successful, end game
-    if (game.userSequence[game.count] != game.compSequence[game.count]) {
-        //Add CSS reaction later
-        gameOver();    
-    }
-    else {
-        //if compSequence == userSequence then turn has been successful, add points to score, call new compTurn
-        if (game.userSequence[game.count] == game.compSequence[game.count]) {
+        if (game.userSequence[game.count] != game.compSequence[game.count]) {
             //Add CSS reaction later
-            gameContinue();
+            gameOver();
         }
-        //else turn is not done yet
         else {
-            userTurn();
-            game.count++;
+            if (game.compSequence.length == game.userSequence.length) {
+                //Add CSS reaction later
+                gameContinue();
+                game.count = 0;
+            }
+            else {
+                //Add CSS reaction later
+                userTurn();
+                game.count++;
+            }
         }
     }
-}
 
 //gameOver()
 function gameOver() {
@@ -140,9 +153,13 @@ function gameOver() {
 
 //gameContinue()
 function gameContinue() {
-    game.compSequence = [];
+    // game.compSequence = [];
     game.dispSequence = [];
     game.userSequence = [];
     game.level++;
     compTurn();
+    
+    console.log("gameContinue");
+    console.log("Level:", game.level, "Turn:", game.turn, "Score:", game.score, "Count:", game.count);
+    console.log("comp:", game.compSequence, "disp:", game.dispSequence, "user:", game.userSequence);
 }
