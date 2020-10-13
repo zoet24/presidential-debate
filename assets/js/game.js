@@ -62,13 +62,13 @@ function boxReact(i){
 }
 
 //Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
-$(".box-trump-1").click(function(){
-    boxTrumpOne();
-});
+// $(".box-trump-1").click(function(){
+//     boxTrumpOne();
+// });
 
-$(".box-biden-1").click(function(){
-    boxBidenOne();
-});
+// $(".box-biden-1").click(function(){
+//     boxBidenOne();
+// });
 
 //Reactions are audio clip and CSS shake effect
 function boxTrumpOne(){
@@ -93,8 +93,24 @@ function boxBidenOne(){
         }, 1200);
 }
 
-//userTurn()
-    //Push user input into userSequence[]
+//userTurn() - push user input into userSequence[]
+function userTurn() {
+    $(".box-game").on("click", function(){
+        setTimeout(function() {
+            compareSequences();
+        }, 250);
+    });
+    
+    $(".box-trump-1").click(function(){
+        game.userSequence.push(1);
+        boxTrumpOne();
+    });
+
+    $(".box-biden-1").click(function(){
+        game.userSequence.push(2);
+        boxBidenOne();
+    });
+}
 
 //compareSequences() compares compSequence[] and userSequence[], calls gameOver(), gameContinue() or userTurn()
 function compareSequences() {
@@ -118,5 +134,15 @@ function compareSequences() {
 }
 
 //gameOver()
+function gameOver() {
+    $("#start").removeClass("hide-button");
+}
 
 //gameContinue()
+function gameContinue() {
+    game.compSequence = [];
+    game.dispSequence = [];
+    game.userSequence = [];
+    game.level++;
+    compTurn();
+}
