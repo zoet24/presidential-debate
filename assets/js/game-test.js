@@ -38,7 +38,7 @@ function newGame(){
 function compTurn(){
     setTimeout(function() {
         for(i=0; i<game.turn; i++){
-            game.compSequence.push(0);
+            game.compSequence.push(Math.floor(Math.random() * 2));
         }
         for(i=0; i<game.compSequence.length; i++) {
             boxReact(i);
@@ -57,10 +57,10 @@ function boxReact(i){
             game.dispSequence.push(i);
             boxTrumpOne();
         }
-        // if (game.compSequence[i] == 1) {
-        //     game.dispSequence.push(i);
-        //     boxBidenOne();
-        //}
+        if (game.compSequence[i] == 1) {
+            game.dispSequence.push(i);
+            boxBidenOne();
+        }
         //When length of compSequence[] = length of dispSequence[] boxReact() calls userTurn()
         if (game.compSequence.length == game.dispSequence.length) {
             setTimeout(function() {
@@ -120,10 +120,10 @@ function userTurn() {
         boxTrumpOne();
     });
 
-    // $(".box-biden-1").click(function(){
-    //     game.userSequence.push(1);
-    //     boxBidenOne();
-    // });
+    $(".box-biden-1").click(function(){
+        game.userSequence.push(1);
+        boxBidenOne();
+    });
 
     console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
