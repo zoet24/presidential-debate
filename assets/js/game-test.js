@@ -1,3 +1,5 @@
+//Bug fix credit - https://github.com/MatthewYong/twufo, $(".box-game").css("cursor", "");
+
 //Game variables
 var game = {
     level: 0,
@@ -35,12 +37,12 @@ function newGame(){
 //compTurn() generates a random whole number between 1 and 2 and pushes it into compSequence[], calls boxReact() x # of turns
 function compTurn(){
     setTimeout(function() {
-    for(i=0;i<game.turn;i++){
-        game.compSequence.push(Math.floor(Math.random() * 2));
-    }
-    for(i=0;i<game.compSequence.length; i++) {
-        boxReact(i);
-    }
+        for(i=0; i<game.turn; i++){
+            game.compSequence.push(0);
+        }
+        for(i=0; i<game.compSequence.length; i++) {
+            boxReact(i);
+        }
     }, 1000);
 
     console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
@@ -55,13 +57,14 @@ function boxReact(i){
             game.dispSequence.push(i);
             boxTrumpOne();
         }
-        if (game.compSequence[i] == 1) {
-            game.dispSequence.push(i);
-            boxBidenOne();
-        }
+        // if (game.compSequence[i] == 1) {
+        //     game.dispSequence.push(i);
+        //     boxBidenOne();
+        //}
         //When length of compSequence[] = length of dispSequence[] boxReact() calls userTurn()
         if (game.compSequence.length == game.dispSequence.length) {
             setTimeout(function() {
+                $(".box-game").css("cursor", "");
                 userTurn();
             }, 200);
         }
@@ -103,7 +106,11 @@ function boxBidenOne(){
 //userTurn() - push user input into userSequence[]
 function userTurn() {
     $(".box-game").on("click", function(){
+        $(this).addClass("shake");
+        $(".box-game").off();
         setTimeout(function() {
+            $(".box-game").removeClass("shake");
+            $(".box-game").css("cursor", "");
             compareSequences();
         }, 1000);
     });
@@ -113,10 +120,10 @@ function userTurn() {
         boxTrumpOne();
     });
 
-    $(".box-biden-1").click(function(){
-        game.userSequence.push(1);
-        boxBidenOne();
-    });
+    // $(".box-biden-1").click(function(){
+    //     game.userSequence.push(1);
+    //     boxBidenOne();
+    // });
 
     console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
@@ -124,20 +131,26 @@ function userTurn() {
 
 //compareSequences() compares compSequence[] and userSequence[], calls gameOver(), gameContinue() or userTurn()
 function compareSequences() {
-        if (game.userSequence[game.count] != game.compSequence[game.count]) {
+        if (game.userSequence[game.count] != game.compSequence[game.count]) { //User turn unsuccessful
             //Add CSS reaction later
-            gameOver();
+            $("#retry").removeClass("hide-button");
+            $("#retry").click(function() {
+                gameRetry();
+            });
         }
         else {
-            if (game.userSequence.length == game.compSequence.length) {
+            if (game.userSequence.length == game.compSequence.length) { //User turn successful
                 //Add CSS reaction later
-                gameContinue();
                 game.count = 0;
+                $("#continue").removeClass("hide-button");
+                $("#continue").click(function() {
+                    gameContinue();
+                });
             }
-            else {
+            else { //User turn still in progress
                 //Add CSS reaction later
-                userTurn();
                 game.count++;
+                userTurn();
             }
         }
 
@@ -147,7 +160,8 @@ function compareSequences() {
     }
 
 //gameOver()
-function gameOver() {
+function gameRetry() {
+    $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
 
     console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
@@ -157,6 +171,8 @@ function gameOver() {
 //gameContinue()
 function gameContinue() {
     // game.compSequence = [];
+    $("#continue").addClass("hide-button");
+    $("#continue").off("click");
     game.dispSequence = [];
     game.userSequence = [];
     game.level++;
