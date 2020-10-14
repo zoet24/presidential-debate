@@ -26,7 +26,7 @@ function newGame(){
     game.dispSequence = [];
     game.userSequence = [];
     
-    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Level:");
+    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
     
     compTurn();
@@ -43,7 +43,7 @@ function compTurn(){
     }
     }, 1000);
 
-    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Level:");
+    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
 }
@@ -118,7 +118,7 @@ function userTurn() {
         boxBidenOne();
     });
 
-    console.log("USER TURN", "Level:", game.level, "Count:", game.count, "Level:");
+    console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
@@ -129,7 +129,7 @@ function compareSequences() {
             gameOver();
         }
         else {
-            if (game.compSequence.length == game.userSequence.length) {
+            if (game.userSequence.length == game.compSequence.length) {
                 //Add CSS reaction later
                 gameContinue();
                 game.count = 0;
@@ -141,7 +141,7 @@ function compareSequences() {
             }
         }
 
-        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", game.count, "Level:");
+        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Turn:", game.turn);
         console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     }
@@ -150,7 +150,7 @@ function compareSequences() {
 function gameOver() {
     $("#start").removeClass("hide-button");
 
-    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Level:");
+    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
@@ -161,7 +161,7 @@ function gameContinue() {
     game.userSequence = [];
     game.level++;
 
-    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Level:");
+    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     compTurn()
