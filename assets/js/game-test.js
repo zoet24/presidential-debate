@@ -43,7 +43,7 @@ function compTurn(){
         for(i=0; i<game.compSequence.length; i++) {
             boxReact(i);
         }
-    }, 1000);
+    }, 100);
 
     console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
@@ -83,24 +83,26 @@ function boxReact(i){
 //Reactions are audio clip and CSS shake effect
 function boxTrumpOne(){
     var audio = document.getElementById("audio-trump-1");
-    audio.currentTime = 0;
+    // audio.currentTime = 0;
     audio.play();
     $(".box-trump-1").addClass("shake");
         setTimeout(function () {
             // audio.pause();   
             $(".box-trump-1").removeClass("shake");
-        }, 1200);
+        }, 500);
+    audio.currentTime = 0;
 }
 
 function boxBidenOne(){
     var audio = document.getElementById("audio-biden-1");
-    audio.currentTime = 0;
+    // audio.currentTime = 0;
     audio.play();
     $(".box-biden-1").addClass("shake");
         setTimeout(function () {
             // audio.pause();    
             $(".box-biden-1").removeClass("shake");
-        }, 1200);
+        }, 500);
+    audio.currentTime = 0;
 }
 
 //userTurn() - push user input into userSequence[]
@@ -112,7 +114,7 @@ function userTurn() {
             $(".box-game").removeClass("shake");
             $(".box-game").css("cursor", "");
             compareSequences();
-        }, 1000);
+        }, 500);
     });
     
     $(".box-trump-1").click(function(){
