@@ -6,33 +6,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/game.css" />
     </head>
 
     <body>
         <!-- Preload audio files before game starts here for quicker reaction -->
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-10 box box-trump box-trump-1 box-game">
-                    <audio id="audio-trump-1" src="assets/audio/sound-trump-1.mp3"></audio>
-                    <span>America!</span>
-                </div>
+        <div class="container-fluid container-background">
+            <!-- Background images -->
+            <div class="img-container-trump">
+                <img src="assets/images/index/trump-no-background.png">
             </div>
-        </div>
+            <div class="img-container-biden">
+                <img src="assets/images/index/biden-no-background.png">
+            </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-3 box box-user-info">
-                    <span id="level">Level: 0</span>
+            <div class="container-fluid container-foreground">
+                <!-- Game boxes -->
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col box box-trump box-trump-1 box-game">
+                        <audio id="audio-trump-1" src="assets/audio/sound-trump-1.mp3"></audio>
+                        <span>America!</span>
+                    </div>
+                    <div class="col box box-biden box-biden-1 box-game">
+                        <audio id="audio-biden-1" src="assets/audio/sound-biden-1.mp3"></audio>
+                        <span>C'mon man!</span>
+                    </div>
+                    <div class="col-2"></div>
                 </div>
-                <div class="col-3 box box-user-info">
-                    <button id="start">Start</button>
-                    <button class="hide-button" id="continue">Continue</button>
-                    <button class="hide-button" id="retry">Retry</button>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col box box-trump box-trump-2 box-game">
+                        <audio id="audio-trump-2" src="assets/audio/sound-trump-1.mp3"></audio>
+                        <span>America!</span>
+                    </div>
+                    <div class="col box box-biden box-biden-2 box-game">
+                        <audio id="audio-biden-2" src="assets/audio/sound-biden-1.mp3"></audio>
+                        <span>C'mon man!</span>
+                    </div>
+                    <div class="col-2"></div>
                 </div>
-                <div class="col-3 box box-user-info">
-                    <span id="score">Score: 0</span>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col box box-trump box-trump-3 box-game">
+                        <audio id="audio-trump-3" src="assets/audio/sound-trump-1.mp3"></audio>
+                        <span>America!</span>
+                    </div>
+                    <div class="col box box-biden box-biden-3 box-game">
+                        <audio id="audio-biden-3" src="assets/audio/sound-biden-1.mp3"></audio>
+                        <span>C'mon man!</span>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <!-- User info -->
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col box box-user-info">
+                        <span id="level">Level: 0</span>
+                    </div>
+                    <div class="col box box-user-info">
+                        <button id="start">Start</button>
+                        <button class="hide-button" id="continue">Continue</button>
+                        <button class="hide-button" id="retry">Retry</button>
+                    </div>
+                    <div class="col box box-user-info">
+                        <span id="score">Score: 0</span>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
         </div>
@@ -55,15 +95,6 @@
                 </ul>
             </div>
         </div> -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col-10 box box-biden box-biden-1 box-game">
-                    <audio id="audio-biden-1" src="assets/audio/sound-biden-1.mp3"></audio>
-                    <span>C'mon man!</span>
-                </div>
-            </div>
-        </div>
 
     <!--Link to Bootstrap CDN-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">

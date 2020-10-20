@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
+body {
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 1.5rem;
+	padding: 0px;
+}
+
+.container-background {
+	height: 100vh;
+
+	overflow: hidden;
+}
+
+.container-foreground {
+	height: 100vh;
+
+	position: absolute;
+	
+	top: 0px;
+	left: 0px;
+}
+
+.img-container-trump {
+	height: 100vh;
+
+	position: absolute;
+
+	left: -105px;
+}
+
+.img-container-biden {
+	height: 100vh;
+
+	position: absolute;
+
+	right: -105px;
+}
+
+.box {
+    border-width: 6px;
+    border-style: solid;
+    margin: 4px;
+}
+
+.box-trump {
+    border-color: red;
+}
+
+.box-biden {
+    border-color: blue;
+}
+
+.box-user-info {
+    border-color: black;
+}
+
+.hide-button {
+    display: none;
+}
+
+/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
+.shake {
+	animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
