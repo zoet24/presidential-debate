@@ -15,6 +15,8 @@ var game = {
 //Clicking start button calls newGame()
 $("#start").click(function(){
     newGame();
+
+    console.log("start");
 });
 
 //newGame() hides start button, resets game variables, calls compTurn()
@@ -24,32 +26,47 @@ function newGame(){
     game.count = 1;
     game.score = 0;
     // game.difficulty = 1;
-    game.compSequence = [];
     game.dispSequence = [];
-    game.userSequence = [];
 
     showScore();
+    newLevel();
     
-    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
-    console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
-    
-    compTurn();
+    // console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
+    // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+    console.log("newGame");
 }
 
-//compTurn() generates a random whole number between 1 and 2 and pushes it into compSequence[], calls boxReact() x # of turns
-function compTurn(){
+function newLevel() {
+    game.compSequence.length = 0;
+    game.userSequence.length = 0;
+
+    randomSequence();
+    showSequence();
+
+    console.log("newLevel");
+}
+
+//compTurn() generates a random whole number between 0 and 5 and pushes it into compSequence[], calls boxReact() x # of turns
+function randomSequence(){
     setTimeout(function() {
-        for(i=0; i<game.turn; i++){
+        for(i=0; i<game.level; i++){
             game.compSequence.push(Math.floor(Math.random() * 6));
         }
+    }, 100);
+
+    console.log("randomSequence");
+}
+
+ function showSequence(){   
+    setTimeout(function() {    
         for(i=0; i<game.compSequence.length; i++) {
             boxReact(i);
         }
     }, 100);
 
-    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
-    console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
-
+    // console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
+    // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+    console.log("showSequence");
 }
 
 //userTurn() - push user input into userSequence[]
@@ -62,6 +79,7 @@ function userTurn() {
             $(".box-game").css("cursor", "");
             compareSequences();
         }, 500);
+        console.log("userTurn");
     });
     
     $(".box-trump-1").click(function(){
@@ -94,8 +112,8 @@ function userTurn() {
         boxBidenThree();
     });
 
-    console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
-    console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+    // console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
+    // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
 //compareSequences() compares compSequence[] and userSequence[], calls gameOver(), gameContinue() or userTurn()
@@ -123,19 +141,22 @@ function compareSequences() {
             }
         }
 
-        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
-        console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+        console.log("compareSequences");
+        // console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
+        // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     }
 
 //Score()
 function showScore() {
     $('.score-count span').text(`Score: `+game.score);
+    console.log("showScore");
     }
 
 function calculateScore() {
     game.score++;
     showScore();
+    console.log("calculateScore");
 }
 
 //gameOver()
@@ -143,8 +164,9 @@ function gameRetry() {
     $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
 
-    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
-    console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+    console.log("gameOver");
+    // console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
+    // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
 //gameContinue()
@@ -155,12 +177,14 @@ function gameContinue() {
     game.dispSequence = [];
     game.userSequence = [];
     game.level++;
+    game.turn
     calculateScore();
 
-    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
-    console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
+    console.log("gameContinue");
+    // console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
+    // console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
-    compTurn()
+    newLevel();
 }
 
 //boxReact() accesses each value in compSequence[], pushes relevant value into dispSequence[], calls relevant reaction
@@ -196,6 +220,7 @@ function boxReact(i){
                 $(".box-game").css("cursor", "");
                 userTurn();
             }, 200);
+            console.log("boxReact");
         }
     }, 1000 * i);
 }
