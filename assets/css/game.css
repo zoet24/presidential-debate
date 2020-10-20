@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
 body {
-	text-align: center;
 	font-family: 'Bowlby One SC', cursive;
 	font-size: 1.5rem;
 	padding: 0px;
+    text-align: center;
+}
+
+div span {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    line-height: 1;
+    margin: 5px auto;
 }
 
 .container-background {
@@ -18,7 +27,7 @@ body {
 
 	position: absolute;
 	
-	top: 0px;
+	top: 0%;
 	left: 0px;
 }
 
@@ -54,6 +63,36 @@ body {
 
 .box-user-info {
     border-color: black;
+    background: white;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.box-trump-1 {
+    transform:translate(-4px, 2px) rotate(-5deg);
+}
+
+.box-biden-1 {
+    transform:translate(-4px, 5px) rotate(5deg);
+}
+
+.box-trump-2 {
+    transform:translate(-2px, 2px) rotate(-1deg);
+}
+
+.box-biden-2 {
+    transform:translate(-2px, 6px) rotate(-1deg);
+}
+
+.box-trump-3 {
+    transform:translate(-2px, 4px) rotate(5deg);
+}
+
+.box-biden-3 {
+    transform:translate(5px, 10px) rotate(-7deg);
 }
 
 .hide-button {
