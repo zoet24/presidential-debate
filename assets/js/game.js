@@ -38,7 +38,7 @@ function newGame(){
 function compTurn(){
     setTimeout(function() {
         for(i=0; i<game.turn; i++){
-            game.compSequence.push(Math.floor(Math.random() * 2));
+            game.compSequence.push(Math.floor(Math.random() * 6));
         }
         for(i=0; i<game.compSequence.length; i++) {
             boxReact(i);
@@ -48,61 +48,6 @@ function compTurn(){
     console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
-}
-
-//boxReact() accesses each value in compSequence[], pushes relevant value into dispSequence[], calls relevant reaction
-function boxReact(i){
-    setTimeout(function () {
-        if (game.compSequence[i] == 0) {
-            game.dispSequence.push(i);
-            boxTrumpOne();
-        }
-        if (game.compSequence[i] == 1) {
-            game.dispSequence.push(i);
-            boxBidenOne();
-        }
-        //When length of compSequence[] = length of dispSequence[] boxReact() calls userTurn()
-        if (game.compSequence.length == game.dispSequence.length) {
-            setTimeout(function() {
-                $(".box-game").css("cursor", "");
-                userTurn();
-            }, 200);
-        }
-    }, 1000 * i);
-}
-
-//Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
-// $(".box-trump-1").click(function(){
-//     boxTrumpOne();
-// });
-
-// $(".box-biden-1").click(function(){
-//     boxBidenOne();
-// });
-
-//Reactions are audio clip and CSS shake effect
-function boxTrumpOne(){
-    var audio = document.getElementById("audio-trump-1");
-    // audio.currentTime = 0;
-    audio.play();
-    $(".box-trump-1").addClass("shake");
-        setTimeout(function () {
-            // audio.pause();   
-            $(".box-trump-1").removeClass("shake");
-        }, 500);
-    audio.currentTime = 0;
-}
-
-function boxBidenOne(){
-    var audio = document.getElementById("audio-biden-1");
-    // audio.currentTime = 0;
-    audio.play();
-    $(".box-biden-1").addClass("shake");
-        setTimeout(function () {
-            // audio.pause();    
-            $(".box-biden-1").removeClass("shake");
-        }, 500);
-    audio.currentTime = 0;
 }
 
 //userTurn() - push user input into userSequence[]
@@ -125,6 +70,26 @@ function userTurn() {
     $(".box-biden-1").click(function(){
         game.userSequence.push(1);
         boxBidenOne();
+    });
+
+    $(".box-trump-2").click(function(){
+        game.userSequence.push(2);
+        boxTrumpTwo();
+    });
+
+    $(".box-biden-2").click(function(){
+        game.userSequence.push(3);
+        boxBidenTwo();
+    });
+
+    $(".box-trump-3").click(function(){
+        game.userSequence.push(4);
+        boxTrumpThree();
+    });
+
+    $(".box-biden-3").click(function(){
+        game.userSequence.push(5);
+        boxBidenThree();
     });
 
     console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn);
@@ -172,9 +137,9 @@ function gameRetry() {
 
 //gameContinue()
 function gameContinue() {
-    // game.compSequence = [];
     $("#continue").addClass("hide-button");
     $("#continue").off("click");
+    // game.compSequence = [];
     game.dispSequence = [];
     game.userSequence = [];
     game.level++;
@@ -183,4 +148,123 @@ function gameContinue() {
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     compTurn()
+}
+
+//boxReact() accesses each value in compSequence[], pushes relevant value into dispSequence[], calls relevant reaction
+function boxReact(i){
+    setTimeout(function () {
+        if (game.compSequence[i] == 0) {
+            game.dispSequence.push(i);
+            boxTrumpOne();
+        }
+        if (game.compSequence[i] == 1) {
+            game.dispSequence.push(i);
+            boxBidenOne();
+        }
+        if (game.compSequence[i] == 2) {
+            game.dispSequence.push(i);
+            boxTrumpTwo();
+        }
+        if (game.compSequence[i] == 3) {
+            game.dispSequence.push(i);
+            boxBidenTwo();
+        }
+        if (game.compSequence[i] == 4) {
+            game.dispSequence.push(i);
+            boxTrumpThree();
+        }
+        if (game.compSequence[i] == 5) {
+            game.dispSequence.push(i);
+            boxBidenThree();
+        }
+        //When length of compSequence[] = length of dispSequence[] boxReact() calls userTurn()
+        if (game.compSequence.length == game.dispSequence.length) {
+            setTimeout(function() {
+                $(".box-game").css("cursor", "");
+                userTurn();
+            }, 200);
+        }
+    }, 1000 * i);
+}
+
+//Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
+// $(".box-trump-1").click(function(){
+//     boxTrumpOne();
+// });
+
+// $(".box-biden-1").click(function(){
+//     boxBidenOne();
+// });
+
+//Reactions are audio clip and CSS shake effect
+function boxTrumpOne(){
+    var audio = document.getElementById("audio-trump-1");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-trump-1").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();   
+            $(".box-trump-1").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
+}
+
+function boxBidenOne(){
+    var audio = document.getElementById("audio-biden-1");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-biden-1").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();    
+            $(".box-biden-1").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
+}
+
+function boxTrumpTwo(){
+    var audio = document.getElementById("audio-trump-2");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-trump-2").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();   
+            $(".box-trump-2").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
+}
+
+function boxBidenTwo(){
+    var audio = document.getElementById("audio-biden-2");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-biden-2").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();    
+            $(".box-biden-2").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
+}
+
+function boxTrumpThree(){
+    var audio = document.getElementById("audio-trump-3");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-trump-3").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();   
+            $(".box-trump-3").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
+}
+
+function boxBidenThree(){
+    var audio = document.getElementById("audio-biden-3");
+    // audio.currentTime = 0;
+    audio.play();
+    $(".box-biden-3").addClass("shake");
+        setTimeout(function () {
+            // audio.pause();    
+            $(".box-biden-3").removeClass("shake");
+        }, 500);
+    audio.currentTime = 0;
 }
