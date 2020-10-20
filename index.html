@@ -6,12 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
     </head>
 
     <body>
-        <p>Presidential Debate - Home</p>
-        <a href="game.html">Game</a>
+        <div class="container-fluid container-background">
+            <!-- Background images -->
+            <div class="img-container-trump">
+                <img src="assets/images/index/trump-no-background.png">
+            </div>
+            <div class="img-container-biden">
+                <img src="assets/images/index/biden-no-background.png">
+            </div>
+
+            <div class="container-fluid container-foreground">
+                <!-- Title -->
+                <div class="row mt-4 mb-3">
+                    <div class="col-2"></div>
+                    <div class="col">
+                        <h1>Presidential<br>debate</h1>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <!-- Start -->
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col" id="home-cta-start">
+                        <span>Start</span>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <!-- Tutorial -->
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col" id="home-cta-tutorial">
+                        <span>Tutorial</span>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                <!-- Contact -->
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col" id="home-cta-contact">
+                        <span>Contact</span>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        </div>
 
     <!--Link to Bootstrap CDN-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
