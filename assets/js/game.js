@@ -5,7 +5,7 @@ var game = {
     level: 0,
     count: 0,
     turn: 1,
-    // score: 0,
+    score: 0,
     // difficulty: 1,
     compSequence: [],
     dispSequence: [],
@@ -22,13 +22,15 @@ function newGame(){
     $("#start").addClass("hide-button");
     game.level = 1;
     game.count = 1;
-    // game.score = 0;
+    game.score = 0;
     // game.difficulty = 1;
     game.compSequence = [];
     game.dispSequence = [];
     game.userSequence = [];
+
+    showScore();
     
-    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
+    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
     
     compTurn();
@@ -45,7 +47,7 @@ function compTurn(){
         }
     }, 100);
 
-    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
+    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
 }
@@ -92,7 +94,7 @@ function userTurn() {
         boxBidenThree();
     });
 
-    console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn);
+    console.log("USER TURN", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
@@ -121,17 +123,27 @@ function compareSequences() {
             }
         }
 
-        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Turn:", game.turn);
+        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Turn:", game.turn, "Score:", game.score);
         console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     }
+
+//Score()
+function showScore() {
+    $('.score-count span').text(`Score: `+game.score);
+    }
+
+function calculateScore() {
+    game.score++;
+    showScore();
+}
 
 //gameOver()
 function gameRetry() {
     $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
 
-    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
+    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 }
 
@@ -143,8 +155,9 @@ function gameContinue() {
     game.dispSequence = [];
     game.userSequence = [];
     game.level++;
+    calculateScore();
 
-    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Turn:", game.turn);
+    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Turn:", game.turn, "Score:", game.score);
     console.log("comp", game.compSequence, "disp", game.dispSequence, "user", game.userSequence);
 
     compTurn()
@@ -186,15 +199,6 @@ function boxReact(i){
         }
     }, 1000 * i);
 }
-
-//Clicking Trump/Biden buttons triggers reaction (DELETE LATER ON)
-// $(".box-trump-1").click(function(){
-//     boxTrumpOne();
-// });
-
-// $(".box-biden-1").click(function(){
-//     boxBidenOne();
-// });
 
 //Reactions are audio clip and CSS shake effect
 function boxTrumpOne(){
