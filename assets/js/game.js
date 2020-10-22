@@ -5,7 +5,7 @@ var game = {
     level: 0,
     count: 0,
     score: 0,
-    // difficulty: 1,
+    difficulty: 0.25,
     compSequenceArr: [],
     showSequenceArr: [],
     userSequenceArr: [],
@@ -24,7 +24,6 @@ function newGame(){
     game.level = 1; //Resets game variables
     game.count = 1;
     game.score = 0;
-    // game.difficulty = 1;
     game.showSequenceArr = [];
 
     showScore(); //Shows score (= 0)
@@ -63,7 +62,7 @@ function randSequence(){
         for(i=0; i<game.level; i++){ //Generates an array with length = number of levels completed
             game.compSequenceArr.push(Math.floor(Math.random() * 6)); //Generates random whole number between 0 and 5 and pushes it into compSequenceArr[]
         }
-    }, 100);
+    }, 250);
 
     // TESTING - delete later
     // console.log("randSequence");
@@ -74,7 +73,7 @@ function randSequence(){
         for(i=0; i<game.compSequenceArr.length; i++) {
             boxReact(i); //Triggers a reaction for each value of the array made by randSequence()
         }
-    }, 100);
+    }, 250);
 
     // TESTING - delete later
     // console.log("showSequence");
@@ -112,9 +111,9 @@ function boxReact(i){
             setTimeout(function() {
                 $(".box-game").css("cursor", "");
                 userTurn();
-            }, 200);
+            }, 250);
         }
-    }, 1000 * i);
+    }, 1000 * i * game.difficulty);
 }
 
 function userTurn() {
@@ -125,7 +124,7 @@ function userTurn() {
             $(".box-game").removeClass("shake");
             $(".box-game").css("cursor", "");
             compareSequences(); //Compares the userSequenceArr[] to the compSequenceArr[]
-        }, 500);
+        }, 250);
     });
     
     $(".box-trump-1").click(function(){ //Pushes the user input into userSequenceArr[]
@@ -195,14 +194,6 @@ function compareSequences() {
 
     }
 
-function calculateScore() {
-    game.score++;
-    showScore();
-
-    // TESTING - delete later
-    // console.log("calculateScore");
-}
-
 //Game outcomes
 function gameRetry() {
     $("#retry").addClass("hide-button");
@@ -230,75 +221,83 @@ function gameContinue() {
     newLevel();
 }
 
+function calculateScore() {
+    game.score++;
+    showScore();
+
+    // TESTING - delete later
+    // console.log("calculateScore");
+}
+
 //Reactions are audio clip and CSS shake effect
 function boxTrumpOne(){
     var audio = document.getElementById("audio-trump-1");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-trump-1").addClass("shake");
         setTimeout(function () {
-            // audio.pause();   
+            audio.pause();   
             $(".box-trump-1").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
 
 function boxBidenOne(){
     var audio = document.getElementById("audio-biden-1");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-biden-1").addClass("shake");
         setTimeout(function () {
-            // audio.pause();    
+            audio.pause();    
             $(".box-biden-1").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
 
 function boxTrumpTwo(){
     var audio = document.getElementById("audio-trump-2");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-trump-2").addClass("shake");
         setTimeout(function () {
-            // audio.pause();   
+            audio.pause();   
             $(".box-trump-2").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
 
 function boxBidenTwo(){
     var audio = document.getElementById("audio-biden-2");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-biden-2").addClass("shake");
         setTimeout(function () {
-            // audio.pause();    
+            audio.pause();    
             $(".box-biden-2").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
 
 function boxTrumpThree(){
     var audio = document.getElementById("audio-trump-3");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-trump-3").addClass("shake");
         setTimeout(function () {
-            // audio.pause();   
+            audio.pause();   
             $(".box-trump-3").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
 
 function boxBidenThree(){
     var audio = document.getElementById("audio-biden-3");
-    // audio.currentTime = 0;
+    audio.currentTime = 0;
     audio.play();
     $(".box-biden-3").addClass("shake");
         setTimeout(function () {
-            // audio.pause();    
+            audio.pause();    
             $(".box-biden-3").removeClass("shake");
-        }, 500);
+        }, 1000);
     audio.currentTime = 0;
 }
