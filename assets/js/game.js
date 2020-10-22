@@ -36,22 +36,32 @@ function newGame(){
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);    
 }
 
+function showScore() {
+    $('.score-count span').text(`Score: `+game.score);
+    
+    // TESTING - delete later
+    // console.log("showScore");
+    }
+
 function newLevel() {
     game.compSequenceArr.length = 0; //Resets arrays to 0 so new sequence can be generated
     game.userSequenceArr.length = 0;
 
-    randSequence(); //Calls random sequence to be generated
-    showSequence(); //Shows the random sequence
+    compTurn(); //Calls a computer turn
 
     // TESTING - delete later
     // console.log("newLevel");
 }
 
-//compTurn() generates a random whole number between 0 and 5 and pushes it into compSequence[], calls boxReact() x # of turns
+function compTurn() {
+    randSequence(); //Calls random sequence to be generated
+    showSequence(); //Shows the random sequence
+}
+
 function randSequence(){
     setTimeout(function() {
         for(i=0; i<game.level; i++){ //Generates an array with length = number of levels completed
-            game.compSequenceArr.push(Math.floor(Math.random() * 6)); //Generates random whole number between 0 and 5 and pushes it into array
+            game.compSequenceArr.push(Math.floor(Math.random() * 6)); //Generates random whole number between 0 and 5 and pushes it into compSequenceArr[]
         }
     }, 100);
 
@@ -62,7 +72,7 @@ function randSequence(){
  function showSequence(){   
     setTimeout(function() {    
         for(i=0; i<game.compSequenceArr.length; i++) {
-            boxReact(i); //Generates a reaction for each value of the array made by randSequence()
+            boxReact(i); //Triggers a reaction for each value of the array made by randSequence()
         }
     }, 100);
 
@@ -70,6 +80,41 @@ function randSequence(){
     // console.log("showSequence");
     console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Score:", game.score);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
+}
+
+function boxReact(i){
+    setTimeout(function () {
+        if (game.compSequenceArr[i] == 0) {
+            game.showSequenceArr.push(i); //Pushes each randomly generated value in compSequenceArr[] to showSequenceArr[]
+            boxTrumpOne(); //Triggers corresponding box reaction so correct sequence is displayed
+        }
+        if (game.compSequenceArr[i] == 1) {
+            game.showSequenceArr.push(i);
+            boxBidenOne();
+        }
+        if (game.compSequenceArr[i] == 2) {
+            game.showSequenceArr.push(i);
+            boxTrumpTwo();
+        }
+        if (game.compSequenceArr[i] == 3) {
+            game.showSequenceArr.push(i);
+            boxBidenTwo();
+        }
+        if (game.compSequenceArr[i] == 4) {
+            game.showSequenceArr.push(i);
+            boxTrumpThree();
+        }
+        if (game.compSequenceArr[i] == 5) {
+            game.showSequenceArr.push(i);
+            boxBidenThree();
+        }
+        if (game.compSequenceArr.length == game.showSequenceArr.length) { //When the full sequence has been displayed, userTurn() is called
+            setTimeout(function() {
+                $(".box-game").css("cursor", "");
+                userTurn();
+            }, 200);
+        }
+    }, 1000 * i);
 }
 
 function userTurn() {
@@ -143,87 +188,46 @@ function compareSequences() {
             }
         }
 
+        // TESTING - delete later
         // console.log("compareSequences");
         console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Score:", game.score);
         console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 
     }
 
-//Score()
-function showScore() {
-    $('.score-count span').text(`Score: `+game.score);
-    // console.log("showScore");
-    }
-
 function calculateScore() {
     game.score++;
     showScore();
+
+    // TESTING - delete later
     // console.log("calculateScore");
 }
 
-//gameOver()
+//Game outcomes
 function gameRetry() {
     $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
 
+    // TESTING - delete later
     // console.log("gameOver");
     console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Score:", game.score);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 }
 
-//gameContinue()
 function gameContinue() {
     $("#continue").addClass("hide-button");
     $("#continue").off("click");
-    // game.compSequenceArr = [];
     game.showSequenceArr = [];
     game.userSequenceArr = [];
     game.level++;
     calculateScore();
 
+    // TESTING - delete later
     // console.log("gameContinue");
     console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Score:", game.score);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 
     newLevel();
-}
-
-//boxReact() accesses each value in compSequence[], pushes relevant value into showSequence[], calls relevant reaction
-function boxReact(i){
-    setTimeout(function () {
-        if (game.compSequenceArr[i] == 0) {
-            game.showSequenceArr.push(i);
-            boxTrumpOne();
-        }
-        if (game.compSequenceArr[i] == 1) {
-            game.showSequenceArr.push(i);
-            boxBidenOne();
-        }
-        if (game.compSequenceArr[i] == 2) {
-            game.showSequenceArr.push(i);
-            boxTrumpTwo();
-        }
-        if (game.compSequenceArr[i] == 3) {
-            game.showSequenceArr.push(i);
-            boxBidenTwo();
-        }
-        if (game.compSequenceArr[i] == 4) {
-            game.showSequenceArr.push(i);
-            boxTrumpThree();
-        }
-        if (game.compSequenceArr[i] == 5) {
-            game.showSequenceArr.push(i);
-            boxBidenThree();
-        }
-        //When length of compSequence[] = length of showSequence[] boxReact() calls userTurn()
-        if (game.compSequenceArr.length == game.showSequenceArr.length) {
-            setTimeout(function() {
-                $(".box-game").css("cursor", "");
-                userTurn();
-            }, 200);
-            // console.log("boxReact");
-        }
-    }, 1000 * i);
 }
 
 //Reactions are audio clip and CSS shake effect
