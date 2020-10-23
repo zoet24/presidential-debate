@@ -301,3 +301,9 @@ function boxBidenThree(){
         }, 1000);
     audio.currentTime = 0;
 }
+
+function getNumber(){ //https://stackoverflow.com/questions/40056297/random-number-which-is-not-equal-to-the-previous-number
+    return (getNumber.number = Math.floor(Math.random() * (4 + 1))) === getNumber.lastNumber ? getNumber() : getNumber.lastNumber = getNumber.number;
+}
+
+console.log(getNumber()); // Generates a random number between 0 and 4
