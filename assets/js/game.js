@@ -7,6 +7,9 @@ var game = {
     score: 0,
     difficulty: 0.25,
 
+    scoreMultiplier: 1,
+    scoreIncrease: 1,
+
     prev: 0,
     next: 0,
 
@@ -236,7 +239,29 @@ function gameContinue() {
 }
 
 function calculateScore() {
-    game.score++;
+
+    switch(game.difficulty)							//choose points modifier based on difficulty
+    {
+        // case '2':
+        //     game.scoreMultiplier=1;
+        //     break;
+        
+        // case '1':
+        //     game.scoreMultiplier=2;
+        //     break;
+
+        // case '0.5':
+        //     game.scoreMultiplier = 3;
+        //     break;
+
+        case '0.25':
+            game.scoreMultiplier = 4;
+            break;
+    }
+
+    game.scoreIncrease = 1 * game.scoreMultiplier;
+    game.score += game.scoreIncrease;
+
     showScore();
 
     // TESTING - delete later
