@@ -5,7 +5,7 @@ var game = {
     level: 0,
     count: 0,
     score: 0,
-    difficulty: 0.25,
+    difficulty: 1,
 
     scoreMultiplier: 1,
     scoreIncrease: 1,
@@ -19,6 +19,7 @@ var game = {
 }
 
 $("#start").click(function(){
+    game.difficulty = $('input[name=difficulty]:checked')
     newGame(); //Clicking start button calls new game
 
     // TESTING - delete later
@@ -242,17 +243,17 @@ function calculateScore() {
 
     switch(game.difficulty)							//choose points modifier based on difficulty
     {
-        // case '2':
-        //     game.scoreMultiplier=1;
-        //     break;
+        case '2':
+            game.scoreMultiplier=1;
+            break;
         
-        // case '1':
-        //     game.scoreMultiplier=2;
-        //     break;
+        case '1':
+            game.scoreMultiplier=2;
+            break;
 
-        // case '0.5':
-        //     game.scoreMultiplier = 3;
-        //     break;
+        case '0.5':
+            game.scoreMultiplier = 3;
+            break;
 
         case '0.25':
             game.scoreMultiplier = 4;
