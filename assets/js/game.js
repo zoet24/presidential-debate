@@ -6,6 +6,10 @@ var game = {
     count: 0,
     score: 0,
     difficulty: 0.25,
+
+    prev: 0,
+    next: 0,
+
     compSequenceArr: [],
     showSequenceArr: [],
     userSequenceArr: [],
@@ -24,6 +28,8 @@ function newGame(){
     game.level = 1; //Resets game variables
     game.count = 1;
     game.score = 0;
+    game.prev = 0;
+    game.next = 0;
     game.showSequenceArr = [];
 
     showScore(); //Shows score (= 0)
@@ -60,7 +66,15 @@ function compTurn() {
 function randSequence(){
     setTimeout(function() {
         for(i=0; i<game.level; i++){ //Generates an array with length = number of levels completed
-            game.compSequenceArr.push(Math.floor(Math.random() * 6)); //Generates random whole number between 0 and 5 and pushes it into compSequenceArr[]
+            game.next = (Math.floor(Math.random() * 6));
+
+            while (game.next === game.prev) {
+        		game.next = (Math.floor(Math.random() * 6));
+        	}
+            
+            game.compSequenceArr.push(game.next);
+            
+            game.prev = game.next;
         }
     }, 250);
 
@@ -301,9 +315,3 @@ function boxBidenThree(){
         }, 1000);
     audio.currentTime = 0;
 }
-
-function getNumber(){ //https://stackoverflow.com/questions/40056297/random-number-which-is-not-equal-to-the-previous-number
-    return (getNumber.number = Math.floor(Math.random() * (4 + 1))) === getNumber.lastNumber ? getNumber() : getNumber.lastNumber = getNumber.number;
-}
-
-console.log(getNumber()); // Generates a random number between 0 and 4
