@@ -32,10 +32,6 @@ h1 {
 	position: absolute;
 
 	left: -35px;
-
-	animation: trump-slide 1s;
-	animation-delay: 2s;
-	animation-fill-mode: forwards;
 }
 
 .img-container-biden-initial {
@@ -44,10 +40,11 @@ h1 {
 	position: absolute;
 
 	right: -35px;
+}
 
-	animation: biden-slide 1s;
-	animation-delay: 2s;
-	animation-fill-mode: forwards;
+.trump-slide {
+    animation: trump-slide 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes trump-slide {
@@ -58,6 +55,11 @@ h1 {
   to { 
 	transform: translate(-70px, 0px); 
 	}
+}
+
+.biden-slide {
+    animation: biden-slide 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes biden-slide {
@@ -99,6 +101,10 @@ h1 {
 #home-cta-start:hover, #home-cta-tutorial:hover, #home-cta-contact:hover {
 	animation: shake-hover 0.5s;
 	animation-iteration-count: infinite;
+}
+
+.hide-button {
+    display: none;
 }
 
 @keyframes shake-start {

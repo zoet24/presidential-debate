@@ -19,7 +19,7 @@ var game = {
 }
 
 $("#start").click(function(){
-    game.difficulty = $('input[name=difficulty]:checked')
+    // game.difficulty = $('input[name=difficulty]:checked')
     newGame(); //Clicking start button calls new game
 
     // TESTING - delete later
@@ -32,8 +32,10 @@ function newGame(){
     game.level = 1; //Resets game variables
     game.count = 1;
     game.score = 0;
+
     game.prev = 0;
     game.next = 0;
+
     game.showSequenceArr = [];
 
     showScore(); //Shows score (= 0)
@@ -241,24 +243,24 @@ function gameContinue() {
 
 function calculateScore() {
 
-    switch(game.difficulty)							//choose points modifier based on difficulty
-    {
-        case '2':
-            game.scoreMultiplier=1;
-            break;
+    // switch(game.difficulty)
+    // {
+    //     case '2':
+    //         game.scoreMultiplier=1;
+    //         break;
         
-        case '1':
-            game.scoreMultiplier=2;
-            break;
+    //     case '1':
+    //         game.scoreMultiplier=2;
+    //         break;
 
-        case '0.5':
-            game.scoreMultiplier = 3;
-            break;
+    //     case '0.5':
+    //         game.scoreMultiplier = 3;
+    //         break;
 
-        case '0.25':
-            game.scoreMultiplier = 4;
-            break;
-    }
+    //     case '0.25':
+    //         game.scoreMultiplier = 4;
+    //         break;
+    // }
 
     game.scoreIncrease = 1 * game.scoreMultiplier;
     game.score += game.scoreIncrease;

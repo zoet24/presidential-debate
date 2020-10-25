@@ -23,27 +23,28 @@
                 <!-- Title -->
                 <div class="row mt-4 mb-3">
                     <div class="col-2"></div>
-                    <div class="col">
+                    <div class="col" id="home-title">
                         <h1>Presidential<br>debate</h1>
                     </div>
                     <div class="col-2"></div>
                 </div>
                 <!-- Start -->
-                <!-- <div class="row">
+                <div class="row">
                     <div class="col-4"></div>
                     <div class="col" id="home-cta-start">
-                        <a href="game.html" role="button">
+                        <a href="game.html" class="start-button" role="button">
                             Start
                             <span class="sr-only">Start button</span>
+                            <audio id="audio-wwe-bell" src="assets/audio/sound-wwe-bell.mp3"></audio>
                         </a>
                     </div>
                     <div class="col-4"></div>
-                </div> -->
+                </div>
                 
                 
                 
                 <!-- Start - Modal-->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-4"></div>
                     <div class="col">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -51,42 +52,42 @@
                         </button>
                     </div>
                     <div class="col-4"></div>
-                </div>
+                </div> -->
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
+                <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="difficulty">
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="2">Easy
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="1" checked>Normal
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="0.5">Hard
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="0.25">Insane
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="game.html" role="button">
+                                Start
+                                <span class="sr-only">Start button</span>
+                            </a>
+                        </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <ul class="difficulty">
-                            <li>
-                                <input type="radio" class="difOpt" name="difficulty" value="2">Easy
-                            </li>
-                            <li>
-                                <input type="radio" class="difOpt" name="difficulty" value="1" checked>Normal
-                            </li>
-                            <li>
-                                <input type="radio" class="difOpt" name="difficulty" value="0.5">Hard
-                            </li>
-                            <li>
-                                <input type="radio" class="difOpt" name="difficulty" value="0.25">Insane
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="game.html" role="button">
-                            Start
-                            <span class="sr-only">Start button</span>
-                        </a>
-                    </div>
-                    </div>
-                </div>
-                </div>
+                </div> -->
                 
                 
                 <!-- Tutorial -->
@@ -98,13 +99,13 @@
                     <div class="col-4"></div>
                 </div>
                 <!-- Contact -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-4"></div>
                     <div class="col" id="home-cta-contact">
                         <span>Contact</span>
                     </div>
                     <div class="col-4"></div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -118,8 +119,8 @@
     <!--Link to JQuery CDN-->
         <script src="https://code.jquery.com/jquery-3.5.1.js">
         </script>
-    <!--Link to script game.js-->
-    	<script src="assets/js/game.js">
+    <!--Link to script index.js-->
+    	<script src="assets/js/index.js">
         </script>
 
     </body>
