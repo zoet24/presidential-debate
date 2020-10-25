@@ -125,6 +125,7 @@ $("#start").click(function(){
 });
 
 $("#retry").click(function(){
+    game.difficulty = $('input[name=difficulty]:checked').val();
     newGame(); //Clicking start button calls new game
 });
 
@@ -300,10 +301,9 @@ function compareSequences() {
                 //Add CSS reaction later
                 game.count = 0;
                 calculateScore();
-                $("#continue").removeClass("hide-button");
-                $("#continue").click(function() {
+                setTimeout(function() {
                     gameContinue();
-                });
+                }, 250);
             }
             else { //User turn still in progress
                 //Add CSS reaction later
@@ -321,10 +321,7 @@ function compareSequences() {
     }
 
 //Game outcomes
-function gameRetry() {
-    // $("#retry").addClass("hide-button");
-    // $("#start").removeClass("hide-button");
-                
+function gameRetry() {                
     game.userScore = 0;
     showScore();
 
@@ -335,8 +332,6 @@ function gameRetry() {
 }
 
 function gameContinue() {
-    $("#continue").addClass("hide-button");
-    $("#continue").off("click");
     game.showSequenceArr = [];
     game.userSequenceArr = [];
     game.level++;
