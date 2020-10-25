@@ -3,7 +3,8 @@
 var game = {
     level: 0,
     count: 0,
-    score: 0,
+    userScore: 0,
+    highScore: 0,
     difficulty: 1,
 
     scoreMultiplier: 1,
@@ -41,7 +42,7 @@ $("#start-first").click(function(){
                 $(".box-trump-1").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
-    }, 1000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-biden-1").removeClass("hide-button");
@@ -54,7 +55,7 @@ $("#start-first").click(function(){
                 $(".box-biden-1").removeClass("shake");
             }, 2000);
         audio.currentTime = 0;
-    }, 2000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-trump-2").removeClass("hide-button");
@@ -67,7 +68,7 @@ $("#start-first").click(function(){
                 $(".box-trump-2").removeClass("shake");
             }, 3000);
         audio.currentTime = 0;
-    }, 3000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-biden-2").removeClass("hide-button");
@@ -80,7 +81,7 @@ $("#start-first").click(function(){
                 $(".box-biden-2").removeClass("shake");
             }, 4000);
         audio.currentTime = 0;
-    }, 4000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-trump-3").removeClass("hide-button");
@@ -93,7 +94,7 @@ $("#start-first").click(function(){
                 $(".box-trump-3").removeClass("shake");
             }, 5000);
         audio.currentTime = 0;
-    }, 5000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-biden-3").removeClass("hide-button");
@@ -106,11 +107,11 @@ $("#start-first").click(function(){
                 $(".box-biden-3").removeClass("shake");
             }, 6000);
         audio.currentTime = 0;
-    }, 6000);
+    }, 0);
 
     setTimeout(function() {
         $(".box-user-info").removeClass("hide-button");
-    }, 7000);
+    }, 0);
 
     // newGame(); //Clicking start button calls new game
 
@@ -134,17 +135,18 @@ function newGame(){
 
     game.showSequenceArr = [];
 
-    showScore(); //Shows score (= 0)
+    showScore(); //Shows userScore (= 0)
     newLevel(); //Calls new level
     
     // TESTING - delete later
     // console.log("newGame");
-    console.log("NEW GAME", "Level:", game.level, "Count:", game.count, "Score:", game.score);
+    console.log("NEW GAME", "Level:", game.level, "Count:", game.count);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);    
 }
 
 function showScore() {
-    $('.score-count span').text(`Score: `+game.score);
+    $('.user-score-count span').text(`Score: `+game.userScore);
+    $('.high-score-count span').text(`High Score: `+game.highScore);
     
     // TESTING - delete later
     // console.log("showScore");
@@ -193,7 +195,7 @@ function randSequence(){
 
     // TESTING - delete later
     // console.log("showSequence");
-    console.log("COMP TURN", "Level:", game.level, "Count:", game.count, "Score:", game.score);
+    console.log("COMP TURN", "Level:", game.level, "Count:", game.count);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 }
 
@@ -275,14 +277,13 @@ function userTurn() {
 
     // TESTING - delete later
     // console.log("userTurn");
-    console.log("USER TURN", "Level:", game.level, "Count:", "Score:", game.score);
+    console.log("USER TURN", "Level:", game.level, "Count:");
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 }
 
 function compareSequences() {
         if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { //User turn unsuccessful
             //Add CSS reaction later
-            calculateScore();
             $("#retry").removeClass("hide-button");
             $("#retry").click(function() {
                 gameRetry();
@@ -308,7 +309,7 @@ function compareSequences() {
 
         // TESTING - delete later
         // console.log("compareSequences");
-        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:", "Score:", game.score);
+        console.log("COMPARE SEQUENCES", "Level:", game.level, "Count:");
         console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 
     }
@@ -318,12 +319,12 @@ function gameRetry() {
     $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
                 
-    game.score = 0;
+    game.userScore = 0;
     showScore();
 
     // TESTING - delete later
     // console.log("gameOver");
-    console.log("GAME OVER", "Level:", game.level, "Count:", game.count, "Score:", game.score);
+    console.log("GAME OVER", "Level:", game.level, "Count:", game.count);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 }
 
@@ -336,7 +337,7 @@ function gameContinue() {
 
     // TESTING - delete later
     // console.log("gameContinue");
-    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count, "Score:", game.score);
+    console.log("GAME CONTINUE", "Level:", game.level, "Count:", game.count);
     console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);
 
     newLevel();
@@ -364,7 +365,11 @@ function calculateScore() {
     }
 
     game.scoreIncrease = 1 * game.scoreMultiplier;
-    game.score += game.scoreIncrease;
+    game.userScore += game.scoreIncrease;
+
+    if (game.userScore > game.highScore) {
+        game.highScore = game.userScore;
+    }
 
     showScore();
 
