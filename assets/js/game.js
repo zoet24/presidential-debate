@@ -27,13 +27,100 @@ onload = function() {
     }, 2000);
 }
 
-$("#start").click(function(){
+$("#start-first").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
+    
+    setTimeout(function() {
+        $(".box-trump-1").removeClass("hide-button");
+        var audio = document.getElementById("audio-trump-1");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-trump-1").addClass("shake");
+            setTimeout(function () {
+                audio.pause();   
+                $(".box-trump-1").removeClass("shake");
+            }, 1000);
+        audio.currentTime = 0;
+    }, 1000);
+
+    setTimeout(function() {
+        $(".box-biden-1").removeClass("hide-button");
+        var audio = document.getElementById("audio-biden-1");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-biden-1").addClass("shake");
+            setTimeout(function () {
+                audio.pause();    
+                $(".box-biden-1").removeClass("shake");
+            }, 2000);
+        audio.currentTime = 0;
+    }, 2000);
+
+    setTimeout(function() {
+        $(".box-trump-2").removeClass("hide-button");
+        var audio = document.getElementById("audio-trump-2");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-trump-2").addClass("shake");
+            setTimeout(function () {
+                audio.pause();   
+                $(".box-trump-2").removeClass("shake");
+            }, 3000);
+        audio.currentTime = 0;
+    }, 3000);
+
+    setTimeout(function() {
+        $(".box-biden-2").removeClass("hide-button");
+        var audio = document.getElementById("audio-biden-2");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-biden-2").addClass("shake");
+            setTimeout(function () {
+                audio.pause();    
+                $(".box-biden-2").removeClass("shake");
+            }, 4000);
+        audio.currentTime = 0;
+    }, 4000);
+
+    setTimeout(function() {
+        $(".box-trump-3").removeClass("hide-button");
+        var audio = document.getElementById("audio-trump-3");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-trump-3").addClass("shake");
+            setTimeout(function () {
+                audio.pause();   
+                $(".box-trump-3").removeClass("shake");
+            }, 5000);
+        audio.currentTime = 0;
+    }, 5000);
+
+    setTimeout(function() {
+        $(".box-biden-3").removeClass("hide-button");
+        var audio = document.getElementById("audio-biden-3");
+        audio.currentTime = 0;
+        audio.play();
+        $(".box-biden-3").addClass("shake");
+            setTimeout(function () {
+                audio.pause();    
+                $(".box-biden-3").removeClass("shake");
+            }, 6000);
+        audio.currentTime = 0;
+    }, 6000);
+
+    setTimeout(function() {
+        $(".box-user-info").removeClass("hide-button");
+    }, 7000);
+
     // newGame(); //Clicking start button calls new game
 
     // TESTING - delete later
     console.log("start");
     console.log(game.difficulty);
+});
+
+$("#start").click(function(){
+    newGame(); //Clicking start button calls new game
 });
 
 function newGame(){
