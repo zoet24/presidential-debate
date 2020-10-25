@@ -340,24 +340,24 @@ function gameContinue() {
 
 function calculateScore() {
 
-    // switch(game.difficulty)
-    // {
-    //     case '2':
-    //         game.scoreMultiplier=1;
-    //         break;
+    switch(game.difficulty)
+    {
+        case "2":
+            game.scoreMultiplier=1;
+            break;
         
-    //     case '1':
-    //         game.scoreMultiplier=2;
-    //         break;
+        case "1":
+            game.scoreMultiplier=2;
+            break;
 
-    //     case '0.5':
-    //         game.scoreMultiplier = 3;
-    //         break;
+        case "0.5":
+            game.scoreMultiplier = 3;
+            break;
 
-    //     case '0.25':
-    //         game.scoreMultiplier = 4;
-    //         break;
-    // }
+        case "0.25":
+            game.scoreMultiplier = 4;
+            break;
+    }
 
     game.scoreIncrease = 1 * game.scoreMultiplier;
     game.score += game.scoreIncrease;
