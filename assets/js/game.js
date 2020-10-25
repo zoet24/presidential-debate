@@ -128,7 +128,6 @@ function newGame(){
     
     game.level = 1; //Resets game variables
     game.count = 1;
-    game.score = 0;
 
     game.prev = 0;
     game.next = 0;
@@ -283,6 +282,7 @@ function userTurn() {
 function compareSequences() {
         if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { //User turn unsuccessful
             //Add CSS reaction later
+            calculateScore();
             $("#retry").removeClass("hide-button");
             $("#retry").click(function() {
                 gameRetry();
@@ -292,6 +292,7 @@ function compareSequences() {
             if (game.userSequenceArr.length == game.compSequenceArr.length) { //User turn successful
                 //Add CSS reaction later
                 game.count = 0;
+                calculateScore();
                 $("#continue").removeClass("hide-button");
                 $("#continue").click(function() {
                     gameContinue();
@@ -300,6 +301,7 @@ function compareSequences() {
             else { //User turn still in progress
                 //Add CSS reaction later
                 game.count++;
+                calculateScore();
                 userTurn();
             }
         }
@@ -315,6 +317,9 @@ function compareSequences() {
 function gameRetry() {
     $("#retry").addClass("hide-button");
     $("#start").removeClass("hide-button");
+                
+    game.score = 0;
+    showScore();
 
     // TESTING - delete later
     // console.log("gameOver");
@@ -328,7 +333,6 @@ function gameContinue() {
     game.showSequenceArr = [];
     game.userSequenceArr = [];
     game.level++;
-    calculateScore();
 
     // TESTING - delete later
     // console.log("gameContinue");
