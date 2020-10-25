@@ -24,7 +24,7 @@ onload = function() {
         $(".img-container-biden-initial").addClass("biden-slide");
     }, 1000);
     setTimeout(function() {
-        document.getElementById("modal-button").click(); // Click on the checkbox
+        document.getElementById("modal-button-1").click(); // Click on the checkbox
     }, 2000);
 }
 
@@ -121,6 +121,10 @@ $("#start-first").click(function(){
 });
 
 $("#start").click(function(){
+    newGame(); //Clicking start button calls new game
+});
+
+$("#retry").click(function(){
     newGame(); //Clicking start button calls new game
 });
 
@@ -284,7 +288,9 @@ function userTurn() {
 function compareSequences() {
         if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { //User turn unsuccessful
             //Add CSS reaction later
-            $("#retry").removeClass("hide-button");
+            setTimeout(function() {
+                document.getElementById("modal-button-2").click(); // Click on the checkbox
+            }, 2000);
             $("#retry").click(function() {
                 gameRetry();
             });
@@ -316,8 +322,8 @@ function compareSequences() {
 
 //Game outcomes
 function gameRetry() {
-    $("#retry").addClass("hide-button");
-    $("#start").removeClass("hide-button");
+    // $("#retry").addClass("hide-button");
+    // $("#start").removeClass("hide-button");
                 
     game.userScore = 0;
     showScore();
