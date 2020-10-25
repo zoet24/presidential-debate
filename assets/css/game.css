@@ -27,24 +27,54 @@ div span {
 
 	position: absolute;
 	
-	top: 0%;
+	top: 0px;
 	left: 0px;
 }
 
-.img-container-trump {
+.img-container-trump-initial {
 	height: 100vh;
 
 	position: absolute;
 
-	left: -105px;
+	left: -35px;
 }
 
-.img-container-biden {
+.img-container-biden-initial {
 	height: 100vh;
 
 	position: absolute;
 
-	right: -105px;
+	right: -35px;
+}
+
+.trump-slide {
+    animation: trump-slide 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes trump-slide {
+  from { 
+  	transform: translate(0px, 0px); 
+	}
+
+  to { 
+	transform: translate(-70px, 0px); 
+	}
+}
+
+.biden-slide {
+    animation: biden-slide 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes biden-slide {
+  from { 
+  	transform: translate(0px, 0px); 
+	}
+
+  to { 
+	transform: translate(70px, 0px); 
+	}
 }
 
 .box {
@@ -64,6 +94,10 @@ div span {
 .box-user-info {
     border-color: black;
     background: white;
+}
+
+.hide-button {
+    display: none;
 }
 
 button {

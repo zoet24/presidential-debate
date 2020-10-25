@@ -14,6 +14,8 @@ h1 {
 .container-background {
 	height: 100vh;
 
+	position: relative;
+
 	overflow: hidden;
 }
 
@@ -40,36 +42,6 @@ h1 {
 	position: absolute;
 
 	right: -35px;
-}
-
-.trump-slide {
-    animation: trump-slide 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes trump-slide {
-  from { 
-  	transform: translate(0px, 0px); 
-	}
-
-  to { 
-	transform: translate(-70px, 0px); 
-	}
-}
-
-.biden-slide {
-    animation: biden-slide 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes biden-slide {
-  from { 
-  	transform: translate(0px, 0px); 
-	}
-
-  to { 
-	transform: translate(70px, 0px); 
-	}
 }
 
 #home-cta-start, #home-cta-tutorial, #home-cta-contact {

@@ -7,8 +7,8 @@ $('.start-button').click(function(e) { //Add delay to page change for animation 
 $(".start-button").click(function(){
     var audio = document.getElementById("audio-wwe-bell");
     audio.currentTime = 0;
-    $(".img-container-trump-initial").addClass("trump-slide");
-    $(".img-container-biden-initial").addClass("biden-slide");
+    // $(".img-container-trump-initial").addClass("trump-slide");
+    // $(".img-container-biden-initial").addClass("biden-slide");
 
     // setTimeout(function() {
     //     $(".img-container-trump-initial").addClass("trump-slide");
@@ -18,14 +18,14 @@ $(".start-button").click(function(){
     // }, 0);
     setTimeout(function() {
         audio.play();
-    }, 800)
+    }, 300)
     setTimeout(function() {
         $("#home-cta-tutorial").addClass("hide-button");
-    }, 900);
+    }, 400);
     setTimeout(function() {
         $("#home-cta-start").addClass("hide-button");
-    }, 1100);
+    }, 600);
     setTimeout(function() {
         $("#home-title").addClass("hide-button");
-    }, 1300);
+    }, 800);
 });

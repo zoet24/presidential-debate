@@ -1,5 +1,4 @@
 //Bug fix credit - https://github.com/MatthewYong/twufo, $(".box-game").css("cursor", "");
-
 //Game variables
 var game = {
     level: 0,
@@ -18,12 +17,23 @@ var game = {
     userSequenceArr: [],
 }
 
+onload = function() {
+    setTimeout(function() {
+        $(".img-container-trump-initial").addClass("trump-slide");
+        $(".img-container-biden-initial").addClass("biden-slide");
+    }, 1000);
+    setTimeout(function() {
+        document.getElementById("modal-button").click(); // Click on the checkbox
+    }, 2000);
+}
+
 $("#start").click(function(){
-    // game.difficulty = $('input[name=difficulty]:checked')
-    newGame(); //Clicking start button calls new game
+    game.difficulty = $('input[name=difficulty]:checked').val();
+    // newGame(); //Clicking start button calls new game
 
     // TESTING - delete later
-    // console.log("start");
+    console.log("start");
+    console.log(game.difficulty);
 });
 
 function newGame(){

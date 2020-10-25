@@ -13,22 +13,61 @@
         <!-- Preload audio files before game starts here for quicker reaction -->
         <div class="container-fluid container-background">
             <!-- Background images -->
-            <div class="img-container-trump">
+            <div class="img-container-trump-initial">
                 <img src="assets/images/index/trump-no-background.png">
             </div>
-            <div class="img-container-biden">
+            <div class="img-container-biden-initial">
                 <img src="assets/images/index/biden-no-background.png">
             </div>
+
+            <!-- Modal -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary hide-button" id="modal-button" data-toggle="modal" data-target="#exampleModalCenter">
+                Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Difficulty</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <ul class="difficulty">
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="2">Easy
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="1" checked>Normal
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="0.5">Hard
+                                </li>
+                                <li>
+                                    <input type="radio" class="difOpt" name="difficulty" value="0.25">Insane
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="start" data-dismiss="modal">Start</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
 
             <div class="container-fluid container-foreground">
                 <!-- Game boxes -->
                 <div class="row mt-4">
                     <div class="col-3"></div>
-                    <div class="col box box-trump box-trump-1 box-game">
+                    <div class="col box box-trump box-trump-1 box-game hide-button">
                         <audio id="audio-trump-1" src="assets/audio/sound-trump-1.mp3"></audio>
                         <span class="mt-3">America!</span>
                     </div>
-                    <div class="col box box-biden box-biden-1 box-game">
+                    <div class="col box box-biden box-biden-1 box-game hide-button">
                         <audio id="audio-biden-1" src="assets/audio/sound-biden-1.mp3"></audio>
                         <span>C'mon man!</span>
                     </div>
@@ -36,11 +75,11 @@
                 </div>
                 <div class="row">
                     <div class="col-3"></div>
-                    <div class="col box box-trump box-trump-2 box-game">
+                    <div class="col box box-trump box-trump-2 box-game hide-button">
                         <audio id="audio-trump-2" src="assets/audio/sound-trump-2.mp3"></audio>
                         <span>You're fired!</span>
                     </div>
-                    <div class="col box box-biden box-biden-2 box-game">
+                    <div class="col box box-biden box-biden-2 box-game hide-button">
                         <audio id="audio-biden-2" src="assets/audio/sound-biden-2.mp3"></audio>
                         <span>Full of shit!</span>
                     </div>
@@ -48,11 +87,11 @@
                 </div>
                 <div class="row">
                     <div class="col-3"></div>
-                    <div class="col box box-trump box-trump-3 box-game">
+                    <div class="col box box-trump box-trump-3 box-game hide-button">
                         <audio id="audio-trump-3" src="assets/audio/sound-trump-3.mp3"></audio>
                         <span>Fake news!</span>
                     </div>
-                    <div class="col box box-biden box-biden-3 box-game">
+                    <div class="col box box-biden box-biden-3 box-game hide-button">
                         <audio id="audio-biden-3" src="assets/audio/sound-biden-3.mp3"></audio>
                         <span>Hairy legs!</span>
                     </div>
@@ -61,15 +100,15 @@
                 <!-- User info -->
                 <div class="row mt-4">
                     <div class="col-1"></div>
-                    <div class="col box box-user-info">
+                    <div class="col box box-user-info hide-button">
                         <span class="mt-2" id="level">Level: 0</span>
                     </div>
-                    <div class="col box box-user-info">
-                        <button id="start">Start</button>
+                    <div class="col box box-user-info hide-button">
+                        <button id="start-2">Start</button>
                         <button class="hide-button" id="continue">Continue</button>
                         <button class="hide-button" id="retry">Retry</button>
                     </div>
-                    <div class="col box box-user-info score-count">
+                    <div class="col box box-user-info score-count hide-button">
                         <span class="mt-2" id="score">Score: 0</span>
                     </div>
                     <div class="col-1"></div>
