@@ -28,7 +28,7 @@ onload = function() {
     }, 2000);
 }
 
-$("#start-first").click(function(){
+$("#start").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
     
     setTimeout(function() {
@@ -53,7 +53,7 @@ $("#start-first").click(function(){
             setTimeout(function () {
                 audio.pause();    
                 $(".box-biden-1").removeClass("shake");
-            }, 2000);
+            }, 1000);
         audio.currentTime = 0;
     }, 0);
 
@@ -66,7 +66,7 @@ $("#start-first").click(function(){
             setTimeout(function () {
                 audio.pause();   
                 $(".box-trump-2").removeClass("shake");
-            }, 3000);
+            }, 1000);
         audio.currentTime = 0;
     }, 0);
 
@@ -79,7 +79,7 @@ $("#start-first").click(function(){
             setTimeout(function () {
                 audio.pause();    
                 $(".box-biden-2").removeClass("shake");
-            }, 4000);
+            }, 1000);
         audio.currentTime = 0;
     }, 0);
 
@@ -92,7 +92,7 @@ $("#start-first").click(function(){
             setTimeout(function () {
                 audio.pause();   
                 $(".box-trump-3").removeClass("shake");
-            }, 5000);
+            }, 1000);
         audio.currentTime = 0;
     }, 0);
 
@@ -105,23 +105,20 @@ $("#start-first").click(function(){
             setTimeout(function () {
                 audio.pause();    
                 $(".box-biden-3").removeClass("shake");
-            }, 6000);
+            }, 1000);
         audio.currentTime = 0;
     }, 0);
 
     setTimeout(function() {
         $(".box-user-info").removeClass("hide-button");
-    }, 0);
+        newGame();
+    }, 2000);
 
     // newGame(); //Clicking start button calls new game
 
     // TESTING - delete later
     console.log("start");
     console.log(game.difficulty);
-});
-
-$("#start").click(function(){
-    newGame(); //Clicking start button calls new game
 });
 
 $("#retry").click(function(){
