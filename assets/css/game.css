@@ -91,7 +91,7 @@ div span {
     border-color: blue;
 }
 
-.box-user-info {
+.box-user-info, box-user-info-volume-on, box-user-info-volume-off {
     border-color: black;
     background: white;
 }

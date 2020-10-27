@@ -111,6 +111,7 @@ $("#start").click(function(){
 
     setTimeout(function() {
         $(".box-user-info").removeClass("hide-button");
+        $(".box-user-info-volume-on").removeClass("hide-button");
         newGame();
     }, 2000);
 
@@ -120,6 +121,19 @@ $("#start").click(function(){
     console.log("start");
     console.log(game.difficulty);
 });
+
+$(".box-user-info-volume-on").on("click", function() {
+        $(".box-user-info-volume-on").addClass("hide-button");
+        $(".box-user-info-volume-off").removeClass("hide-button");
+        $("audio").prop("muted", true);
+        // console.log("Click!!");
+    });
+
+$(".box-user-info-volume-off").on("click", function() {
+        $(".box-user-info-volume-on").removeClass("hide-button");
+        $(".box-user-info-volume-off").addClass("hide-button");
+        $("audio").prop("muted", false);
+    });
 
 $("#retry").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
