@@ -32,7 +32,7 @@ $("#start").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
     
     setTimeout(function() {
-        $(".box-trump-1").removeClass("hide-button");
+        $(".box-trump-1").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-trump-1");
         audio.currentTime = 0;
         audio.play();
@@ -45,7 +45,7 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-biden-1").removeClass("hide-button");
+        $(".box-biden-1").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-biden-1");
         audio.currentTime = 0;
         audio.play();
@@ -58,7 +58,7 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-trump-2").removeClass("hide-button");
+        $(".box-trump-2").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-trump-2");
         audio.currentTime = 0;
         audio.play();
@@ -71,7 +71,7 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-biden-2").removeClass("hide-button");
+        $(".box-biden-2").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-biden-2");
         audio.currentTime = 0;
         audio.play();
@@ -84,7 +84,7 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-trump-3").removeClass("hide-button");
+        $(".box-trump-3").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-trump-3");
         audio.currentTime = 0;
         audio.play();
@@ -97,7 +97,7 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-biden-3").removeClass("hide-button");
+        $(".box-biden-3").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-biden-3");
         audio.currentTime = 0;
         audio.play();
@@ -110,8 +110,8 @@ $("#start").click(function(){
     }, 0);
 
     setTimeout(function() {
-        $(".box-user-info").removeClass("hide-button");
-        $(".box-user-info-volume-on").removeClass("hide-button");
+        $(".box-user-info").removeClass("hide-button", "style.css");
+        $(".box-user-info-volume-on").removeClass("hide-button", "style.css");
         newGame();
     }, 2000);
 
@@ -123,15 +123,15 @@ $("#start").click(function(){
 });
 
 $(".box-user-info-volume-on").on("click", function() {
-        $(".box-user-info-volume-on").addClass("hide-button");
-        $(".box-user-info-volume-off").removeClass("hide-button");
+        $(".box-user-info-volume-on").addClass("hide-button", "style.css");
+        $(".box-user-info-volume-off").removeClass("hide-button", "style.css");
         $("audio").prop("muted", true);
         // console.log("Click!!");
     });
 
 $(".box-user-info-volume-off").on("click", function() {
-        $(".box-user-info-volume-on").removeClass("hide-button");
-        $(".box-user-info-volume-off").addClass("hide-button");
+        $(".box-user-info-volume-on").removeClass("hide-button", "style.css");
+        $(".box-user-info-volume-off").addClass("hide-button", "style.css");
         $("audio").prop("muted", false);
     });
 
@@ -141,7 +141,7 @@ $("#retry").click(function(){
 });
 
 function newGame(){
-    $("#start").addClass("hide-button"); //Hides start button
+    $("#start").addClass("hide-button", "style.css"); //Hides start button
     
     game.level = 1; //Resets game variables
     game.count = 1;

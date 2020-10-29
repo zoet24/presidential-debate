@@ -1,29 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
-
-body {
-	font-family: 'Bowlby One SC', cursive;
-	font-size: 1.5rem;
-	padding: 0px;
-    text-align: center;
-}
-
-div span {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    line-height: 1;
-    margin: 5px auto;
-}
-
 .container-background {
 	height: 100vh;
+    width: 100%;
+
+	position: relative;
 
 	overflow: hidden;
 }
 
 .container-foreground {
 	height: 100vh;
+    width: 100%;
 
 	position: absolute;
 	
@@ -77,6 +63,15 @@ div span {
 	}
 }
 
+div span {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    line-height: 1;
+    margin: 5px auto;
+}
+
 .box {
     border-width: 6px;
     border-style: solid;
@@ -91,13 +86,11 @@ div span {
     border-color: blue;
 }
 
-.box-user-info, box-user-info-volume-on, box-user-info-volume-off {
+.box-user-info, .box-user-info-volume-on, .box-user-info-volume-off {
+    font-size: 1.25rem;
+    color: black;
     border-color: black;
     background: white;
-}
-
-.hide-button {
-    display: none;
 }
 
 button {
