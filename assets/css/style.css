@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
 body {
-    text-transform: uppercase;
-    text-align: center;
+	text-align: center;
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 2rem;
+	padding: 0px;
 }
 
-.box {
+/* .box {
     border-width: 2px;
     border-style: solid;
     margin: 4px auto;
@@ -23,10 +27,10 @@ body {
 
 .hide-button {
     display: none;
-}
+} */
 
 /*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
-.shake {
+/* .shake {
 	animation: shake 0.5s;
 }
 
@@ -42,4 +46,4 @@ body {
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
+} */

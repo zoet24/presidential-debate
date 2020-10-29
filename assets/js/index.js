@@ -1,21 +1,6 @@
-$('.start-button').click(function(e) { //Add delay to page change for animation https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
-  console.log("block");
-  e.preventDefault();
-  setTimeout(function(url) { window.location = url }, 2500, this.href);
-});
-
-$(".start-button").click(function(){
+$(".start-button").click(function(){ //Animation for index.html --> game.html transition
     var audio = document.getElementById("audio-wwe-bell");
     audio.currentTime = 0;
-    // $(".img-container-trump-initial").addClass("trump-slide");
-    // $(".img-container-biden-initial").addClass("biden-slide");
-
-    // setTimeout(function() {
-    //     $(".img-container-trump-initial").addClass("trump-slide");
-    // }, 0);
-    // setTimeout(function() {
-    //     $(".img-container-biden-initial").addClass("biden-slide");
-    // }, 0);
     setTimeout(function() {
         audio.play();
     }, 300)
@@ -28,4 +13,10 @@ $(".start-button").click(function(){
     setTimeout(function() {
         $("#home-title").addClass("hide-button");
     }, 800);
+});
+
+$('.start-button').click(function(e) { //Add delay to page change for animation https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
+  console.log("block");
+  e.preventDefault();
+  setTimeout(function(url) { window.location = url }, 2500, this.href);
 });
