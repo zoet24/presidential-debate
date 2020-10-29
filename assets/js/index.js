@@ -5,13 +5,14 @@ $(".start-button").click(function(){ //Animation for index.html --> game.html tr
         audio.play();
     }, 300)
     setTimeout(function() {
-        $("#home-cta-tutorial").addClass("hide-button");
+        $("#home-cta-tutorial").addClass("hide-button", "style.css");
     }, 400);
     setTimeout(function() {
-        $("#home-cta-start").addClass("hide-button");
+        $("#home-cta-start").addClass("hide-button", "style.css");
     }, 600);
     setTimeout(function() {
-        $("#home-title").addClass("hide-button");
+        $("#home-title").addClass("hide-button", "style.css");
+        $("#half-star").addClass("hide-button", "style.css");
     }, 800);
 });
 
