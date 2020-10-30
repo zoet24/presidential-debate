@@ -36,8 +36,9 @@
 #home-title-row {
     margin: 8.5% 0px 0px;
 
+    animation: shake 0.75s;
     animation-delay: 0s;
-}
+	animation-iteration-count: infinite;}
 
 #half-star {
     margin: 6px 0px 0px 4px;
@@ -68,15 +69,14 @@ h1 .h1-debate {
 }
 
 #home-cta-start {
+    animation: shake 0.75s;
     animation-delay: 0.25s;
+ 	animation-iteration-count: infinite;   
 }
 
 #home-cta-tutorial {
+    animation: shake 0.75s;
     animation-delay: 0.5s;
-}
-
-#home-title-row, #home-cta-start, #home-cta-tutorial {
-	animation: shake 0.75s;
 	animation-iteration-count: infinite;
 }
 
