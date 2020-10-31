@@ -63,13 +63,9 @@
 	}
 }
 
-.modal-body ul li {
-    list-style: none;
-}
-
 /* Modal https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 /* Customize the label (the container) */
-.difficulty {
+/* .difficulty {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -80,51 +76,51 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 /* Hide the browser's default checkbox */
-.difficulty input {
+/* .difficulty input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
-}
+} */
 
 /* Create a custom checkbox */
-.difficulty {
+/* .difficulty {
   position: absolute;
   top: 0;
   left: 0;
   height: 25px;
   width: 25px;
   background-color: #eee;
-}
+} */
 
 /* On mouse-over, add a grey background color */
-.difficulty:hover input ~ .checkmark {
+/* .difficulty:hover input ~ .checkmark {
   background-color: #ccc;
-}
+} */
 
 /* When the checkbox is checked, add a blue background */
-.difficulty input:checked ~ .checkmark {
+/* .difficulty input:checked ~ .checkmark {
   background-color: #2196F3;
-}
+} */
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.difficulty:after {
+/* .difficulty:after {
   content: "";
   position: absolute;
   display: none;
-}
+} */
 
 /* Show the checkmark when checked */
-.difficulty input:checked ~ .checkmark:after {
+/* .difficulty input:checked ~ .checkmark:after {
   display: block;
-}
+} */
 
 /* Style the checkmark/indicator */
-.difficulty .checkmark:after {
+/* .difficulty .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -134,8 +130,54 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-}
+} */
 /* Modal */
+
+#modal-header-1 {
+    font-size: 2.25rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+}
+
+.modal-content ul li {
+    list-style: none;
+}
+
+.opt input[type="radio"] {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.opt input[type="radio"]:checked ~ label {
+    color: red;
+}
+
+.modal-content ul li input:checked {
+    color: red;
+}
+
+#game-cta-start {
+    color: black;
+    background: white;
+    border: solid 6px black;
+    margin: 4px auto;
+    font-size: 2rem;
+
+    animation: shake 0.75s;
+ 	animation-iteration-count: infinite;
+}
+
+#game-cta-start:hover {
+    animation: shake 0.5s;
+	animation-iteration-count: infinite;
+    text-decoration: none;
+    border-width: 8px;
+}
 
 div span {
     display: flex;

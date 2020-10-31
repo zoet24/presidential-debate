@@ -28,39 +28,32 @@
 
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalCenter-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle-1">Pick your difficulty</h5>
-                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button> -->
-                    </div>
-                    <div class="modal-body">
-                            <ul class="difficulty">
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="2">Easy
-                                    <span class="checkmark"></span>
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="1" checked>Normal
-                                    <span class="checkmark"></span>
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="0.5">Hard
-                                    <span class="checkmark"></span>
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="0.25">Insane
-                                    <span class="checkmark"></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" id="start" data-dismiss="modal">Start</button>
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <header class="modal-title" id="modal-header-1">Pick your difficulty</header>
+                            <form>
+                                <ul class="difficulty p-0 m-0">
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-1" name="difficulty" value="2">
+                                        <label for="difOpt-1">Easy</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-2" name="difficulty" value="1" checked>
+                                        <label for="difOpt-2">Normal</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-3" name="difficulty" value="0.5">
+                                        <label for="difOpt-3">Hard</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-4" name="difficulty" value="0.25">
+                                        <label for="difOpt-4">Insane</label>
+                                    </li>
+                                </ul>
+                            </form>
+                            <button type="button" class="btn btn-secondary" id="game-cta-start" data-dismiss="modal">Start</button>
                         </div>
                     </div>
-                </div>
                 </div>
 
             <!-- Modal 2-->

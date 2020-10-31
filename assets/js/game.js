@@ -28,9 +28,9 @@ onload = function() {
     }, 2000);
 }
 
-$("#start").click(function(){
+$("#game-cta-start").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
-    
+
     setTimeout(function() {
         $(".box-trump-1").removeClass("hide-button", "style.css");
         var audio = document.getElementById("audio-trump-1");
