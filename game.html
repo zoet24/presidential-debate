@@ -22,76 +22,72 @@
 
             <!-- Modal 1-->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary hide-button" id="modal-button-1" data-toggle="modal" data-target="#exampleModalCenter-1">
+                <button type="button" class="btn hide-button" id="modal-1" data-toggle="modal" data-target="#modal-start">
                 Launch demo modal
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="modal-start" tabindex="-1" role="dialog" aria-labelledby="modal-start-header" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <header class="modal-title" id="modal-header-1">Pick your difficulty</header>
+                            <header id="modal-start-header">Pick your difficulty</header>
                             <form>
                                 <ul class="difficulty p-0 m-0">
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-1" name="difficulty" value="2">
-                                        <label for="difOpt-1">Easy</label>
+                                        <input type="radio" id="difOpt-start-1" name="difficulty" value="2">
+                                        <label for="difOpt-start-1">Easy</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-2" name="difficulty" value="1" checked>
-                                        <label for="difOpt-2">Normal</label>
+                                        <input type="radio" id="difOpt-start-2" name="difficulty" value="1" checked>
+                                        <label for="difOpt-start-2">Normal</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-3" name="difficulty" value="0.5">
-                                        <label for="difOpt-3">Hard</label>
+                                        <input type="radio" id="difOpt-start-3" name="difficulty" value="0.5">
+                                        <label for="difOpt-start-3">Hard</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-4" name="difficulty" value="0.25">
-                                        <label for="difOpt-4">Insane</label>
+                                        <input type="radio" id="difOpt-start-4" name="difficulty" value="0.25">
+                                        <label for="difOpt-start-4">Insane</label>
                                     </li>
                                 </ul>
                             </form>
-                            <button type="button" class="btn btn-secondary" id="game-cta-start" data-dismiss="modal">Start</button>
+                            <button type="button" id="game-cta-start" data-dismiss="modal">Start</button>
                         </div>
                     </div>
                 </div>
 
             <!-- Modal 2-->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary hide-button" id="modal-button-2" data-toggle="modal" data-target="#exampleModalCenter-2">
+                <button type="button" class="btn hide-button" id="modal-2" data-toggle="modal" data-target="#modal-retry">
                 Launch demo modal
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="modal-retry" tabindex="-1" role="dialog" aria-labelledby="modal-retry-header" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle-2">Difficulty</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                                <span>Vote vote vote!!</span>
-                                <ul class="difficulty">
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="2">Easy
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="1" checked>Normal
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="0.5">Hard
-                                </li>
-                                <li>
-                                    <input type="radio" class="difOpt" name="difficulty" value="0.25">Insane
-                                </li>
-                            </ul>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" id="retry" data-dismiss="modal">Retry</button>
-                            </div>
+                            <header id="modal-retry-header">Pick your difficulty</header>
+                            <form>
+                                <ul class="difficulty p-0 m-0">
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-retry-1" name="difficulty" value="2">
+                                        <label for="difOpt-retry-1">Easy</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-retry-2" name="difficulty" value="1" checked>
+                                        <label for="difOpt-retry-2">Normal</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-retry-3" name="difficulty" value="0.5">
+                                        <label for="difOpt-retry-3">Hard</label>
+                                    </li>
+                                    <li class="opt">
+                                        <input type="radio" id="difOpt-retry-4" name="difficulty" value="0.25">
+                                        <label for="difOpt-retry-4">Insane</label>
+                                    </li>
+                                </ul>
+                            </form>
+                            <button type="button" id="game-cta-retry" data-dismiss="modal">Retry</button>
                         </div>
                     </div>
                 </div>
@@ -135,16 +131,16 @@
                     <div class="col-3"></div>
                 </div>
                 <!-- User info -->
-                <div class="row mt-4">
-                    <div class="col-1"></div>
+                <div class="row-fixed row">
+                    <div class="col"></div>
                     <a href="index.html" class="col-1 box box-user-info hide-button" role="button">
                         <i class="fas fa-arrow-left" aria-hidden="true"></i>
                         <span class="sr-only">Return to home</span>
                     </a>
-                    <div class="col box box-user-info user-score-count hide-button">
+                    <div class="col-4 box box-user-info user-score-count hide-button">
                         <span class="mt-2" id="user-score">Score: 0</span>
                     </div>
-                    <div class="col box box-user-info high-score-count hide-button">
+                    <div class="col-4 box box-user-info high-score-count hide-button">
                         <span class="mt-2" id="high-score">High Score: 0</span>
                     </div>
                     <div class="col-1 box box-user-info-volume-on hide-button">
@@ -155,7 +151,7 @@
                         <i class="fas fa-volume-off" aria-hidden="true"></i>
                         <span class="sr-only">Volume off</span>
                     </div>
-                    <div class="col-1"></div>
+                    <div class="col"></div>
                 </div>
             </div>
         </div>

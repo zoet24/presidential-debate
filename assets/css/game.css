@@ -63,77 +63,18 @@
 	}
 }
 
-/* Modal https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
-/* Customize the label (the container) */
-/* .difficulty {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
+.modal {
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
 
-/* Hide the browser's default checkbox */
-/* .difficulty input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-} */
+.modal-content {
+    background: none;
+    border: none;
+}
 
-/* Create a custom checkbox */
-/* .difficulty {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-} */
-
-/* On mouse-over, add a grey background color */
-/* .difficulty:hover input ~ .checkmark {
-  background-color: #ccc;
-} */
-
-/* When the checkbox is checked, add a blue background */
-/* .difficulty input:checked ~ .checkmark {
-  background-color: #2196F3;
-} */
-
-/* Create the checkmark/indicator (hidden when not checked) */
-/* .difficulty:after {
-  content: "";
-  position: absolute;
-  display: none;
-} */
-
-/* Show the checkmark when checked */
-/* .difficulty input:checked ~ .checkmark:after {
-  display: block;
-} */
-
-/* Style the checkmark/indicator */
-/* .difficulty .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-} */
-/* Modal */
-
-#modal-header-1 {
+#modal-start-header, #modal-retry-header {
     font-size: 2.25rem;
     color: white;
     text-shadow:
@@ -145,6 +86,7 @@
 
 .modal-content ul li {
     list-style: none;
+    line-height: 1.25rem;
 }
 
 .opt input[type="radio"] {
@@ -154,19 +96,21 @@
 }
 
 .opt input[type="radio"]:checked ~ label {
-    color: red;
-}
+    font-size: 1.75rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;}
 
-.modal-content ul li input:checked {
-    color: red;
-}
-
-#game-cta-start {
+#game-cta-start, #game-cta-retry {
     color: black;
     background: white;
     border: solid 6px black;
     margin: 4px auto;
     font-size: 2rem;
+    width: 33vw;
 
     animation: shake 0.75s;
  	animation-iteration-count: infinite;
@@ -186,6 +130,13 @@ div span {
     flex-direction: column;
     line-height: 1;
     margin: 5px auto;
+}
+
+.row-fixed {
+    width: 100%;
+    
+    position: fixed;
+    bottom: 5%;
 }
 
 .box {
@@ -236,10 +187,6 @@ button {
 
 .box-biden-3 {
     transform:translate(5px, 10px) rotate(-7deg);
-}
-
-.hide-button {
-    display: none;
 }
 
 /*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
