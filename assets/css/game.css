@@ -190,8 +190,18 @@ button {
 }
 
 /*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
+.text-pop {
+    font-size: 1.75rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+}
+
 .shake {
-	animation: shake 0.5s;
+    animation: shake 0.5s;
 }
 
 @keyframes shake {

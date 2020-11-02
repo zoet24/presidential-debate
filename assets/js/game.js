@@ -287,6 +287,7 @@ function compareSequences() {
         }, 500);
         setTimeout(function() {
             gameRetry();
+            $("#game-btn").text("Retry?");
             document.getElementById("modal-difficulty-menu-btn").click(); // Retrigger difficulty menu modal
         }, 1000);
     }
@@ -359,6 +360,10 @@ function boxTrumpOne(){
     audio.currentTime = 0;
     audio.play();
     $(".box-trump-1").addClass("shake");
+    $(".box-trump-1").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-trump-1").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-1").removeClass("shake");
@@ -371,6 +376,10 @@ function boxBidenOne(){
     audio.currentTime = 0;
     audio.play();
     $(".box-biden-1").addClass("shake");
+    $(".box-biden-1").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-biden-1").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-1").removeClass("shake");
@@ -383,6 +392,10 @@ function boxTrumpTwo(){
     audio.currentTime = 0;
     audio.play();
     $(".box-trump-2").addClass("shake");
+    $(".box-trump-2").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-trump-2").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-2").removeClass("shake");
@@ -395,6 +408,10 @@ function boxBidenTwo(){
     audio.currentTime = 0;
     audio.play();
     $(".box-biden-2").addClass("shake");
+    $(".box-biden-2").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-biden-2").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-2").removeClass("shake");
@@ -407,6 +424,10 @@ function boxTrumpThree(){
     audio.currentTime = 0;
     audio.play();
     $(".box-trump-3").addClass("shake");
+    $(".box-trump-3").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-trump-3").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-3").removeClass("shake");
@@ -419,6 +440,10 @@ function boxBidenThree(){
     audio.currentTime = 0;
     audio.play();
     $(".box-biden-3").addClass("shake");
+    $(".box-biden-3").addClass("text-pop");
+        setTimeout(function () {
+            $(".box-biden-3").removeClass("text-pop");
+        }, 500);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-3").removeClass("shake");
