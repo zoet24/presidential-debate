@@ -1,5 +1,4 @@
-//Bug fix credit - https://github.com/MatthewYong/twufo, $(".box-game").css("cursor", "");
-//Game variables
+// Game variables
 var game = {
     level: 0,
     count: 0,
@@ -18,17 +17,19 @@ var game = {
     userSequenceArr: [],
 }
 
+// When page loads, animate background images and trigger difficulty menu
 onload = function() {
     setTimeout(function() {
         $(".img-container-trump-initial").addClass("trump-slide");
         $(".img-container-biden-initial").addClass("biden-slide");
     }, 1000);
     setTimeout(function() {
-        document.getElementById("modal-1").click(); // Click on the checkbox
+        document.getElementById("modal-difficulty-menu-btn").click();
     }, 2000);
 }
 
-$("#game-cta-start").click(function(){
+// When start button is clicked set difficulty, animate game boxes, animate user info boxes and trigger new game
+$("#game-btn").click(function(){
     game.difficulty = $('input[name=difficulty]:checked').val();
 
     setTimeout(function() {
@@ -119,110 +120,25 @@ $("#game-cta-start").click(function(){
     }, 2000);
 
     // TESTING - delete later
-    console.log("start");
-    console.log(game.difficulty);
+    // console.log("start");
+    // console.log(game.difficulty);
 });
 
+// Turn sound off
 $(".box-user-info-volume-on").on("click", function() {
         $(".box-user-info-volume-on").addClass("hide-button", "style.css");
         $(".box-user-info-volume-off").removeClass("hide-button", "style.css");
         $("audio").prop("muted", true);
     });
 
+// Turn sound on
 $(".box-user-info-volume-off").on("click", function() {
         $(".box-user-info-volume-on").removeClass("hide-button", "style.css");
         $(".box-user-info-volume-off").addClass("hide-button", "style.css");
         $("audio").prop("muted", false);
     });
 
-$("#game-cta-retry").click(function(){
-    gameRetry();
-    
-    game.difficulty = $('input[name=difficulty]:checked').val();
-
-    setTimeout(function() {
-        $(".box-trump-1").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-trump-1");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-trump-1").addClass("shake");
-            setTimeout(function () {
-                audio.pause();   
-                $(".box-trump-1").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        $(".box-biden-1").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-biden-1");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-biden-1").addClass("shake");
-            setTimeout(function () {
-                audio.pause();    
-                $(".box-biden-1").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        $(".box-trump-2").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-trump-2");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-trump-2").addClass("shake");
-            setTimeout(function () {
-                audio.pause();   
-                $(".box-trump-2").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        $(".box-biden-2").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-biden-2");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-biden-2").addClass("shake");
-            setTimeout(function () {
-                audio.pause();    
-                $(".box-biden-2").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        $(".box-trump-3").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-trump-3");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-trump-3").addClass("shake");
-            setTimeout(function () {
-                audio.pause();   
-                $(".box-trump-3").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        $(".box-biden-3").removeClass("hide-button", "style.css");
-        var audio = document.getElementById("audio-biden-3");
-        audio.currentTime = 0;
-        audio.play();
-        $(".box-biden-3").addClass("shake");
-            setTimeout(function () {
-                audio.pause();    
-                $(".box-biden-3").removeClass("shake");
-            }, 1000);
-        audio.currentTime = 0;
-    }, 0);
-
-    setTimeout(function() {
-        newGame(); //Clicking start button calls new game
-    }, 1500);
-});
-
+// 
 function newGame(){   
     game.level = 1; //Resets game variables
     game.count = 1;
@@ -237,8 +153,8 @@ function newGame(){
     
     // TESTING - delete later
     // console.log("newGame");
-    console.log("NEW GAME", "Level:", game.level, "Count:", game.count);
-    console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);    
+    // console.log("NEW GAME", "Level:", game.level, "Count:", game.count);
+    // console.log("comp", game.compSequenceArr, "show", game.showSequenceArr, "user", game.userSequenceArr);    
 }
 
 function showScore() {
@@ -390,11 +306,9 @@ function compareSequences() {
                 $(".box-biden-3").addClass("hide-button", "style.css");
             }, 500);
             setTimeout(function() {
-                document.getElementById("modal-2").click(); // Click on the checkbox
+                gameRetry();
+                document.getElementById("modal-difficulty-menu-btn").click(); // Click on the checkbox
             }, 1000);
-            // $("#game-cta-retry").click(function() {
-            //     gameRetry();
-            // });
         }
         else {
             if (game.userSequenceArr.length == game.compSequenceArr.length) { //User turn successful

@@ -20,74 +20,38 @@
                 <img src="assets/images/index/biden-no-background.png">
             </div>
 
-            <!-- Modal 1-->
+            <!-- Modal-->
                 <!-- Button trigger modal -->
-                <button type="button" class="btn hide-button" id="modal-1" data-toggle="modal" data-target="#modal-start">
+                <button type="button" class="btn hide-button" id="modal-difficulty-menu-btn" data-toggle="modal" data-target="#modal-difficulty-menu">
                 Launch demo modal
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="modal-start" tabindex="-1" role="dialog" aria-labelledby="modal-start-header" aria-hidden="true">
+                <div class="modal fade" id="modal-difficulty-menu" tabindex="-1" role="dialog" aria-labelledby="modal-difficulty-menu-header" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                            <header id="modal-start-header">Pick your difficulty</header>
+                            <header id="modal-difficulty-menu-header">Pick your difficulty</header>
                             <form>
                                 <ul class="difficulty p-0 m-0">
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-start-1" name="difficulty" value="2">
-                                        <label for="difOpt-start-1">Easy</label>
+                                        <input type="radio" id="difOpt-1" name="difficulty" value="2">
+                                        <label for="difOpt-1">Easy</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-start-2" name="difficulty" value="1" checked>
-                                        <label for="difOpt-start-2">Normal</label>
+                                        <input type="radio" id="difOpt-2" name="difficulty" value="1" checked>
+                                        <label for="difOpt-2">Normal</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-start-3" name="difficulty" value="0.5">
-                                        <label for="difOpt-start-3">Hard</label>
+                                        <input type="radio" id="difOpt-3" name="difficulty" value="0.5">
+                                        <label for="difOpt-3">Hard</label>
                                     </li>
                                     <li class="opt">
-                                        <input type="radio" id="difOpt-start-4" name="difficulty" value="0.25">
-                                        <label for="difOpt-start-4">Insane</label>
+                                        <input type="radio" id="difOpt-4" name="difficulty" value="0.25">
+                                        <label for="difOpt-4">Insane</label>
                                     </li>
                                 </ul>
                             </form>
-                            <button type="button" id="game-cta-start" data-dismiss="modal">Start</button>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- Modal 2-->
-                <!-- Button trigger modal -->
-                <button type="button" class="btn hide-button" id="modal-2" data-toggle="modal" data-target="#modal-retry">
-                Launch demo modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="modal-retry" tabindex="-1" role="dialog" aria-labelledby="modal-retry-header" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <header id="modal-retry-header">Pick your difficulty</header>
-                            <form>
-                                <ul class="difficulty p-0 m-0">
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-retry-1" name="difficulty" value="2">
-                                        <label for="difOpt-retry-1">Easy</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-retry-2" name="difficulty" value="1" checked>
-                                        <label for="difOpt-retry-2">Normal</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-retry-3" name="difficulty" value="0.5">
-                                        <label for="difOpt-retry-3">Hard</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-retry-4" name="difficulty" value="0.25">
-                                        <label for="difOpt-retry-4">Insane</label>
-                                    </li>
-                                </ul>
-                            </form>
-                            <button type="button" id="game-cta-retry" data-dismiss="modal">Retry</button>
+                            <button type="button" id="game-btn" data-dismiss="modal">Start</button>
                         </div>
                     </div>
                 </div>

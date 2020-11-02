@@ -74,7 +74,7 @@
     border: none;
 }
 
-#modal-start-header, #modal-retry-header {
+#modal-difficulty-menu-header {
     font-size: 2.25rem;
     color: white;
     text-shadow:
@@ -104,7 +104,7 @@
     -2px 2px 0 #000,
      2px 2px 0 #000;}
 
-#game-cta-start, #game-cta-retry {
+#game-btn {
     color: black;
     background: white;
     border: solid 6px black;
@@ -116,7 +116,7 @@
  	animation-iteration-count: infinite;
 }
 
-#game-cta-start:hover {
+#game-btn:hover {
     animation: shake 0.5s;
 	animation-iteration-count: infinite;
     text-decoration: none;
