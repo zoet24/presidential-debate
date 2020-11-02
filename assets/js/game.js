@@ -277,6 +277,79 @@ function userTurn() {
 // compareSequences() compares the userSequenceArr[] to the compSequenceArr[] and triggers either gameRetry(), gameContinue() or userTurn()
 function compareSequences() {
     if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { //User turn unsuccessful
+        
+        // incorrectSequence()
+        correctValue = game.compSequenceArr[game.count];
+        
+        var audio = document.getElementById("audio-wwe-bell");
+        audio.currentTime = 0;
+        setTimeout(function() {
+            audio.play();
+        }, 500);
+
+        setTimeout(function() {
+            if (correctValue == 0) {
+                boxTrumpOne();
+            }
+            if (correctValue == 1) {
+                boxBidenOne();
+            }
+            if (correctValue == 2) {
+                boxTrumpTwo();
+            }
+            if (correctValue == 3) {
+                boxBidenTwo();
+            }
+            if (correctValue == 4) {
+                boxTrumpThree();
+            }
+            if (correctValue == 5) {
+                boxBidenThree();
+            }
+        }, 1500);
+
+        setTimeout(function() {
+            if (correctValue == 0) {
+                boxTrumpOne();
+            }
+            if (correctValue == 1) {
+                boxBidenOne();
+            }
+            if (correctValue == 2) {
+                boxTrumpTwo();
+            }
+            if (correctValue == 3) {
+                boxBidenTwo();
+            }
+            if (correctValue == 4) {
+                boxTrumpThree();
+            }
+            if (correctValue == 5) {
+                boxBidenThree();
+            }
+        }, 2600);
+
+        setTimeout(function() {
+            if (correctValue == 0) {
+                boxTrumpOne();
+            }
+            if (correctValue == 1) {
+                boxBidenOne();
+            }
+            if (correctValue == 2) {
+                boxTrumpTwo();
+            }
+            if (correctValue == 3) {
+                boxBidenTwo();
+            }
+            if (correctValue == 4) {
+                boxTrumpThree();
+            }
+            if (correctValue == 5) {
+                boxBidenThree();
+            }
+        }, 3700);
+
         setTimeout(function() {
             $(".box-trump-1").addClass("hide-button", "style.css");
             $(".box-trump-2").addClass("hide-button", "style.css");
@@ -284,12 +357,13 @@ function compareSequences() {
             $(".box-biden-1").addClass("hide-button", "style.css");
             $(".box-biden-2").addClass("hide-button", "style.css");
             $(".box-biden-3").addClass("hide-button", "style.css");
-        }, 500);
+        }, 4800);
+
         setTimeout(function() {
             gameRetry();
             $("#game-btn").text("Retry?");
             document.getElementById("modal-difficulty-menu-btn").click(); // Retrigger difficulty menu modal
-        }, 1000);
+        }, 5200);
     }
     else {
         if (game.userSequenceArr.length == game.compSequenceArr.length) { //User turn successful
@@ -365,7 +439,7 @@ function boxTrumpOne(){
     $(".box-trump-1").addClass("text-pop");
         setTimeout(function () {
             $(".box-trump-1").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-1").removeClass("shake");
@@ -381,7 +455,7 @@ function boxBidenOne(){
     $(".box-biden-1").addClass("text-pop");
         setTimeout(function () {
             $(".box-biden-1").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-1").removeClass("shake");
@@ -397,7 +471,7 @@ function boxTrumpTwo(){
     $(".box-trump-2").addClass("text-pop");
         setTimeout(function () {
             $(".box-trump-2").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-2").removeClass("shake");
@@ -413,7 +487,7 @@ function boxBidenTwo(){
     $(".box-biden-2").addClass("text-pop");
         setTimeout(function () {
             $(".box-biden-2").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-2").removeClass("shake");
@@ -429,7 +503,7 @@ function boxTrumpThree(){
     $(".box-trump-3").addClass("text-pop");
         setTimeout(function () {
             $(".box-trump-3").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();   
             $(".box-trump-3").removeClass("shake");
@@ -445,7 +519,7 @@ function boxBidenThree(){
     $(".box-biden-3").addClass("text-pop");
         setTimeout(function () {
             $(".box-biden-3").removeClass("text-pop");
-        }, 500);
+        }, 450);
         setTimeout(function () {
             audio.pause();    
             $(".box-biden-3").removeClass("shake");
