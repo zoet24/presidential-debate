@@ -3,7 +3,7 @@ var game = {
     level: 0,
     count: 0,
     userScore: 0,
-    highScore: 0,
+    highScore: localStorage.getItem("highScore"),
     difficulty: 1,
 
     scoreMultiplier: 1,
@@ -350,6 +350,8 @@ function calculateScore() {
     if (game.userScore > game.highScore) {
         game.highScore = game.userScore;
     }
+
+    localStorage.setItem('highScore', game.highScore);
 
     showScore();
 }
