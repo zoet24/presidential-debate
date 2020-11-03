@@ -2,15 +2,53 @@
 <html lang="en-GB">
     
     <head>
-        <title>Presidential Debate</title>
+        <title>Presidential Debate | Tutorial</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />        
+        <link rel="stylesheet" type="text/css" href="assets/css/tutorial.css" />
     </head>
 
     <body>
-        <p>Presidential Debate - Tutorial</p>
+        <div class="container-background">
+            <!-- Background images -->
+            <div class="img-container-trump-initial">
+                <img src="assets/images/index/trump-no-background.png">
+            </div>
+            <div class="img-container-biden-initial">
+                <img src="assets/images/index/biden-no-background.png">
+            </div>
+            <!-- Carousel -->
+            <div class="container-foreground">
+                <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" alt="First slide">
+                            Pick your difficulty - you will score more points at a higher difficulty but it will be harder to keep up!
+                        </div>
+                        <div class="carousel-item" alt="Second slide">
+                            Score more points by copying the pattern played by the computer!
+                        </div>
+                        <div class="carousel-item" alt="Third slide">
+                            If you make a mistake, retry and try to beat your high score!
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
 
     <!--Link to Bootstrap CDN-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
@@ -23,7 +61,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.js">
         </script>
     <!--Link to script game.js-->
-    	<script src="assets/js/game.js">
+    	<script src="assets/js/tutorial.js">
         </script>
 
     </body>
