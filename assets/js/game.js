@@ -151,7 +151,12 @@ function newGame(){
 // showScore() displays userScore and highScore
 function showScore() {
     $('.user-score-count span').text(`Score: `+game.userScore);
+    if (game.highScore === null) {
+        game.highScore = 0;
+    }
+    else {
     $('.high-score-count span').text(`High Score: `+game.highScore);
+    }
 }
 
 // newLevel() resets sequence arrays to 0 so a new sequence can be generated and triggers compTurn()
