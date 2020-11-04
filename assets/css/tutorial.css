@@ -34,5 +34,63 @@
 }
 
 .carousel {
-    height: 100%;
+    height: 90%;
+    margin: 2.5%;
+
+    position: relative;
+
+    background: rgba(0,0,0,0.2);
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+   width: 1rem;
+   height: 1rem;
+   margin-left: .5rem;
+   margin-right: .5rem;
+   border-radius: 50%;
+   border: black solid 3px;
+}
+
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 7.5% 0;
+}
+
+.tutorial-image {
+    border: black solid 1px;
+    width: 70%;
+    height: 50vh;
+}
+
+.tutorial-text {
+    font-size: 2.25rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+}
+
+ol.carousel-indicators li.active {
+   background: white;
+}
+
+.carousel-control {
+    opacity: 1;
+}
+
+.prev-icon .fas, .next-icon .fas {
+    font-size: 4rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
 }

@@ -11,44 +11,58 @@
     </head>
 
     <body>
-        <div class="container-background">
+        <!-- <div class="container-background"> -->
             <!-- Background images -->
-            <div class="img-container-trump-initial">
+            <!-- <div class="img-container-trump-initial">
                 <img src="assets/images/index/trump-no-background.png">
             </div>
             <div class="img-container-biden-initial">
                 <img src="assets/images/index/biden-no-background.png">
-            </div>
+            </div> -->
             <!-- Carousel -->
             <div class="container-foreground">
-                <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+                
+                <div id="carousel" class="carousel slide" data-interval="false">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active" alt="First slide">
-                            Pick your difficulty - you will score more points at a higher difficulty but it will be harder to keep up!
+                            <div class="carousel-content">
+                                <div class="tutorial-image"></div>
+                                <span class="tutorial-text">Pick your difficulty!</span>
+                            </div>
                         </div>
                         <div class="carousel-item" alt="Second slide">
-                            Score more points by copying the pattern played by the computer!
+                            <div class="carousel-content">
+                                <div class="tutorial-image"></div>
+                                <span class="tutorial-text">Copy the pattern!!</span>
+                            </div>
                         </div>
                         <div class="carousel-item" alt="Third slide">
-                            If you make a mistake, retry and try to beat your high score!
+                            <div class="carousel-content">
+                                <div class="tutorial-image"></div>
+                                <span class="tutorial-text">Beat your high score!!!</span>
+                            </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <a class="carousel-control carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="prev-icon" aria-hidden="true">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <a class="carousel-control carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="next-icon" aria-hidden="true">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
 
     <!--Link to Bootstrap CDN-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
