@@ -15,6 +15,8 @@
 	
 	top: 0px;
 	left: 0px;
+
+    background: rgba(0,0,0,0.4);
 }
 
 .img-container-trump-initial {
@@ -33,13 +35,33 @@
 	right: -35px;
 }
 
+#tutorial-close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    z-index: 2;
+
+    font-size: 2.25rem;
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+}
+
+/* #tutorial-close i {
+    height: 40px;
+    width: 40px;
+    line-height: 35px;
+    border: solid black 3px;
+    border-radius: 25%;
+    background-color: white;
+} */
+
 .carousel {
-    height: 90%;
-    margin: 2.5%;
-
-    position: relative;
-
-    background: rgba(0,0,0,0.2);
+    height: 100%;
 }
 
 ol.carousel-indicators li,
@@ -58,13 +80,13 @@ ol.carousel-indicators li.active {
     justify-content: center;
     flex-direction: column;
 
-    margin: 7.5% 0;
+    margin: 5% 0;
 }
 
 .tutorial-image {
     border: black solid 1px;
     width: 70%;
-    height: 50vh;
+    height: 60vh;
 }
 
 .tutorial-text {
@@ -75,6 +97,10 @@ ol.carousel-indicators li.active {
     2px -2px 0 #000,
     -2px 2px 0 #000,
      2px 2px 0 #000;
+}
+
+.carousel-indicators {
+    margin-bottom: 5%;
 }
 
 ol.carousel-indicators li.active {
