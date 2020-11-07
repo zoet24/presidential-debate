@@ -83,10 +83,19 @@ ol.carousel-indicators li.active {
     margin: 5% 0;
 }
 
-.tutorial-image {
+#carousel-content-slideshow {
     border: black solid 1px;
     width: 70%;
     height: 60vh;
+
+    position: relative;
+}
+
+#carousel-content-slideshow > img {
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
 }
 
 .tutorial-text {

@@ -147,10 +147,12 @@ div span {
 
 .box-trump {
     border-color: red;
+    background: rgba(250,250,250,0.5);
 }
 
 .box-biden {
     border-color: blue;
+    background: rgba(250,250,250,0.5);
 }
 
 .box-user-info, .box-user-info-volume-on, .box-user-info-volume-off {
