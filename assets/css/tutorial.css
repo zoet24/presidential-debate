@@ -51,15 +51,6 @@
      2px 2px 0 #000;
 }
 
-/* #tutorial-close i {
-    height: 40px;
-    width: 40px;
-    line-height: 35px;
-    border: solid black 3px;
-    border-radius: 25%;
-    background-color: white;
-} */
-
 .carousel {
     height: 100%;
 }
@@ -83,7 +74,11 @@ ol.carousel-indicators li.active {
     margin: 5% 0;
 }
 
-#carousel-content-slideshow {
+.carousel-content > img {
+    width: 70%;
+}
+
+/* #carousel-content-slideshow {
     border: black solid 1px;
     width: 70%;
     height: 60vh;
@@ -96,7 +91,7 @@ ol.carousel-indicators li.active {
 
     top: 0px;
     left: 0px;
-}
+} */
 
 .tutorial-text {
     font-size: 2.25rem;
