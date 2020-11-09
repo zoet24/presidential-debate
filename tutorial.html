@@ -11,22 +11,22 @@
     </head>
 
     <body>
+        <!-- Background images -->
         <div class="container-background">
-            <!-- Background images -->
             <div class="img-container-trump-initial">
                 <img src="assets/images/index/trump-no-background.png">
             </div>
             <div class="img-container-biden-initial">
                 <img src="assets/images/index/biden-no-background.png">
             </div>
-            <!-- Carousel -->
-            <div class="container-foreground">
-
-                <a href="index.html" id="tutorial-close" role="button">
+            <!-- Foreground text -->
+            <div class="container-foreground container-foreground-opaque">
+                <!-- Close button -->
+                <a href="index.html" class="tutorial-text" id="tutorial-close" role="button">
                     <i>X</i>
                     <span class="sr-only">Close tutorial</span>
                 </a>
-
+                <!-- Carousel -->
                 <div id="carousel" class="carousel slide" data-interval="false">
                     <ol class="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -89,7 +89,6 @@
                 </div>
             </div>
         </div>
-
     <!--Link to Bootstrap CDN-->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
         </script>
@@ -103,7 +102,5 @@
     <!--Link to script game.js-->
     	<script src="assets/js/tutorial.js">
         </script>
-
     </body>
-
 </html>

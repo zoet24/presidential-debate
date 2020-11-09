@@ -136,15 +136,15 @@ $(".box-user-info-volume-off").on("click", function() {
 
 // newGame() resets variables, shows userScore and triggers newLevel()
 function newGame(){   
-    game.level = 1;
-    game.count = 1;
+    game.level = 3; // Initial round is 3 turns
+    game.count = 0;
 
     game.prev = 0;
     game.next = 0;
 
     game.showSequenceArr = [];
 
-    showScore(); //Shows userScore (= 0)
+    showScore(); // Shows userScore (= 0)
     newLevel();
 }
 
@@ -281,7 +281,7 @@ function userTurn() {
 
 // compareSequences() compares the userSequenceArr[] to the compSequenceArr[] and triggers either gameRetry(), gameContinue() or userTurn()
 function compareSequences() {
-    if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { //User turn unsuccessful
+    if (game.userSequenceArr[game.count] != game.compSequenceArr[game.count]) { // User turn unsuccessful
         
         // incorrectSequence()
         correctValue = game.compSequenceArr[game.count];
@@ -367,18 +367,18 @@ function compareSequences() {
         setTimeout(function() {
             gameRetry();
             $("#game-btn").text("Retry?");
-            document.getElementById("modal-difficulty-menu-btn").click(); // Retrigger difficulty menu modal
+            document.getElementById("modal-difficulty-menu-btn").click();
         }, 5200);
     }
     else {
-        if (game.userSequenceArr.length == game.compSequenceArr.length) { //User turn successful
-            game.count = 0;
+        if (game.compSequenceArr.length === game.userSequenceArr.length) { // User turn successful - trigger gameContinue()
             calculateScore();
+            game.count = 0;
             setTimeout(function() {
                 gameContinue();
             }, 250);
         }
-        else { //User turn still in progress
+        else { // User turn still in progress - trigger userTurn()
             game.count++;
             calculateScore();
             userTurn();

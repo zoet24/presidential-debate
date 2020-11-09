@@ -162,6 +162,10 @@ div span {
     background: white;
 }
 
+.box-user-info:focus {
+    color: black;
+}
+
 button {
     border: none;
     background: none;
@@ -191,7 +195,6 @@ button {
     transform:translate(5px, 10px) rotate(-7deg);
 }
 
-/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
 .text-pop {
     font-size: 1.75rem;
     color: white;
@@ -202,6 +205,7 @@ button {
      2px 2px 0 #000;
 }
 
+/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
 .shake {
     animation: shake 0.5s;
 }

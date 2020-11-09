@@ -13,11 +13,11 @@ function slide(){
     setTimeout(function() {
         $(".image-2").addClass("hide-button");
         $(".image-3").removeClass("hide-button");
-    }, 250);
+    }, 50);
     setTimeout(function() {
         $(".image-3").addClass("hide-button");
         $(".image-4").removeClass("hide-button");
-    }, 500);
+    }, 300);
     setTimeout(function() {
         $(".image-4").addClass("hide-button");
         $(".image-5").removeClass("hide-button");

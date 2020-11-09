@@ -38,7 +38,8 @@
 
     animation: shake 0.75s;
     animation-delay: 0s;
-	animation-iteration-count: infinite;}
+	animation-iteration-count: infinite;
+}
 
 #half-star {
     margin: 6px 0px 0px 4px;
