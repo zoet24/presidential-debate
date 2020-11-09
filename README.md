@@ -1,15 +1,16 @@
 `python3 -m http.server`
-https://zoet24.github.io/presidential-debate/
 
 # Presidential Debate
 
 ## Code Institute: Milestone Project 2
 
-Intro
+Amiresponsive photo
 
-This was the second of four Milestone Projects required to pass the Full Stack Web Development Program at _Code Institute_. The main requirements were to build an interactive front-end site which responds to the users' actions using HTML, CSS and JavaScript.
+_Presidential Debate_ is a satirical memory game that pits the player against the computer, challenging them to repeat the increasingly complicated patterns with an amusing political twist. I wanted to develop my JavaScript skills by designing a "Bop-It" program and, after watching the first presidential debate between Joe Biden and Donald Trump, thought a fun variation on the classic game would be to replace the standard "Bop-It" noises with soundbites of the two candidates shouting at each other.
 
-Click [here](https://github.com/zoet24/presidential-debate) to view the Github repository for the project, and click here to view the live website.
+This was the second of four Milestone Projects required to pass the Full Stack Web Development Program at _Code Institute_. The main requirements were to build an interactive front-end site which responds to the users' actions using HTML, CSS, JavaScript and JQuery.
+
+Click [here](https://github.com/zoet24/presidential-debate) to view the Github repository for the project, and click [here](https://zoet24.github.io/presidential-debate/) to view the live website.
 
 ## Table of Contents
 
@@ -49,16 +50,35 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
 
 ## UX Design
 ### Main aims
+- To develop my JavaScript and JQuery skills
+- Create fun and challenging game
 ### User stories
+- As a user, I want the website to be aesthetically pleasing and easy to navigate.
+- As a user, I want the game to load quickly and not lag.
+- As a user, I want to enjoy playing the game.
+- As a user, I want clear instructions on how to play the game so I know what to do.
+- As a user, I want to be able to select an easy difficulty so I can get the hang of the game.
+- As a user, I want to be able to select a harder difficulty so I can challenge myself when I know how to play.
+- As a user, I want to be able to see my high score so I can try to beat it.
+- As a user, I want to receive visual and audio feedback when I play the game correctly so I know I've done it right.
+- As a user, I want to receive visual and audio feedback when I play the game incorrectly so I know that I've made a mistake.
+- As a user, I want to be able to turn the sound on and off depending on where I'm playing it.
 #### Project stakeholder
 #### New users
 #### Returning users
 
 ## Design Process
 
-1. **Strategy plane:**
+1. **Strategy plane:** My primary aim for this project was to create an aesthetically pleasing game with an amusing political twist that would entertain a wide range of users. My secondary aim was to build upon the HTML and CSS3 skills I had learnt in the first section of the _Code Institute_ course content, and develop the JavaScript and JQuery skills I had learnt in the second section. ADD MORE
 
-2. **Scope plane:**
+2. **Scope plane:** After establishing the main aims of this project, I started looking for inspiration in similar games that already existed. I found these previous _Code Institue_ MS2 projects particularly helpful:
+- [Memory Game by shaamuus](https://shaamuus.github.io/milestone-project-2/)
+- [TWUFO by matthewyong](https://matthewyong.github.io/twufo/index.html)
+- [Bop It! by hschafer2017](https://hschafer2017.github.io/Stream-Two-Project/)
+
+These other pages were also userful:
+- [Simon Says Tutorial by Dan Purdy](https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/)
+- [Bop It! by GreenSock](https://codepen.io/jkantner/pen/YVJVzW)
 
 3. **Structure plane:**
 
@@ -73,6 +93,8 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
 #### Tutorial
 #### Game
 ### Features left to implement
+- Share highscore/game on social media
+- Choose sounds/politicians to fight
 
 ## Technologies used
 ### Languages and frameworks
