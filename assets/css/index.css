@@ -41,24 +41,8 @@
 	animation-iteration-count: infinite;
 }
 
-#half-star {
-    margin: 6px 0px 0px 4px;
-    height: 95%;
-}
-
-h1 {
-	font-size: 2.85rem;
-    color: white;
-    text-shadow:
-   -6px -6px 0 #000,  
-    6px -6px 0 #000,
-    -6px 6px 0 #000,
-     6px 6px 0 #000;
-     line-height: 60px;
-}
-
-h1 .h1-debate {
-    font-size: 5.5rem;
+#home-title {
+    width: 100%;
 }
 
 #home-cta-start, #home-cta-tutorial {
