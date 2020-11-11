@@ -15,19 +15,15 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
 ## Table of Contents
 
 - [UX Design](#ux-design)
-    - [Main aims](#main-aims)
-    - [User stories](#user-stories)
-        - [Project stakeholder](#project-stakeholder)
-        - [New users](#new-users)
-        - [Returning users](#returning-users)
-- [Design Process](#design-process)
-- [Features](#features)
-    - [Existing features](#existing-features)
-        - [Consistent features](#consistent-features)
-        - [Home](#home)
-        - [Tutorial](#tutorial)
-        - [Game](#game)
-    - [Features left to implement](#features-left-to-implement)
+    - [User stories - done](#user-stories)
+    - [Design Process](#design-process)
+    - [Features](#features)
+        - [Existing features](#existing-features)
+            - [Consistent features](#consistent-features)
+            - [Home](#home)
+            - [Tutorial](#tutorial)
+            - [Game](#game)
+        - [Features left to implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
     - [Languages and frameworks](#languages-and-frameworks)
     - [Additional tools used](#additional-tools-used)
@@ -49,25 +45,27 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
 - [Credits](#credits)
 
 ## UX Design
-### Main aims
-- To develop my JavaScript and JQuery skills
-- Create fun and challenging game
 ### User stories
-- As a user, I want the website to be aesthetically pleasing and easy to navigate.
-- As a user, I want the game to load quickly and not lag.
-- As a user, I want to enjoy playing the game.
-- As a user, I want clear instructions on how to play the game so I know what to do.
-- As a user, I want to be able to select an easy difficulty so I can get the hang of the game.
-- As a user, I want to be able to select a harder difficulty so I can challenge myself when I know how to play.
-- As a user, I want to be able to see my high score so I can try to beat it.
-- As a user, I want to receive visual and audio feedback when I play the game correctly so I know I've done it right.
-- As a user, I want to receive visual and audio feedback when I play the game incorrectly so I know that I've made a mistake.
-- As a user, I want to be able to turn the sound on and off depending on where I'm playing it.
-#### Project stakeholder
-#### New users
-#### Returning users
+I started the design process for _Presidential Debate_ by considering the goals of the site owner (me) and the site users (new players and returning players).
 
-## Design Process
+**Site owner**
+1. As the site owner, I want the site users to enjoy playing the game so that the game becomes popular.
+2. As the site owner, I want the website to be aesthetically pleasing to demonstrate my ability to code in HTML and CSS and to create a positive UX experience for the site users.
+3. As the site owner, I want the game to function well to demonstrate my ability to code in JavaScript and JQuery and to create a positive UX experience for the site users.
+
+**Site users**
+1. As a site user, I want to enjoy playing the game.
+2. As a site user, I want the game to load quickly and not lag so I am not distracted from playing the game.
+3. As a site user, I want to receive visual and audio feedback when I play the game correctly so I know what I've done right.
+4. As a site user, I want to receive visual and audio feedback when I play the game incorrectly so I know that I've made a mistake.
+5. As a site user, I want to be able to turn the sound on and off depending on my surroundings.
+6. As a new site user, I want the website to be easy to navigate so I can find the game and the instructions quickly.
+7. As a new site user, I want clear instructions on how the game works so I can start playing quickly.
+8. As a new site user, I want to be able to select an easy difficulty so I can get the hang of the game.
+9. As a returning site user, I want to be able to select a harder difficulty so I can challenge myself and score more points.
+10. As a returning site user, I want to be able to see my high score so I can try to beat it.
+
+### Design Process
 
 1. **Strategy plane:** My primary aim for this project was to create an aesthetically pleasing game with an amusing political twist that would entertain a wide range of users. My secondary aim was to build upon the HTML and CSS3 skills I had learnt in the first section of the _Code Institute_ course content, and develop the JavaScript and JQuery skills I had learnt in the second section. ADD MORE
 
@@ -86,13 +84,13 @@ These other pages were also userful:
 
 5. **Surface plane:**
 
-## Features
-### Existing features
-#### Consistent features
-#### Home
-#### Tutorial
-#### Game
-### Features left to implement
+### Features
+#### Existing features
+##### Consistent features
+##### Home
+##### Tutorial
+##### Game
+#### Features left to implement
 - Share highscore/game on social media
 - Choose sounds/politicians to fight
 
