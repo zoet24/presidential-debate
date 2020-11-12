@@ -162,7 +162,7 @@ div span {
     background: white;
 }
 
-.box-user-info:focus {
+a.box-user-info:hover {
     color: black;
 }
 

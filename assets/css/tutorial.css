@@ -42,7 +42,16 @@
 
     z-index: 2;
 
-     text-decoration: none;
+    text-decoration: none;
+}
+
+a#tutorial-close:hover {
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
 }
 
 .carousel {
