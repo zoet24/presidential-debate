@@ -21,13 +21,12 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
         - [Structure Plane](#structure-plane) - done
         - [Skeleton Plane](#skeleton-plane) - needs Balsamiq pics
         - [Surface Plane](#surface-plane) - done
-    - [Features](#features)
-        - [Existing features](#existing-features)
-            - [Consistent features](#consistent-features)
-            - [Home](#home)
-            - [Tutorial](#tutorial)
-            - [Game](#game)
-        - [Features left to implement](#features-left-to-implement)
+    - [Features](#features) - done
+        - [Existing features](#existing-features) - done
+            - [Home](#home) - done
+            - [Game](#game) - done
+            - [Tutorial](#tutorial) - done
+        - [Features left to implement](#features-left-to-implement) - done
 - [Technologies Used](#technologies-used)
     - [Languages and frameworks](#languages-and-frameworks)
     - [Additional tools used](#additional-tools-used)
@@ -114,17 +113,54 @@ Having sketched out what I wanted my website to look like, the main things I wan
 
 ### Features
 #### Existing features
-##### Consistent features
 ##### Home
-##### Tutorial
+- The title, start button and tutorial button are superimposed on the Trump and Biden backdrop which remains consistent across the website.
+- All of the text has a "shake" effect applied to it, giving the page an energetic feel that is in-keeping with the fast-paced game. The "shake" effect also intensifies when the user hovers over the start and tutorial buttons, indicating that they can be clicked on.
+- When the start button is clicked, the user hears a wrestling bell signalling the start of the "fight". The icons disappear one after another in time with each ring of the bell, giving a smooth transition to the 'Game' page.
 ##### Game
+- Once the 'Game' page loads, the two halves of the backdrop slide to the side into "fighting" position.
+- The start modal fills the screen and allows the user to pick their difficulty. Picking a harder difficulty decreases the time between inputs but increases the points you get for each correct input.
+- After the user selects their difficulty, the computer has its first turn - it will generate a random sequence of three reactions from the six boxes available. A reaction from a box will play the associated audio clip, change the font colour and size, change the border width and "shake" the box to make it clear to the user what box has been triggered.
+- After the first computer sequence has finished, the user has their first turn - each box they press will react in the same way as on the computer's turn.
+- If the user's turn is successful the computer goes again, this time triggering four boxes. The sequence continues to increase by one until the user loses.
+- If the user's turn is unsuccessful the wrestling bell will sound again and the correct box will react three times in a row to make it clear which one they should have pressed. The retry modal appears and allows the user to pick a new difficulty and try again.
+- The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site.
+- The user can return to the 'Home' page using the back button on the left of the screen.
+- The user can also toggle the volume on/off using the speaker button on the right of the screen.
+##### Tutorial
+- The 'Tutorial' page consists of three screenshots of the game being played on a smartphone, with simple instructions below on how to play the game.
+- The second screenshot has an animation of the computer playing a turn, followed by the user playing a turn.
+- The user can flick between the screenshots using the carousel icons.
+- The user can also return to the 'Home' page using the close button on the top right of the screen.
 #### Features left to implement
-- Share highscore/game on social media
-- Choose sounds/politicians to fight
+The game in its current state meets all of the "must-have" criteria that I outlined in my scope. If I continued to develop it further, I would like to introduce the following features:
+- A button that would allow users to share their high scores to their social medias.
+- Background music that would increase in tempo as the user's score increases.
+- A leaderboard of high scores of all users.
+- Hotkey functionality to allow users to play with their keyboards.
+- A 'Settings' page where users could customise aspects of the game such as number of boxes, different soundbites and different politicians.
+- Multiplayer functionality so users could play against each other instead of the computer.
 
 ## Technologies used
 ### Languages and frameworks
+- __HTML5:__ The language used to create the content and structure of my project.
+- __CSS3:__ The language used to style the HTML5 elements to create the aesthetic of my game.
+- __JavaScript:__ The language used to program my game and make aspects of the 'Home' and 'Tutorial' pages dynamic.
+- __Bootstrap framework:__ I used the Bootstrap grid system to make my site responsive on different devices. I also used it for the carousel and modal components on the 'Tutorial' and 'Game' pages.
+- __GitHub:__ I used GitHub to store my source code and repository.
+- __GitHub Pages:__ I used GitHub Pages to deploy my project and make it viewable to others.
+- __Gitpod:__ I used Gitpod's development environment to write the code for my project.
+
 ### Additional tools used
+- __Amiresponsive:__ I used this to test the responsiveness of my website and to produce the title photo in my README document.
+- __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
+- __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used this to test different functions in my JavaScript code.
+- __Google Fonts:__ I used one complementary font from Google Fonts for my project - Bowlby One SC.
+- __Image Online:__ I used this to produce the graphics for my game.
+- __Paint:__ I used this to produce the graphics for my game.
+- __W3C CSS Validation Service:__ I used this to test to the validity of my CSS code.
+- __W3C Markup Validation Service:__ I used this to test the validity of my HTML5 code.
+- __WAVE - Web Accessibility Evaluation Tool:__ I used this to test the accessibility of my website.
 
 ## Git Commit Messages
 
@@ -168,3 +204,8 @@ To develop my project further you can clone it to your local machine with the fo
 More information can be found [here](https://docs.github.com/en/enterprise/2.13/user/articles/cloning-a-repository).
 
 ## Credits
+__Images:__
+
+__Audio:__
+- All noises from https://www.101soundboards.com/
+__Acknowledgements:__
