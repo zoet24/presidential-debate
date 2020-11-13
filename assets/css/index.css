@@ -18,23 +18,29 @@
 }
 
 .img-container-trump-initial {
-	height: 100vh;
+	height: 100%;
 
 	position: absolute;
 
-	left: -35px;
+	left: -10%;
 }
 
 .img-container-biden-initial {
-	height: 100vh;
+	height: 100%;
 
 	position: absolute;
 
-	right: -35px;
+	right: -10%;
+}
+
+.container-background > div > img {
+    height: 100%;
 }
 
 #home-title-row {
-    margin: 8.5% 0px 0px;
+    height: 40%;
+
+    margin-top: 12.5vh;
 
     animation: shake 0.75s;
     animation-delay: 0s;
@@ -42,7 +48,7 @@
 }
 
 #home-title {
-    width: 100%;
+    width: 80%;
 }
 
 #home-cta-start, #home-cta-tutorial {
@@ -50,7 +56,7 @@
     background: white;
     border: solid 6px black;
     margin: 4px auto;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 #home-cta-start {
@@ -65,7 +71,7 @@
 	animation-iteration-count: infinite;
 }
 
-#home-title-row:hover, #home-cta-start:hover, #home-cta-tutorial:hover {
+#home-cta-start:hover, #home-cta-tutorial:hover {
 	animation: shake 0.5s;
 	animation-iteration-count: infinite;
     text-decoration: none;
@@ -84,4 +90,85 @@
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Media queries */
+@media (min-width: 600px) {
+    .img-container-trump-initial {
+        left: -5%;
+    }
+
+    .img-container-biden-initial {
+        right: -5%;
+    }
+
+    #home-start-row {
+        margin-top: 5vh;
+    }
+
+    #home-cta-start, #home-cta-tutorial {
+        margin: 4px auto;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .img-container-trump-initial {
+        left: 0;
+    }
+
+    .img-container-biden-initial {
+        right: 0;
+    }
+
+    #home-title {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-background {
+	    height: 70vh;
+        margin: 15vh 0 0 0;
+        border: solid black 16px;
+    }
+
+    .container-foreground {
+	    height: 70vh;
+    }
+
+    #home-title-row {
+        margin-top: 10vh;
+    }
+
+    #home-start-row {
+        margin-top: 0vh;
+    }
+
+    #home-cta-start, #home-cta-tutorial {
+        border: solid 8px black;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #home-title-row {
+        margin-top: 5vh;
+    }
+
+    #home-start-row {
+        margin-top: 5vh;
+    }
+
+    #home-cta-start, #home-cta-tutorial {
+        border: solid 10px black;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1350px) {
+    #home-cta-start, #home-cta-tutorial {
+        border: solid 12px black;
+        font-size: 4rem;
+    }
 }
