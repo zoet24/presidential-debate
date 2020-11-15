@@ -18,19 +18,23 @@
 }
 
 .img-container-trump-initial {
-	height: 100vh;
+	height: 100%;
 
 	position: absolute;
 
-	left: -35px;
+	left: -10%;
 }
 
 .img-container-biden-initial {
-	height: 100vh;
+	height: 100%;
 
 	position: absolute;
 
-	right: -35px;
+	right: -10%;
+}
+
+.container-background > div > img {
+    height: 100%;
 }
 
 .trump-slide {
