@@ -127,13 +127,17 @@
     border-width: 8px;
 }
 
-div span {
+.row-top {
+    height: 15vh;
+}
+
+.box span, .box i {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
     line-height: 1;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
 .row-fixed {
@@ -149,6 +153,10 @@ div span {
     margin: 4px;
 }
 
+.box-game {
+    font-size: 1.25rem;
+}
+
 .box-trump {
     border-color: red;
     background: rgba(250,250,250,0.5);
@@ -160,7 +168,7 @@ div span {
 }
 
 .box-user-info, .box-user-info-volume-on, .box-user-info-volume-off {
-    font-size: 1.25rem;
+    font-size: 0.85rem;
     color: black;
     border-color: black;
     background: white;
@@ -200,7 +208,7 @@ button {
 }
 
 .text-pop {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: white;
     text-shadow:
    -2px -2px 0 #000,  
