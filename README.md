@@ -4,7 +4,7 @@
 
 ## Code Institute: Milestone Project 2
 
-Amiresponsive photo
+![Presidential Debate on mobile and tablet](assets/images/readme/readme-title.png)
 
 _Presidential Debate_ is a satirical memory game that pits the player against the computer, challenging them to repeat the increasingly complicated patterns with an amusing political twist. I wanted to develop my JavaScript skills by designing a "Bop-It" program and, after watching the first presidential debate between Joe Biden and Donald Trump, thought a fun variation on the classic game would be to replace the standard "Bop-It" noises with soundbites of the two candidates shouting at each other.
 
@@ -16,24 +16,24 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
 
 - [UX Design](#ux-design)
     - [Design Process](#design-process)
-        - [Strategy Plane](#strategy-plane) - done
-        - [Scope Plane](#scope-plane) - done
-        - [Structure Plane](#structure-plane) - done
-        - [Skeleton Plane](#skeleton-plane) - needs Balsamiq pics
-        - [Surface Plane](#surface-plane) - done
+        - [Strategy Plane](#strategy-plane)
+        - [Scope Plane](#scope-plane)
+        - [Structure Plane](#structure-plane)
+        - [Skeleton Plane](#skeleton-plane)
+        - [Surface Plane](#surface-plane)
     - [Features](#features)
-        - [Existing features](#existing-features) - done
-            - [Home](#home) - done
-            - [Game](#game) - needs function tree
-            - [Tutorial](#tutorial) - done
-        - [Features left to implement](#features-left-to-implement) - done
+        - [Existing features](#existing-features)
+            - [Home](#home)
+            - [Game](#game)
+            - [Tutorial](#tutorial)
+        - [Features left to implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
-    - [Languages and frameworks](#languages-and-frameworks) - done
-    - [Additional tools used](#additional-tools-used) - done
+    - [Languages and frameworks](#languages-and-frameworks)
+    - [Additional tools used](#additional-tools-used)
 - [Git Commit Messages](#git-commit-messages)
 - [Testing](#testing)
-- [Deployment](#deployment) - done
-- [Cloning](#cloning) - done
+- [Deployment](#deployment)
+- [Cloning](#cloning)
 - [Credits](#credits)
 
 ## UX Design
@@ -93,7 +93,7 @@ Based on the features outlined in my scope and my research of other similar webs
 I added a ‘Settings’ page to my “nice-to-have” list - this would be a page where the user could customise various aspects of the game, but it was an unnecessary addition to include in the initial MVP.
 
 #### Skeleton Plane
-I used Balsamiq to develop wireframes (Click [Home](https:), [Tutorial](https:) or [Game](https:) to view them) of what I wanted my game to look like on mobile, tablet and desktop. I liked the idea of having a backdrop of Trump and Biden facing off on either side of the screen so used that to divide the screen in half and place the relevant information over the top of it. I kept my scope at the forefront of this design process to make sure that there was going to be a place to put all of my key features.
+I used Balsamiq to develop wireframes (click [here](wireframes.md) to view them) of what I wanted my game to look like on mobile, tablet and desktop. I liked the idea of having a backdrop of Trump and Biden facing off on either side of the screen so used that to divide the screen in half and place the relevant information over the top of it. I kept my scope at the forefront of this design process to make sure that there was going to be a place to put all of my key features.
 
 **Note:** I changed the layout of my desktop wireframe later on due to the background image I chose. It didn't scale well so instead of filling the whole screen for larger devices the game is restricted to 70% of the height.
 
@@ -118,9 +118,6 @@ Having sketched out what I wanted my website to look like, the main things I wan
 - The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site.
 - The user can return to the 'Home' page using the back button on the left of the screen.
 - The user can also toggle the volume on/off using the speaker button on the right of the screen.
-
-Click [here](https:) to view a detailed breakdown of the functions seen in game.js.
-
 ##### Tutorial
 - The 'Tutorial' page consists of three screenshots of the game being played on a smartphone, with simple instructions below on how to play the game.
 - The second screenshot has an animation of the computer playing a turn, followed by the user playing a turn.
@@ -147,7 +144,6 @@ The game in its current state meets all of the "must-have" criteria that I outli
 
 ### Additional tools used
 - __101soundboards:__ I used 101soundboards.com to find all of the sound effects used through the site.
-- __Amiresponsive:__ I used this to test the responsiveness of my website and to produce the title photo in my README document.
 - __Balsamiq:__ I used this to produce wireframe sketches for the site's skeleton plane.
 - __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
 - __FreeFormatter:__ I used Freeformatter.com to format my code properly.
@@ -161,6 +157,18 @@ The game in its current state meets all of the "must-have" criteria that I outli
 - __WAVE - Web Accessibility Evaluation Tool:__ I used this to test the accessibility of my website.
 
 ## Git Commit Messages
+I built on the git commit format style that I had developed during my MS1 project and made sure that I used it throughout the whole of the MS2 development process. In comparison with my previous project I committed more regularly, and the format of the commit messages was more consistent. I used the imperative tense for all messages; I referred to all pages with their full name (ie. index.html instead of index); I denoted bug fixes by including "Bug" at the start of the message; all messages were under 50 characters. I've included 10 git commit messages below to demonstrate the syntax.
+- **9246a1c** 2020-10-25 - Introduce second modal to game.html for retry button
+- **25966df** 2020-10-25 - Add high score functionality to game.js
+- **575561a** 2020-10-25 - Change calculateScore() to add points on each userTurn
+- **04a5c50** 2020-10-25 - Add difficulty multiplier based on user input
+- **7528555** 2020-10-25 - Add initial game.js opening animation
+- **3656e29** 2020-10-25 - Add basic user difficulty input
+- **c650358** 2020-10-25 - Delete game-test.js
+- **83b92e0** 2020-10-25 - Add animation transition from index.html to game.html
+- **edd1bc8** 2020-10-24 - Initial index.html and game.js for difficulty user input
+- **29e4add** 2020-10-24 - Initial calculateScore() update to include difficulty multiplier
+- **175c69b** 2020-10-24 - Bug fix: randSequence() no longer generates sequential equal values in compSequenceArr[]
 
 ## Testing
 Click [here](TESTING.md) to view the complete testing process.
@@ -193,7 +201,17 @@ More information can be found [here](https://docs.github.com/en/enterprise/2.13/
 
 ## Credits
 __Images:__
+The background image was taken from the NBC News website.
 
 __Audio:__
-- All noises from https://www.101soundboards.com/
+All audio files were downloaded from https://www.101soundboards.com/.
+
 __Acknowledgements:__
+I'd like to acknowledge the following tutorials and websites that I studied to complete my project. These sources have been credited in the code comments and were heavily modified for my own website.
+
+- Solving initial bugs and including a volume on/off toggle - [TWUFO by matthewyong](https://matthewyong.github.io/twufo/index.html)
+- Adding the difficulty input functionality - [Simon Says Tutorial by Dan Purdy](https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/)
+- Saving the user's high score - [PhaserJS](https://phaserjs.com/saving-high-score)
+- Adding a delay to page loading - [Webflow Forum](https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4)
+
+I'd also like to thank my tutor Can Sucullu, the Code Institute community and my friends and family for their guidance and input on this project.

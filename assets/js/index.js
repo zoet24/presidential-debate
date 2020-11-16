@@ -1,4 +1,4 @@
-$(".start-button").click(function(){ //Animation for index.html --> game.html transition
+$(".start-button").click(function(){ // Animation for index.html --> game.html transition
     var audio = document.getElementById("audio-wwe-bell");
     audio.currentTime = 0;
     setTimeout(function() {
@@ -12,11 +12,10 @@ $(".start-button").click(function(){ //Animation for index.html --> game.html tr
     }, 600);
     setTimeout(function() {
         $("#home-title").addClass("hide-button", "style.css");
-        $("#half-star").addClass("hide-button", "style.css");
     }, 800);
 });
 
-$('.start-button').click(function(e) { //Add delay to page change for animation https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
+$('.start-button').click(function(e) { // Add delay to page change for animation - source: https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
   console.log("block");
   e.preventDefault();
   setTimeout(function(url) { 

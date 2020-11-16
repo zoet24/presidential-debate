@@ -120,14 +120,14 @@ $("#game-btn").click(function(){
     }, 2000);
 });
 
-// Turn sound off
+// Turn sound off - source: https://matthewyong.github.io/twufo/index.html
 $(".box-user-info-volume-on").on("click", function() {
     $(".box-user-info-volume-on").addClass("hide-button", "style.css");
     $(".box-user-info-volume-off").removeClass("hide-button", "style.css");
     $("audio").prop("muted", true);
 });
 
-// Turn sound on
+// Turn sound on - source: https://matthewyong.github.io/twufo/index.html
 $(".box-user-info-volume-off").on("click", function() {
     $(".box-user-info-volume-on").removeClass("hide-button", "style.css");
     $(".box-user-info-volume-off").addClass("hide-button", "style.css");
@@ -226,7 +226,7 @@ function boxReact(i){
             game.showSequenceArr.push(i);
             boxBidenThree();
         }
-        if (game.compSequenceArr.length == game.showSequenceArr.length) {
+        if (game.compSequenceArr.length == game.showSequenceArr.length) { // source - https://matthewyong.github.io/twufo/index.html
             setTimeout(function() {
                 $(".box-game").css("cursor", "");
                 userTurn();
@@ -401,7 +401,7 @@ function gameContinue() {
     newLevel();
 }
 
-// calculateScore() changes scoreMultiplier based on user difficulty input, calculates new user and highscores and triggers showScore()
+// calculateScore() changes scoreMultiplier based on user difficulty input, calculates new user and highscores and triggers showScore() - source: https://www.danpurdy.co.uk/tutorial/simon-says-game-in-jquery-tutorial/
 function calculateScore() {
 
     switch(game.difficulty)
@@ -422,7 +422,7 @@ function calculateScore() {
             game.scoreMultiplier = 4;
             break;
     }
-
+// source - https://phaserjs.com/saving-high-score
     game.scoreIncrease = 1 * game.scoreMultiplier;
     game.userScore += game.scoreIncrease;
 
