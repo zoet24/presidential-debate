@@ -15,7 +15,7 @@ var game = {
     compSequenceArr: [],
     showSequenceArr: [],
     userSequenceArr: [],
-}
+};
 
 // When page loads, animate background images and trigger difficulty menu modal
 onload = function() {
@@ -26,7 +26,7 @@ onload = function() {
     setTimeout(function() {
         document.getElementById("modal-difficulty-menu-btn").click();
     }, 2000);
-}
+};
 
 // When start button is clicked set difficulty, animate game boxes, animate user info boxes and trigger newGame()
 $("#game-btn").click(function(){

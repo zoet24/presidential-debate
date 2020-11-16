@@ -21,30 +21,19 @@ Click [here](https://github.com/zoet24/presidential-debate) to view the Github r
         - [Structure Plane](#structure-plane) - done
         - [Skeleton Plane](#skeleton-plane) - needs Balsamiq pics
         - [Surface Plane](#surface-plane) - done
-    - [Features](#features) - done
+    - [Features](#features)
         - [Existing features](#existing-features) - done
             - [Home](#home) - done
-            - [Game](#game) - done
+            - [Game](#game) - needs function tree
             - [Tutorial](#tutorial) - done
         - [Features left to implement](#features-left-to-implement) - done
 - [Technologies Used](#technologies-used)
-    - [Languages and frameworks](#languages-and-frameworks)
-    - [Additional tools used](#additional-tools-used)
+    - [Languages and frameworks](#languages-and-frameworks) - done
+    - [Additional tools used](#additional-tools-used) - done
 - [Git Commit Messages](#git-commit-messages)
 - [Testing](#testing)
-    - [Testing user stories](#testing-user-stories)
-        - [Testing - Project stakeholder](#testing---project-stakeholder)
-        - [Testing - New users](#testing---new-users)
-        - [Testing - Returning users](#testing---returning-users)
-    - [Validating the code](#validating-the-code)
-        - [HTML](#html)
-        - [CSS](#css)
-        - [JS](#js)
-    - [Validating the responsiveness](#validating-the-responsiveness)
-    - [Validating the accessibility](#validating-the-accessibility)
-    - [Validating the functionality of all links](#validating-the-functionality-of-all-links)
-- [Deployment](#deployment)
-- [Cloning](#cloning)
+- [Deployment](#deployment) - done
+- [Cloning](#cloning) - done
 - [Credits](#credits)
 
 ## UX Design
@@ -86,12 +75,12 @@ _**"Must-haves"**_
 2. The site must be easy to navigate.
 3. The game must load quickly and not lag.
 4. The game must have at least 4 user inputs.
-4. The game must give the player feedback when they succeed/fail.
-5. The game must have clear instructions on how to play.
-6. The game must keep track of the player's score.
-7. The player must be able to input the difficulty of the game.
-8. The player must be able to see their previous high score.
-9. The player must be able to toggle the sound on/off.
+5. The game must give the player feedback when they succeed/fail.
+6. The game must have clear instructions on how to play.
+7. The game must keep track of the player's score.
+8. The player must be able to input the difficulty of the game.
+9. The player must be able to see their previous high score.
+10. The player must be able to toggle the sound on/off.
 
 _**"Nice-to-haves"**_
 1. The game could have a leaderboard of previous scores.
@@ -104,10 +93,12 @@ Based on the features outlined in my scope and my research of other similar webs
 I added a ‘Settings’ page to my “nice-to-have” list - this would be a page where the user could customise various aspects of the game, but it was an unnecessary addition to include in the initial MVP.
 
 #### Skeleton Plane
-I used Balsamiq to develop wireframes (view them using Home, Game and Tutorial) of what I wanted my game to look like on mobile, tablet and desktop. I liked the idea of having a backdrop of Trump and Biden facing off on either side of the screen so used that to divide the screen in half and place the relevant information over the top of it. I kept my scope at the forefront of this design process to make sure that there was going to be a place to put all of my key features.
+I used Balsamiq to develop wireframes (Click [Home](https:), [Tutorial](https:) or [Game](https:) to view them) of what I wanted my game to look like on mobile, tablet and desktop. I liked the idea of having a backdrop of Trump and Biden facing off on either side of the screen so used that to divide the screen in half and place the relevant information over the top of it. I kept my scope at the forefront of this design process to make sure that there was going to be a place to put all of my key features.
+
+**Note:** I changed the layout of my desktop wireframe later on due to the background image I chose. It didn't scale well so instead of filling the whole screen for larger devices the game is restricted to 70% of the height.
 
 #### Surface Plane
-Having sketched out what I wanted my website to look like, the main things I wanted to define on my surface plane were colour scheme, font and background image. As my game is American-themed, I kept it simple and stuck to a colour scheme of the standard CSS ‘red’, ‘white’ and ‘blue’ colours instead of trying to find a specific hex combination. I wanted something big, bold and cartoonish for the font to be in-keeping with the tongue-in-cheek theme of the game, so I went for Bowlby One SC. As the website contains minimal text I only used a single font throughout. For my background, I found an image of Donald Trump and Joe Biden facing off against each other on a simple red and blue backdrop. I used Paint to separate the image into two halves down the tear in the middle of the graphic, and then used Image Online to remove the white background.
+Having sketched out what I wanted my website to look like, the main things I wanted to define on my surface plane were colour scheme, font and background image. As my game is American-themed, I kept it simple and stuck to a colour scheme of the standard CSS ‘red’, ‘white’ and ‘blue’ colours instead of using a specific hex combination. I wanted something big, bold and cartoonish for the font to be in-keeping with the tongue-in-cheek theme of the game, so I went for Bowlby One SC. As the website contains minimal text I only used a single font throughout. For my background, I found an image of Donald Trump and Joe Biden facing off against each other on a simple red and blue backdrop. I used Paint to separate the image into two halves down the tear in the middle of the graphic, and then used Image Online to remove the white background.
 
 ![Donald Trump and Joe Biden](https://media3.s-nbcnews.com/j/newscms/2020_40/3415557/200928-fact-check-debate-main-cover-khu-_e25d50d2ca59323008ffa06e54aa1536.fit-400w.jpg)
 
@@ -127,6 +118,9 @@ Having sketched out what I wanted my website to look like, the main things I wan
 - The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site.
 - The user can return to the 'Home' page using the back button on the left of the screen.
 - The user can also toggle the volume on/off using the speaker button on the right of the screen.
+
+Click [here](https:) to view a detailed breakdown of the functions seen in game.js.
+
 ##### Tutorial
 - The 'Tutorial' page consists of three screenshots of the game being played on a smartphone, with simple instructions below on how to play the game.
 - The second screenshot has an animation of the computer playing a turn, followed by the user playing a turn.
@@ -145,19 +139,22 @@ The game in its current state meets all of the "must-have" criteria that I outli
 ### Languages and frameworks
 - __HTML5:__ The language used to create the content and structure of my project.
 - __CSS3:__ The language used to style the HTML5 elements to create the aesthetic of my game.
-- __JavaScript:__ The language used to program my game and make aspects of the 'Home' and 'Tutorial' pages dynamic.
+- __JavaScript and JQuery:__ The language used to program my game and make aspects of the 'Home' and 'Tutorial' pages dynamic.
 - __Bootstrap framework:__ I used the Bootstrap grid system to make my site responsive on different devices. I also used it for the carousel and modal components on the 'Tutorial' and 'Game' pages.
 - __GitHub:__ I used GitHub to store my source code and repository.
 - __GitHub Pages:__ I used GitHub Pages to deploy my project and make it viewable to others.
 - __Gitpod:__ I used Gitpod's development environment to write the code for my project.
 
 ### Additional tools used
+- __101soundboards:__ I used 101soundboards.com to find all of the sound effects used through the site.
 - __Amiresponsive:__ I used this to test the responsiveness of my website and to produce the title photo in my README document.
+- __Balsamiq:__ I used this to produce wireframe sketches for the site's skeleton plane.
 - __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
-- __Free Formatter:__ I used Freeformatter.com to format my code properly.
+- __FreeFormatter:__ I used Freeformatter.com to format my code properly.
 - __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used this to test different functions in my JavaScript code.
 - __Google Fonts:__ I used one complementary font from Google Fonts for my project - Bowlby One SC.
 - __Image Online:__ I used this to produce the graphics for my game.
+- __JSHint:__ I used this to test to the validity of my JavaScript and JQuery code.
 - __Paint:__ I used this to produce the graphics for my game.
 - __W3C CSS Validation Service:__ I used this to test to the validity of my CSS code.
 - __W3C Markup Validation Service:__ I used this to test the validity of my HTML5 code.
@@ -166,21 +163,7 @@ The game in its current state meets all of the "must-have" criteria that I outli
 ## Git Commit Messages
 
 ## Testing
-### Testing User Stories
-#### Testing - Project stakeholder
-#### Testing - New users
-#### Testing - Returning users
-### Validating the code
-#### HTML
-#### CSS
-#### JS
-#### Validating the responsiveness
-I tested the accessibility of my website using WAVE - The Web Accessibility Evaluation Tool which highlighted the following errors:
-- fieldset on game
-- alt tags missing
-- justify headings
-#### Validating the accessibility
-#### Validating the functionality of all links
+Click [here](TESTING.md) to view the complete testing process.
 
 ## Deployment
 

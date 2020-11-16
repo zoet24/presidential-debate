@@ -3,7 +3,7 @@ $(".start-button").click(function(){ //Animation for index.html --> game.html tr
     audio.currentTime = 0;
     setTimeout(function() {
         audio.play();
-    }, 300)
+    }, 300);
     setTimeout(function() {
         $("#home-cta-tutorial").addClass("hide-button", "style.css");
     }, 400);
@@ -19,5 +19,7 @@ $(".start-button").click(function(){ //Animation for index.html --> game.html tr
 $('.start-button').click(function(e) { //Add delay to page change for animation https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
   console.log("block");
   e.preventDefault();
-  setTimeout(function(url) { window.location = url }, 2500, this.href);
+  setTimeout(function(url) { 
+      window.location = url;
+    }, 2500, this.href);
 });
