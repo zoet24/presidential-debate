@@ -1,136 +1,132 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    
-    <head>
-        <title>Presidential Debate | Game</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />        
-        <link rel="stylesheet" type="text/css" href="assets/css/game.css" />
-    </head>
-
-    <body>
-        <!-- Preload audio -->
-        <audio preload="auto" id="audio-wwe-bell" src="assets/audio/sound-wwe-bell.mp3"></audio>
-        <!-- Background images -->
-        <div class="container-background">
-            <div class="img-container-trump-initial">
-                <img src="assets/images/index/trump-no-background.png">
+   <head>
+      <title>Presidential Debate | Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/game.css" />
+   </head>
+   <body>
+      <!-- WWE bell -->
+      <audio preload="auto" id="audio-wwe-bell" src="assets/audio/sound-wwe-bell.mp3"></audio>
+      <!-- Background images -->
+      <div class="container-background">
+         <div class="img-container-trump-initial">
+            <img src="assets/images/index/trump-no-background.png" alt="Donald Trump">
+         </div>
+         <div class="img-container-biden-initial">
+            <img src="assets/images/index/biden-no-background.png" alt="Joe Biden">
+         </div>
+         <!-- Modal -->
+         <!-- Trigger modal -->
+         <button type="button" class="btn hide-button" id="modal-difficulty-menu-btn" data-toggle="modal" data-target="#modal-difficulty-menu">
+         </button>
+         <!-- Modal body -->
+         <div class="modal fade" id="modal-difficulty-menu" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="modal-difficulty-menu-header" aria-hidden="true">
+            <div class="modal-dialog-centered modal-dialog" role="document">
+               <div class="modal-content">
+                  <header id="modal-difficulty-menu-header">Pick your difficulty</header>
+                  <form>
+                     <fieldset>
+                        <legend class="sr-only">Difficulty menu</legend>
+                        <ul class="difficulty p-0 m-0">
+                           <li class="opt">
+                              <input type="radio" id="difOpt-1" name="difficulty" value="2">
+                              <label for="difOpt-1">Easy</label>
+                           </li>
+                           <li class="opt">
+                              <input type="radio" id="difOpt-2" name="difficulty" value="1" checked>
+                              <label for="difOpt-2">Normal</label>
+                           </li>
+                           <li class="opt">
+                              <input type="radio" id="difOpt-3" name="difficulty" value="0.5">
+                              <label for="difOpt-3">Hard</label>
+                           </li>
+                           <li class="opt">
+                              <input type="radio" id="difOpt-4" name="difficulty" value="0.25">
+                              <label for="difOpt-4">Insane</label>
+                           </li>
+                        </ul>
+                     </fieldset>
+                  </form>
+                  <button type="button" id="game-btn" data-dismiss="modal">Start</button>
+               </div>
             </div>
-            <div class="img-container-biden-initial">
-                <img src="assets/images/index/biden-no-background.png">
+         </div>
+         <!-- Foreground text -->
+         <div class="container-foreground">
+            <!-- Game boxes -->
+            <div class="row row-top"></div>
+            <div class="row">
+               <div class="col-1 col-md-2"></div>
+               <div class="col box box-trump box-trump-1 box-game hide-button">
+                  <audio preload="auto" id="audio-trump-1" src="assets/audio/sound-trump-1.mp3"></audio>
+                  <span>America!</span>
+               </div>
+               <div class="col box box-biden box-biden-1 box-game hide-button">
+                  <audio preload="auto" id="audio-biden-1" src="assets/audio/sound-biden-1.mp3"></audio>
+                  <span>C'mon man!</span>
+               </div>
+               <div class="col-1 col-md-2"></div>
             </div>
-            <!-- Modal-->
-                <!-- Trigger modal -->
-                <button type="button" class="btn hide-button" id="modal-difficulty-menu-btn" data-toggle="modal" data-target="#modal-difficulty-menu">
-                </button>
-                <!-- Modal body -->
-                <div class="modal fade" id="modal-difficulty-menu" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="modal-difficulty-menu-header" aria-hidden="true">
-                    <div class="modal-dialog-centered modal-dialog" role="document">
-                        <div class="modal-content">
-                            <header id="modal-difficulty-menu-header">Pick your difficulty</header>
-                            <form>
-                                <ul class="difficulty p-0 m-0">
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-1" name="difficulty" value="2">
-                                        <label for="difOpt-1">Easy</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-2" name="difficulty" value="1" checked>
-                                        <label for="difOpt-2">Normal</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-3" name="difficulty" value="0.5">
-                                        <label for="difOpt-3">Hard</label>
-                                    </li>
-                                    <li class="opt">
-                                        <input type="radio" id="difOpt-4" name="difficulty" value="0.25">
-                                        <label for="difOpt-4">Insane</label>
-                                    </li>
-                                </ul>
-                            </form>
-                            <button type="button" id="game-btn" data-dismiss="modal">Start</button>
-                        </div>
-                    </div>
-                </div>
-            <!-- Foreground text -->
-            <div class="container-foreground">
-                <!-- Game boxes -->
-                <div class="row row-top"></div>
-                <div class="row">
-                    <div class="col-1 col-md-2"></div>
-                    <div class="col box box-trump box-trump-1 box-game hide-button">
-                        <audio preload="auto" id="audio-trump-1" src="assets/audio/sound-trump-1.mp3"></audio>
-                        <span>America!</span>
-                    </div>
-                    <div class="col box box-biden box-biden-1 box-game hide-button">
-                        <audio preload="auto" id="audio-biden-1" src="assets/audio/sound-biden-1.mp3"></audio>
-                        <span>C'mon man!</span>
-                    </div>
-                    <div class="col-1 col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-1 col-md-2"></div>
-                    <div class="col box box-trump box-trump-2 box-game hide-button">
-                        <audio preload="auto" id="audio-trump-2" src="assets/audio/sound-trump-2.mp3"></audio>
-                        <span>You're fired!</span>
-                    </div>
-                    <div class="col box box-biden box-biden-2 box-game hide-button">
-                        <audio preload="auto" id="audio-biden-2" src="assets/audio/sound-biden-2.mp3"></audio>
-                        <span>Full of shit!</span>
-                    </div>
-                    <div class="col-1 col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-1 col-md-2"></div>
-                    <div class="col box box-trump box-trump-3 box-game hide-button">
-                        <audio preload="auto" id="audio-trump-3" src="assets/audio/sound-trump-3.mp3"></audio>
-                        <span>Fake news!</span>
-                    </div>
-                    <div class="col box box-biden box-biden-3 box-game hide-button">
-                        <audio preload="auto" id="audio-biden-3" src="assets/audio/sound-biden-3.mp3"></audio>
-                        <span>Hairy legs!</span>
-                    </div>
-                    <div class="col-1 col-md-2"></div>
-                </div>
-                <!-- User info -->
-                <div class="row-fixed row">
-                    <div class="col-1"></div>
-                    <a href="index.html" class="col-1 box box-user-info hide-button" role="button">
-                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
-                        <span class="sr-only">Back</span>
-                    </a>
-                    <div class="col-4 box box-user-info user-score-count hide-button">
-                        <span id="user-score">Score: </span>
-                    </div>
-                    <div class="col-4 box box-user-info high-score-count hide-button">
-                        <span id="high-score">High Score: </span>
-                    </div>
-                    <div class="col-1 box box-user-info-volume-on hide-button">
-                        <i class="fas fa-volume-up" aria-hidden="true"></i>
-                        <span class="sr-only">Volume on</span>
-                    </div>
-                    <div class="col-1 box box-user-info-volume-off hide-button">
-                        <i class="fas fa-volume-off" aria-hidden="true"></i>
-                        <span class="sr-only">Volume off</span>
-                    </div>
-                    <div class="col-1"></div>
-                </div>
+            <div class="row">
+               <div class="col-1 col-md-2"></div>
+               <div class="col box box-trump box-trump-2 box-game hide-button">
+                  <audio preload="auto" id="audio-trump-2" src="assets/audio/sound-trump-2.mp3"></audio>
+                  <span>You're fired!</span>
+               </div>
+               <div class="col box box-biden box-biden-2 box-game hide-button">
+                  <audio preload="auto" id="audio-biden-2" src="assets/audio/sound-biden-2.mp3"></audio>
+                  <span>Full of shit!</span>
+               </div>
+               <div class="col-1 col-md-2"></div>
             </div>
-        </div>
-    <!--Link to Bootstrap CDN-->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-        </script>
-    <!--Link to JQuery CDN-->
-        <script src="https://code.jquery.com/jquery-3.5.1.js">
-        </script>
-    <!--Link to script game.js-->
-    	<script src="assets/js/game.js">
-        </script>
-    </body>
+            <div class="row">
+               <div class="col-1 col-md-2"></div>
+               <div class="col box box-trump box-trump-3 box-game hide-button">
+                  <audio preload="auto" id="audio-trump-3" src="assets/audio/sound-trump-3.mp3"></audio>
+                  <span>Fake news!</span>
+               </div>
+               <div class="col box box-biden box-biden-3 box-game hide-button">
+                  <audio preload="auto" id="audio-biden-3" src="assets/audio/sound-biden-3.mp3"></audio>
+                  <span>Hairy legs!</span>
+               </div>
+               <div class="col-1 col-md-2"></div>
+            </div>
+            <!-- User info -->
+            <div class="row-fixed row">
+               <div class="col-1"></div>
+               <a href="index.html" class="col-1 box box-user-info hide-button" role="button">
+               <i class="fas fa-arrow-left" aria-hidden="true"></i>
+               <span class="sr-only">Back</span>
+               </a>
+               <div class="col-4 box box-user-info user-score-count hide-button">
+                  <span id="user-score">Score: </span>
+               </div>
+               <div class="col-4 box box-user-info high-score-count hide-button">
+                  <span id="high-score">High Score: </span>
+               </div>
+               <div class="col-1 box box-user-info-volume-on hide-button">
+                  <i class="fas fa-volume-up" aria-hidden="true"></i>
+                  <span class="sr-only">Volume on</span>
+               </div>
+               <div class="col-1 box box-user-info-volume-off hide-button">
+                  <i class="fas fa-volume-off" aria-hidden="true"></i>
+                  <span class="sr-only">Volume off</span>
+               </div>
+               <div class="col-1"></div>
+            </div>
+         </div>
+      </div>
+      <!--Link to Bootstrap CDN-->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--Link to JQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <!--Link to script game.js-->
+      <script src="assets/js/game.js"></script>
+   </body>
 </html>

@@ -1,64 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    
-    <head>
-        <title>Presidential Debate | Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-    </head>
-
-    <body>
-        <!-- Background images -->
-        <div class="container-background">
-            <div class="img-container-trump-initial">
-                <img src="assets/images/index/trump-no-background.png">
+   <head>
+      <title>Presidential Debate | Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+   </head>
+   <body>
+      <!-- Background images -->
+      <div class="container-background">
+         <div class="img-container-trump-initial">
+            <img src="assets/images/index/trump-no-background.png" alt="Donald Trump">
+         </div>
+         <div class="img-container-biden-initial">
+            <img src="assets/images/index/biden-no-background.png" alt="Joe Biden">
+         </div>
+         <!-- Foreground text -->
+         <div class="container-foreground">
+            <!-- Title -->
+            <div class="row" id="home-title-row">
+               <h1 class="col p-0">
+                  <img id="home-title" src="assets/images/index/title.png" alt="Presidential Debate title">
+               </h1>
             </div>
-            <div class="img-container-biden-initial">
-                <img src="assets/images/index/biden-no-background.png">
+            <!-- Start -->
+            <div class="row" id="home-start-row">
+               <div class="col-4"></div>
+               <a href="game.html" class="col start-button" id="home-cta-start" role="button">
+                  <span>Start</span>
+                  <span class="sr-only">Start button</span>
+                  <audio preload="auto" id="audio-wwe-bell" src="assets/audio/sound-wwe-bell.mp3"></audio>
+               </a>
+               <div class="col-4"></div>
             </div>
-            <!-- Foreground text -->
-            <div class="container-foreground">
-                <!-- Title -->
-                <div class="row" id="home-title-row">
-                    <div class="col p-0">
-                        <img id="home-title" src="assets/images/index/title.png">
-                    </div>
-                </div>
-                <!-- Start -->
-                <div class="row" id="home-start-row">
-                    <div class="col-4"></div>
-                    <a href="game.html" class="col start-button" id="home-cta-start" role="button">
-                        <span>Start</span>
-                        <span class="sr-only">Start button</span>
-                        <audio preload="auto" id="audio-wwe-bell" src="assets/audio/sound-wwe-bell.mp3"></audio>
-                    </a>
-                    <div class="col-4"></div>
-                </div>
-                <!-- Tutorial -->
-                <div class="row">
-                    <div class="col-4"></div>
-                    <a href="tutorial.html" class="col" id="home-cta-tutorial" role="button">
-                        Tutorial
-                        <span class="sr-only">Tutorial button</span>
-                    </a>
-                    <div class="col-4"></div>
-                </div>
+            <!-- Tutorial -->
+            <div class="row">
+               <div class="col-4"></div>
+               <a href="tutorial.html" class="col" id="home-cta-tutorial" role="button">
+               <span>Tutorial</span>
+               <span class="sr-only">Tutorial button</span>
+               </a>
+               <div class="col-4"></div>
             </div>
-    <!--Link to Bootstrap CDN-->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-        </script>
-    <!--Link to JQuery CDN-->
-        <script src="https://code.jquery.com/jquery-3.5.1.js">
-        </script>
-    <!--Link to script index.js-->
-    	<script src="assets/js/index.js">
-        </script>
-    </body>
+         </div>
+      </div>
+      <!--Link to Bootstrap CDN-->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--Link to JQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <!--Link to script index.js-->
+      <script src="assets/js/index.js"></script>
+   </body>
 </html>

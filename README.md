@@ -154,6 +154,7 @@ The game in its current state meets all of the "must-have" criteria that I outli
 ### Additional tools used
 - __Amiresponsive:__ I used this to test the responsiveness of my website and to produce the title photo in my README document.
 - __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
+- __Free Formatter:__ I used Freeformatter.com to format my code properly.
 - __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used this to test different functions in my JavaScript code.
 - __Google Fonts:__ I used one complementary font from Google Fonts for my project - Bowlby One SC.
 - __Image Online:__ I used this to produce the graphics for my game.
@@ -174,6 +175,10 @@ The game in its current state meets all of the "must-have" criteria that I outli
 #### CSS
 #### JS
 #### Validating the responsiveness
+I tested the accessibility of my website using WAVE - The Web Accessibility Evaluation Tool which highlighted the following errors:
+- fieldset on game
+- alt tags missing
+- justify headings
 #### Validating the accessibility
 #### Validating the functionality of all links
 

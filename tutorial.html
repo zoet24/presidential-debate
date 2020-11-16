@@ -1,106 +1,99 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    
-    <head>
-        <title>Presidential Debate | Tutorial</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />  
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />        
-        <link rel="stylesheet" type="text/css" href="assets/css/tutorial.css" />
-    </head>
-
-    <body>
-        <!-- Background images -->
-        <div class="container-background">
-            <div class="img-container-trump-initial">
-                <img src="assets/images/index/trump-no-background.png">
-            </div>
-            <div class="img-container-biden-initial">
-                <img src="assets/images/index/biden-no-background.png">
-            </div>
-            <!-- Foreground text -->
-            <div class="container-foreground">
-                <!-- Close button -->
-                <a href="index.html" class="tutorial-text" id="tutorial-close" role="button">
-                    <i>X</i>
-                    <span class="sr-only">Close tutorial</span>
-                </a>
-                <!-- Carousel -->
-                <div id="carousel" class="carousel slide" data-interval="false">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel" data-slide-to="1"></li>
-                        <li data-target="#carousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" alt="First slide">
-                            <div class="carousel-content">
-                                <div>
-                                    <img class="tutorial-image" src="assets/images/tutorial/tutorial-1.png">
-                                </div>
-                                <span class="tutorial-text">Pick your difficulty!</span>
-                            </div>
+   <head>
+      <title>Presidential Debate | Tutorial</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/tutorial.css" />
+   </head>
+   <body>
+      <!-- Background images -->
+      <div class="container-background">
+         <div class="img-container-trump-initial">
+            <img src="assets/images/index/trump-no-background.png" alt="Donald Trump">
+         </div>
+         <div class="img-container-biden-initial">
+            <img src="assets/images/index/biden-no-background.png" alt="Joe Biden">
+         </div>
+         <!-- Foreground text -->
+         <div class="container-foreground">
+            <!-- Close button -->
+            <a href="index.html" class="tutorial-text" id="tutorial-close" role="button">
+                <i>X</i>
+                <span class="sr-only">Close tutorial</span>
+            </a>
+            <!-- Carousel -->
+            <div id="carousel" class="carousel slide" data-interval="false">
+               <ol class="carousel-indicators">
+                  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel" data-slide-to="1"></li>
+                  <li data-target="#carousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active" alt="First slide">
+                     <div class="carousel-content">
+                        <div>
+                           <img class="tutorial-image" src="assets/images/tutorial/tutorial-1.png" alt="Tutorial - pick your difficulty">
                         </div>
-                        <div class="carousel-item" id="carousel-second-slide" alt="Second slide">
-                            <div class="carousel-content">
-                                <div>
-                                    <img class="tutorial-image image-2" src="assets/images/tutorial/tutorial-2.png">
-                                </div>
-                                <div>
-                                    <img class="tutorial-image image-3 hide-button" src="assets/images/tutorial/tutorial-3.png">
-                                </div>
-                                <div>
-                                    <img class="tutorial-image image-4 hide-button" src="assets/images/tutorial/tutorial-4.png">
-                                </div>
-                                <div>
-                                    <img class="tutorial-image image-5 hide-button" src="assets/images/tutorial/tutorial-5.png">
-                                </div>
-                                <div>
-                                    <img class="tutorial-image image-6 hide-button" src="assets/images/tutorial/tutorial-6.png">
-                                </div>
-                                <div>
-                                    <img class="tutorial-image image-7 hide-button" src="assets/images/tutorial/tutorial-7.png">
-                                </div>
-                                <span class="tutorial-text">Copy the pattern!!</span>
-                            </div>
+                        <span class="tutorial-text">Pick your difficulty!</span>
+                     </div>
+                  </div>
+                  <div class="carousel-item" id="carousel-second-slide" alt="Second slide">
+                     <div class="carousel-content">
+                        <div>
+                           <img class="tutorial-image image-2" src="assets/images/tutorial/tutorial-2.png" alt="Tutorial - Computer turn">
                         </div>
-                        <div class="carousel-item" alt="Third slide">
-                            <div class="carousel-content">
-                                <div>
-                                    <img class="tutorial-image" src="assets/images/tutorial/tutorial-8.png">
-                                </div>
-                                <span class="tutorial-text">Beat your high score!!!</span>
-                            </div>
+                        <div>
+                           <img class="tutorial-image image-3 hide-button" src="assets/images/tutorial/tutorial-3.png" alt="Tutorial - Computer turn">
                         </div>
-                    </div>
-                    <a class="carousel-control carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                        <span class="prev-icon" aria-hidden="true">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control carousel-control-next" href="#carousel" role="button" data-slide="next">
-                        <span class="next-icon" aria-hidden="true">
-                            <i class="fas fa-chevron-right"></i>
-                        </span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+                        <div>
+                           <img class="tutorial-image image-4 hide-button" src="assets/images/tutorial/tutorial-4.png" alt="Tutorial - Computer turn">
+                        </div>
+                        <div>
+                           <img class="tutorial-image image-5 hide-button" src="assets/images/tutorial/tutorial-5.png" alt="Tutorial - User turn">
+                        </div>
+                        <div>
+                           <img class="tutorial-image image-6 hide-button" src="assets/images/tutorial/tutorial-6.png" alt="Tutorial - User turn">
+                        </div>
+                        <div>
+                           <img class="tutorial-image image-7 hide-button" src="assets/images/tutorial/tutorial-7.png" alt="Tutorial - User turn">
+                        </div>
+                        <span class="tutorial-text">Copy the pattern!!</span>
+                     </div>
+                  </div>
+                  <div class="carousel-item" alt="Third slide">
+                     <div class="carousel-content">
+                        <div>
+                           <img class="tutorial-image" src="assets/images/tutorial/tutorial-8.png" alt="Tutorial - Retry menu">
+                        </div>
+                        <span class="tutorial-text">Beat your high score!!!</span>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="prev-icon" aria-hidden="true">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="next-icon" aria-hidden="true">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="sr-only">Next</span>
+               </a>
             </div>
-        </div>
-    <!--Link to Bootstrap CDN-->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
-        </script>
-    <!--Link to JQuery CDN-->
-        <script src="https://code.jquery.com/jquery-3.5.1.js">
-        </script>
-    <!--Link to script game.js-->
-    	<script src="assets/js/tutorial.js">
-        </script>
-    </body>
+         </div>
+      </div>
+      <!--Link to Bootstrap CDN-->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!--Link to JQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <!--Link to script game.js-->
+      <script src="assets/js/tutorial.js"></script>
+   </body>
 </html>
