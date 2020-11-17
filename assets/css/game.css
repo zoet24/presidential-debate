@@ -176,6 +176,7 @@
 
 a.box-user-info:hover {
     color: black;
+    text-decoration: none;
 }
 
 button {

@@ -16,7 +16,6 @@ $(".start-button").click(function(){ // Animation for index.html --> game.html t
 });
 
 $('.start-button').click(function(e) { // Add delay to page change for animation - source: https://forum.webflow.com/t/javascript-delay-on-page-links/38852/4
-  console.log("block");
   e.preventDefault();
   setTimeout(function(url) { 
       window.location = url;
