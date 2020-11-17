@@ -111,16 +111,16 @@ Having sketched out what I wanted my website to look like, the main things I wan
 ##### Game
 - Once the 'Game' page loads, the two halves of the backdrop slide to the side into "fighting" position.
 - The start modal fills the screen and allows the user to pick their difficulty. Picking a harder difficulty decreases the time between inputs but increases the points you get for each correct input.
-- After the user selects their difficulty, the computer has its first turn - it will generate a random sequence of three reactions from the six boxes available. A reaction from a box will play the associated audio clip, change the font colour and size, change the border width and "shake" the box to make it clear to the user what box has been triggered.
+- After the user selects their difficulty, the computer has its first turn - it will generate a random sequence of three reactions from the six boxes available. A reaction from a box will play the associated audio clip, change the font colour and size, change the border width and "shake" the box to give the user clear feedback what box has been triggered.
 - After the first computer sequence has finished, the user has their first turn - each box they press will react in the same way as on the computer's turn.
 - If the user's turn is successful the computer goes again, this time triggering four boxes. The sequence continues to increase by one until the user loses.
-- If the user's turn is unsuccessful the wrestling bell will sound again and the correct box will react three times in a row to make it clear which one they should have pressed. The retry modal appears and allows the user to pick a new difficulty and try again.
+- If the user's turn is unsuccessful, the wrestling bell will sound again and the correct box will react three times in a row to give feedback for which one they should have pressed. The retry modal appears and allows the user to pick a new difficulty and try again.
 - The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site.
 - The user can return to the 'Home' page using the back button on the left of the screen.
 - The user can also toggle the volume on/off using the speaker button on the right of the screen.
 ##### Tutorial
-- The 'Tutorial' page consists of three screenshots of the game being played on a smartphone, with simple instructions below on how to play the game.
-- The second screenshot has an animation of the computer playing a turn, followed by the user playing a turn.
+- The 'Tutorial' page consists of multiple screenshots of the game being played on a smartphone, with simple instructions below on how to play the game.
+- The third, fourth, fifth and sixth screenshots have animations of the computer and user playing turns.
 - The user can flick between the screenshots using the carousel icons.
 - The user can also return to the 'Home' page using the close button on the top right of the screen.
 #### Features left to implement
@@ -145,6 +145,7 @@ The game in its current state meets all of the "must-have" criteria that I outli
 ### Additional tools used
 - __101soundboards:__ I used 101soundboards.com to find all of the sound effects used through the site.
 - __Balsamiq:__ I used this to produce wireframe sketches for the site's skeleton plane.
+- __CompressPNG:__ I used this to compress the images on my website to improve its performance.
 - __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
 - __FreeFormatter:__ I used Freeformatter.com to format my code properly.
 - __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used this to test different functions in my JavaScript code.
