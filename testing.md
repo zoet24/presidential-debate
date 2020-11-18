@@ -41,7 +41,7 @@ I used WAVE (The Web Accessibility Evaluation Tool) to test the accessibility of
 - Some of the images used on tutorial.html were missing _alt_ tags.
 - It also flagged a lack of semantic elements on each page. As there is very little text, I felt justified in mainly using _divs_ throughout the site and didn't make any changes.
 ### Performance
-I used the Lighthouse tool on the Google Developer software to test the performance of my game. It flagged that the images throughout the site were quite large, so I reloaded them after compressing the files which improved my overall score.
+I used the Lighthouse tool on the Google Developer software to test the performance of my game. It flagged that the images throughout the site were quite large, so I reloaded them after compressing the files which improved my overall score to 93/100.
 
 ## Testing User Stories
 _**Site owner**_
@@ -56,7 +56,7 @@ _**Site users**_
 1. _As a site user, I want to enjoy playing the game._
     - See 1 in Testing User Stories - Site owner.
 2. _As a site user, I want the game to load quickly and not lag so I am not distracted from playing the game._
-    - The website has a Lighthouse performance score of --- indicating that the game loads quickly and won't lag.
+    - The website has a Lighthouse performance score of 93/100 indicating that the game loads quickly and won't lag.
 3. _As a site user, I want to receive feedback when I play the game correctly so I know what I've done right._
     - A successful turn is evident by the score increasing and the game continuing.
 4. _As a site user, I want to receive feedback when I play the game incorrectly so I know that I've made a mistake._
