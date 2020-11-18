@@ -280,6 +280,11 @@ function compareSequences() {
         // incorrectSequence()
         correctValue = game.compSequenceArr[game.count];
         
+        setTimeout(function() {
+            $(".box").addClass("long-shake");
+            $(".box-game").addClass("text-pop");
+        }, 500);
+
         var audio = document.getElementById("audio-wwe-bell");
         audio.currentTime = 0;
         setTimeout(function() {
@@ -287,6 +292,9 @@ function compareSequences() {
         }, 500);
 
         setTimeout(function() {
+            $(".box").removeClass("long-shake");
+            $(".box-game").removeClass("text-pop");
+            
             if (correctValue == 0) {
                 boxTrumpOne();
             }
@@ -326,7 +334,7 @@ function compareSequences() {
             if (correctValue == 5) {
                 boxBidenThree();
             }
-        }, 2600);
+        }, 2500);
 
         setTimeout(function() {
             if (correctValue == 0) {
@@ -347,7 +355,7 @@ function compareSequences() {
             if (correctValue == 5) {
                 boxBidenThree();
             }
-        }, 3700);
+        }, 3500);
 
         setTimeout(function() {
             $(".box-trump-1").addClass("hide-button", "style.css");
