@@ -358,12 +358,7 @@ function compareSequences() {
         }, 3500);
 
         setTimeout(function() {
-            $(".box-trump-1").addClass("hide-button", "style.css");
-            $(".box-trump-2").addClass("hide-button", "style.css");
-            $(".box-trump-3").addClass("hide-button", "style.css");
-            $(".box-biden-1").addClass("hide-button", "style.css");
-            $(".box-biden-2").addClass("hide-button", "style.css");
-            $(".box-biden-3").addClass("hide-button", "style.css");
+            $(".box-game").addClass("hide-button", "style.css");
         }, 4800);
 
         setTimeout(function() {

@@ -111,11 +111,11 @@ Having sketched out what I wanted my website to look like, the main things I wan
 ##### Game
 - Once the 'Game' page loads, the two halves of the backdrop slide to the side into "fighting" position.
 - The start modal fills the screen and allows the user to pick their difficulty. Picking a harder difficulty decreases the time between inputs but increases the points you get for each correct input.
-- After the user selects their difficulty, the computer has its first turn - it will generate a random sequence of three reactions from the six boxes available. A reaction from a box will play the associated audio clip, change the font colour and size, change the border width and "shake" the box to give the user clear feedback what box has been triggered.
+- After the user selects their difficulty, the computer has its first turn - it will generate a random sequence of three reactions from the six boxes available. A reaction from a box will play the associated audio clip, change the font colour and size, change the border width and "shake" the box to give the user clear feedback about what box has been triggered.
 - After the first computer sequence has finished, the user has their first turn - each box they press will react in the same way as on the computer's turn.
 - If the user's turn is successful the computer goes again, this time triggering four boxes. The sequence continues to increase by one until the user loses.
-- If the user's turn is unsuccessful, the wrestling bell will sound again and the correct box will react three times in a row to give feedback for which one they should have pressed. The retry modal appears and allows the user to pick a new difficulty and try again.
-- The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site.
+- If the user's turn is unsuccessful, the wrestling bell will sound again, all the boxes will shake and the correct box will react three times in a row to give feedback for which one they should have pressed. The retry modal appears and allows the user to pick a new difficulty and try again.
+- The game keeps track of the user's current score and high score in clear boxes at the bottom of the screen. The high score is recalled from the user's local storage, so the game will remember it for subsequent visits to the site. If the user is beating their high score, the high score box will start to shake.
 - The user can return to the 'Home' page using the back button on the left of the screen.
 - The user can also toggle the volume on/off using the speaker button on the right of the screen.
 ##### Tutorial
@@ -125,12 +125,14 @@ Having sketched out what I wanted my website to look like, the main things I wan
 - The user can also return to the 'Home' page using the close button on the top right of the screen.
 #### Features left to implement
 The game in its current state meets all of the "must-have" criteria that I outlined in my scope. If I continued to develop it further, I would like to introduce the following features:
-- A button that would allow users to share their high scores to their social medias.
+- A button that would allow users to share their high scores to their social media.
 - Background music that would increase in tempo as the user's score increases.
 - A leaderboard of high scores of all users.
 - Hotkey functionality to allow users to play with their keyboards.
 - A 'Settings' page where users could customise aspects of the game such as number of boxes, different soundbites and different politicians.
 - Multiplayer functionality so users could play against each other instead of the computer.
+
+In addition to the features that I would like to implement, if I was going to do this project again from the beginning I would like to write the JavaScript and JQuery files in a way that would make it easier for another developer to scale. For example, if the developer wanted to increase the number of game inputs from 6 to 8, they would have to copy and paste multiple lines of code in many different functions throughout the game.js file. Writing the code more succinctly would have made this easier, and it's something I will bear in mind for future projects.
 
 ## Technologies used
 ### Languages and frameworks
@@ -148,7 +150,7 @@ The game in its current state meets all of the "must-have" criteria that I outli
 - __CompressPNG:__ I used this to compress the images on my website to improve its performance.
 - __FontAwesome:__ I used FontAwesome's database for basic icons throughout my site.
 - __FreeFormatter:__ I used Freeformatter.com to format my code properly.
-- __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used this to test different functions in my JavaScript code.
+- __Google Developer Tools:__ I used this to test the responsiveness of my website by viewing my project on devices with different screen sizes, and to produce screenshots of the game for my 'Tutorial' page. I also used the Console to test different functions in my JavaScript code throughout development, and the Lighthouse package to test the performance of the site.
 - __Google Fonts:__ I used one complementary font from Google Fonts for my project - Bowlby One SC.
 - __Image Online:__ I used this to produce the graphics for my game.
 - __JSHint:__ I used this to test to the validity of my JavaScript and JQuery code.
