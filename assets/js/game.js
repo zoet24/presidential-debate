@@ -39,7 +39,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-trump-1").addClass("shake");
             setTimeout(function () {
-                audio.pause();   
                 $(".box-trump-1").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -52,7 +51,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-biden-1").addClass("shake");
             setTimeout(function () {
-                audio.pause();    
                 $(".box-biden-1").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -65,7 +63,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-trump-2").addClass("shake");
             setTimeout(function () {
-                audio.pause();   
                 $(".box-trump-2").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -78,7 +75,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-biden-2").addClass("shake");
             setTimeout(function () {
-                audio.pause();    
                 $(".box-biden-2").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -91,7 +87,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-trump-3").addClass("shake");
             setTimeout(function () {
-                audio.pause();   
                 $(".box-trump-3").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -104,7 +99,6 @@ $("#game-btn").click(function(){
         audio.play();
         $(".box-biden-3").addClass("shake");
             setTimeout(function () {
-                audio.pause();    
                 $(".box-biden-3").removeClass("shake");
             }, 1000);
         audio.currentTime = 0;
@@ -389,6 +383,7 @@ function compareSequences() {
 // gameRetry() resets score and triggers showScore() (a new game is triggered through the difficulty menu modal)
 function gameRetry() {                
     game.userScore = 0;
+    $(".high-score-count").removeClass("long-shake");
     showScore();
 }
 
@@ -426,8 +421,9 @@ function calculateScore() {
     game.scoreIncrease = 1 * game.scoreMultiplier;
     game.userScore += game.scoreIncrease;
 
-    if (game.userScore > game.highScore) {
+    if (game.userScore >= game.highScore) {
         game.highScore = game.userScore;
+        $(".high-score-count").addClass("long-shake");
     }
 
     localStorage.setItem('highScore', game.highScore);
@@ -446,7 +442,6 @@ function boxTrumpOne(){
             $(".box-trump-1").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();   
             $(".box-trump-1").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;
@@ -462,7 +457,6 @@ function boxBidenOne(){
             $(".box-biden-1").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();    
             $(".box-biden-1").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;
@@ -478,7 +472,6 @@ function boxTrumpTwo(){
             $(".box-trump-2").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();   
             $(".box-trump-2").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;
@@ -494,7 +487,6 @@ function boxBidenTwo(){
             $(".box-biden-2").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();    
             $(".box-biden-2").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;
@@ -510,7 +502,6 @@ function boxTrumpThree(){
             $(".box-trump-3").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();   
             $(".box-trump-3").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;
@@ -526,7 +517,6 @@ function boxBidenThree(){
             $(".box-biden-3").removeClass("text-pop");
         }, 450);
         setTimeout(function () {
-            audio.pause();    
             $(".box-biden-3").removeClass("shake");
         }, 1000);
     audio.currentTime = 0;

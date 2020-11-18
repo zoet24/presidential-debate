@@ -172,7 +172,7 @@ I built on the git commit format style that I had developed during my MS1 projec
 - **175c69b** 2020-10-24 - Bug fix: randSequence() no longer generates sequential equal values in compSequenceArr[]
 
 ## Testing
-Click [here](TESTING.md) to view the complete testing process.
+Click [here](testing.md) to view the complete testing process.
 
 ## Deployment
 
