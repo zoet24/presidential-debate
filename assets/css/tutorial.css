@@ -72,7 +72,7 @@ ol.carousel-indicators li.active {
 }
 
 .tutorial-text {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: white;
 	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
@@ -98,7 +98,6 @@ ol.carousel-indicators li.active {
 
 
 /* Media queries */
-
 @media (min-width: 600px) {
 	.img-container-trump-initial {
 		left: -5%;
@@ -108,9 +107,6 @@ ol.carousel-indicators li.active {
 	}
 	.carousel-content {
 		margin-top: 2.5vh;
-	}
-	.tutorial-text {
-		font-size: 2.5rem;
 	}
 	.carousel-indicators {
 		margin-bottom: 5vh;
@@ -155,7 +151,7 @@ ol.carousel-indicators li.active {
 		margin-top: 0;
 	}
 	.tutorial-text {
-		font-size: 3.5rem;
+		font-size: 2rem;
 	}
 	.carousel-indicators {
 		margin-bottom: 6vh;
@@ -169,10 +165,10 @@ ol.carousel-indicators li.active {
 
 @media (min-width: 1200px) {
 	.carousel-content>div>img {
-		width: 90%;
+		width: 80%;
 	}
 	.tutorial-text {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 	.prev-icon .fas,
 	.next-icon .fas {
@@ -191,10 +187,10 @@ ol.carousel-indicators li.active {
 		border: black solid 7px;
 	}
 	.carousel-content>div>img {
-		width: 100%;
+		width: 90%;
 	}
 	.tutorial-text {
-		font-size: 5rem;
+		font-size: 4rem;
 		text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
 	}
 	.prev-icon .fas,

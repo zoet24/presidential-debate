@@ -66,7 +66,7 @@
 	background: white;
 	border: solid 6px black;
 	margin: 4px auto;
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 }
 
 #home-cta-start {
@@ -139,7 +139,6 @@
 	#home-cta-start,
 	#home-cta-tutorial {
 		margin: 4px auto;
-		font-size: 2rem;
 	}
 }
 
@@ -176,7 +175,7 @@
 	#home-cta-start,
 	#home-cta-tutorial {
 		border: solid 8px black;
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 	}
 	#home-cta-start:hover,
 	#home-cta-tutorial:hover {
@@ -197,7 +196,7 @@
 	#home-cta-start,
 	#home-cta-tutorial {
 		border: solid 10px black;
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 	#home-cta-start:hover,
 	#home-cta-tutorial:hover {
@@ -209,7 +208,7 @@
 	#home-cta-start,
 	#home-cta-tutorial {
 		border: solid 12px black;
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 	#home-cta-start:hover,
 	#home-cta-tutorial:hover {

@@ -96,7 +96,7 @@
 	background: white;
 	border: solid 6px black;
 	margin: 4px auto;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	width: 33vw;
 	animation: shake 0.75s;
 	animation-iteration-count: infinite;
@@ -136,7 +136,7 @@
 }
 
 .box-game {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 .box-trump {
@@ -193,7 +193,7 @@ button {
 }
 
 .text-pop {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	color: white;
 	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
@@ -251,20 +251,6 @@ button {
 	.img-container-biden-initial {
 		right: -5%;
 	}
-	.row-top {
-		height: 17.5vh;
-	}
-	.box-game {
-		font-size: 1.5rem;
-	}
-	.box-user-info,
-	.box-user-info-volume-on,
-	.box-user-info-volume-off {
-		font-size: 1.25rem;
-	}
-	.text-pop {
-		font-size: 1.75rem;
-	}
 }
 
 @media (min-width: 768px) {
@@ -284,6 +270,9 @@ button {
 	}
 	.text-pop {
 		font-size: 2rem;
+	}
+    .row-top {
+		height: 5vh;
 	}
 }
 
@@ -309,9 +298,6 @@ button {
 	}
 	.opt input[type="radio"]:checked~label {
 		font-size: 2.25rem;
-	}
-	.row-top {
-		height: 10vh;
 	}
 	.row-fixed {
 		bottom: 20%;
@@ -366,9 +352,6 @@ button {
 	}
 	#game-btn {
 		font-size: 2.75rem;
-	}
-	.row-top {
-		height: 12.5vh;
 	}
 	.row-fixed {
 		bottom: 22.5%;

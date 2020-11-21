@@ -1,5 +1,3 @@
-`python3 -m http.server`
-
 # Presidential Debate
 
 ## Code Institute: Milestone Project 2
@@ -105,6 +103,7 @@ Having sketched out what I wanted my website to look like, the main things I wan
 ### Features
 #### Existing features
 ##### Home
+- The game should be played in landscape, so I included an overlay that appears when the window height is greater than the window width (indicating that the device is in portrait) to encourage the user to change the orientation of their device.
 - The title, start button and tutorial button are superimposed on the Trump and Biden backdrop which remains consistent across the website.
 - All of the text has a "shake" effect applied to it, giving the page an energetic feel that is in-keeping with the fast-paced game. The "shake" effect also intensifies when the user hovers over the start and tutorial buttons, indicating that they can be clicked on.
 - When the start button is clicked, the user hears a wrestling bell signalling the start of the "fight". The icons disappear one after another in time with each ring of the bell, giving a smooth transition to the 'Game' page.
