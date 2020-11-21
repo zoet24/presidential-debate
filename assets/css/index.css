@@ -5,6 +5,25 @@
 	overflow: hidden;
 }
 
+.container-portrait-overlay {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+    background-color: rgba(100,100,100,0.5);
+
+    font-size: 2.5rem;
+	color: white;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
 .container-foreground {
 	height: 100vh;
 	width: 100%;
